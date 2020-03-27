@@ -1,7 +1,12 @@
 /* ADVANCED OPTIONS -- CHANGE AT YOUR OWN RISK */
 
+html, body {
+    min-height: 100%;
+    width: 100%;
+}
+
 body {
-    text-align: center;
+    background-image: url("/your_content/images/BG Tile2.png"), url("/your_content/images/tree-bark3.png"), url("/your_content/images/bgTest.png");
 }
 
 div#container {

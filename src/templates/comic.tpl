@@ -46,7 +46,7 @@
             <div id="patreon-call">
                 <div id="patreon-blurb"><p>Like the comic? Support the creator by subscribing to Patreon!</p></div>
                 <div id="patreon-API"><p><span class="icon-group"></span> 188 patrons &nbsp; <span class="icon-coins"></span> $3245</p></div>
-                <a id="patreon-button" href="http://www.patreon.com/tamberlane">Become a Patron!</a>
+                <a id="patreon-button" href="http://www.patreon.com/tamberlane">Become a Patron!!</a>
             </div>
         </div>
     </div>

@@ -13,11 +13,28 @@
 <body>
 {% block body %}
 <div id="container">
-    <div id="banner"><img id="banner-img" src="/{{ base_dir }}/your_content/images/banner.png"></div>
-    <div id="links-bar">
-    {%- for link in links %}
-        <a class="link-bar-link" href="{{ link.url }}">{{ link.name }}</a>
-    {%- endfor %}
+    <div id="header">
+        <div id="logo">  <a href="http://www.tamberlanecomic.com"><span></span></a></div>
+        <ul id="socialLinks">
+            <li><a href="https://www.webtoons.com/en/challenge/tamberlane/list?title_no=372674" title="Read Tamberlane on Webtoon"><i class="icon-webtoon"><span style="color: #663403;" class="Label">&nbsp;Webtoons</span></a></i></li>
+            <li><a href="https://tapas.io/series/Tamberlane" title="Read Tamberlane on Tapas"><i class="icon-tapas"><span style="color: #663403;" class="Label">&nbsp;Tapas</span></i></a></li>
+            <li><a href="http://www.twitter.com/tamberlanecomic" title="Get Updates on Twitter"><i class="icon-twitter"><span style="color: #663403;" class="Label">&nbsp;Twitter</span></i></a></li>
+            <li><a href="https://www.facebook.com/groups/209745269853069/" title="Get Updates on Facebook"><i class="icon-facebook"><span style="color: #663403;" class="Label">&nbsp;Facebook</span></i></a></li>
+            <li><a href="http://tamberlanecomic.tumblr.com/" title="Get Updates on Tumblr"><i class="icon-tumblr"><span style="color: #663403;" class="Label">&nbsp;Tumblr</span></i></a></li>
+            <li><a href="http://www.twitch.tv/tamberlanecomic" title="Watch Comic Livestreams on Twitch"><i class="icon-twitch"><span style="color: #663403;" class="Label">&nbsp;Twitch</span></i></a></li>
+            <li><a href="http://www.youtube.com/c/pixelprism" title="Watch Speeddraws on YouTube"><i class="icon-youtube"><span style="color: #663403;" class="Label">&nbsp;YouTube</span></i></a></li>
+            <li><a href="https://www.tamberlanecomic.com/feed/"><i class="icon-rss" title="Subscribe on RSS"><span style="color: #663403;" class="Label">&nbsp;RSS</span></i></a></li>
+            <li><a href="http://www.webtoons.com" title="Subscribe via Email"><i class="icon-envelope"><span style="color: #663403;" class="Label">&nbsp;Subscribe</span></i></a></li>
+        </ul>
+        <ul id="navMenu">
+            <li><h3><a href="/latest">Latest</a></h3></li>
+            <li><h3><a href="/archive">Archive</a></h3></li>
+            <li><h3><a href="/about">About</a></h3></li>
+            <li><h3><a href="/cast">Cast</a></h3></li>
+            <li><h3><a href="https://shop.tamberlanecomic.com">Shop</a></h3></li>
+            <li><h3><a href="http://www.patreon.com/tamberlane">Patreon</a></h3></li>
+            <li class="liveStream"><a href="http://www.twitch.tv/tamberlanecomic"><i class="icon-twitch"></i><h3>&nbsp;Now Live</h3></a></li>
+        </ul>
     </div>
 
     {% block content %}{% endblock %}

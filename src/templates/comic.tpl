@@ -28,17 +28,26 @@
     </div>
 
     <div id="blurb">
-        <h1 id="page-title">{{ page_title }}</h1>
-        <div id="post-date">Posted on: {{ post_date }}</div>
-        <div id="tags">
-        Tags:
-        {%- for tag in tags %}
-            <a class="tag-link" href="/{{ base_dir }}/tagged.html?tag={{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-        {%- endfor %}
+        <div id="content-left">
+            <h1 id="page-title">{{ page_title }}</h1>
+            <div id="post-date">Posted on: {{ post_date }}</div>
+            <div id="tags">
+            Tags:
+            {%- for tag in tags %}
+                <a class="tag-link" href="/{{ base_dir }}/tagged.html?tag={{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+            {%- endfor %}
+            </div>
+            <hr id="post-body-break">
+            <div id="post-body">
+    {{ post_html }}
+            </div>
         </div>
-        <hr id="post-body-break">
-        <div id="post-body">
-{{ post_html }}
+        <div id="content-right">
+            <div id="patreon-call">
+                <div id="patreon-blurb"><p>Like the comic? Support the creator by subscribing to Patreon!</p></div>
+                <div id="patreon-API"><p><span class="icon-group"></span> 188 patrons &nbsp; <span class="icon-coins"></span> $3245</p></div>
+                <a id="patreon-button" href="http://www.patreon.com/tamberlane">Become a Patron!</a>
+            </div>
         </div>
     </div>
 {%- endblock %}

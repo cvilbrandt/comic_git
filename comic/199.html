@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../src/css/comic.css">
         <link rel="stylesheet" type="text/css" href="../src/css/icons.css">
-        <title>{{ page_title }} | {{ comic_title }}</title>
+        <title>Page 199 | Tamberlane</title>
     </head>
     <body>
     <header>
@@ -37,31 +37,23 @@
     <div id="content">
         <div id="comic-page">
         <!--     Makes the comic image a Next link. -->
-            <a href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page">
-                <img src="/{{ base_dir }}/{{ comic_path }}" title="{{ alt_text }}"/>
+            <a href="/comic_git/comic/200.html#comic-page">
+                <img src="/comic_git/your_content/comics/199/Page_199.png" title="&quot;Yeah, I&#x27;ll start a fight. And I&#x27;ll end it too!! From time out!!&quot;"/>
             </a>
         </div>
             <div id="comic-navigation">
             <!--Disable the navigation links if you're at the first or latest comic. -->
-                    {% if first_id == current_id %}
-                        <a id="first-invalid">First</a>
-                        <a id="previous-invalid">Previous</a>
-                    {% else %}
-                        <a href="/{{ base_dir }}/comic/{{ first_id }}.html#comic-page" id="first-link">First</a>
-                        <a href="/{{ base_dir }}/comic/{{ previous_id }}.html#comic-page" id="previous-link">Previous</a>
-                    {% endif %}
-                    {% if page_name|int %}
-                        <div id="page-number"><span>{{ page_name }}</span></div>
-                    {% else %}
-                        <div id="page-number"><span>Interlude</span></div>
-                    {% endif %}
-                    {% if last_id == current_id %}
-                        <a id="next-invalid">Next</a>
-                        <a id="latest-invalid">Last</a>
-                    {% else %}
-                        <a href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page" id="next-link">Next</a>
-                        <a href="/{{ base_dir }}/comic/{{ last_id }}.html#comic-page" id="latest-link">Last</a>
-                    {% endif %}
+                    
+                        <a href="/comic_git/comic/197.html#comic-page" id="first-link">First</a>
+                        <a href="/comic_git/comic/198.html#comic-page" id="previous-link">Previous</a>
+                    
+                    
+                        <div id="page-number"><span>199</span></div>
+                    
+                    
+                        <a href="/comic_git/comic/200.html#comic-page" id="next-link">Next</a>
+                        <a href="/comic_git/comic/202.html#comic-page" id="latest-link">Last</a>
+                    
             </div>
         <div id="comic-support">
             <h3>Enjoying the Comic? Show Your Support!</h3>
@@ -75,18 +67,28 @@
         <!--    Commence the metadata! -->
             <div id="comic-post">
                 <div id="metadata">
-                    <h1>{{ page_title }}</h1>
-                    <div>Posted on: {{ post_date }}</div>
+                    <h1>Page 199</h1>
+                    <div>Posted on: December 11, 2019</div>
                     <div id="tags">
                         Tags:
-                        {% for tag in tags %}
-                        <a href="/{{ base_dir }}/tagged.html?tag={{ tag }}">{{ tag }}</a>
-                        {% endfor %}
+                        
+                        <a href="/comic_git/tagged.html?tag=Chapter 4 (section 2)">Chapter 4 (section 2)</a>
+                        
+                        <a href="/comic_git/tagged.html?tag=Anthony">Anthony</a>
+                        
+                        <a href="/comic_git/tagged.html?tag=Belfry">Belfry</a>
+                        
+                        <a href="/comic_git/tagged.html?tag=Piper">Piper</a>
+                        
+                        <a href="/comic_git/tagged.html?tag=Tamberlane">Tamberlane</a>
+                        
                     </div>
                 </div>
         <!--    Commence the post! -->
                 <div id="post-content">
-                {{ post_html }}
+                <p>Anthony has all the answers! And Piper ... well, Piper is unapologetically her.
+
+<p>Saturday's my birthday! Yay! Happy birthday to me 😀 Thank you all for the wonderful birthday gift of reading my little story here. It means a lot to me!
                 </div>
             </div>
         </div>

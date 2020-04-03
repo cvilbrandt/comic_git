@@ -2,6 +2,8 @@
 <html lang="en">
 
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src forum.tamberlanecomic.com;">
         <link rel="stylesheet" type="text/css" href="../src/css/comic.css">
         <link rel="stylesheet" type="text/css" href="../src/css/icons.css">
         <title>{{ page_title }} | {{ comic_title }}</title>
@@ -53,7 +55,7 @@
                     {% if page_name|int %}
                         <div id="page-number"><span>{{ page_name }}</span></div>
                     {% else %}
-                        <div id="page-number"><span>Interlude</span></div>
+                        <div id="page-interlude"><span>Interlude</span></div>
                     {% endif %}
                     {% if last_id == current_id %}
                         <a id="next-invalid">Next</a>
@@ -68,6 +70,7 @@
             <div id="support-buttons">
                 <div id="patreon-button"><a href="http://www.patreon.com/tamberlane">Become a Patron</a></div>
                 <div id="coffee-button"><a href="http://www.ko-fi.com/justcaytlin">Buy the Creator a Coffee</a></div>
+                <div id="share-button"><a href="">Share the Comic</a></div>
             </div>
         </div>
         <div id="comic-content">
@@ -76,20 +79,41 @@
             <div id="comic-post">
                 <div id="metadata">
                     <h1>{{ page_title }}</h1>
-                    <div>Posted on: {{ post_date }}</div>
+                    <div><p id="postdate">Posted on {{ post_date }}</p></div>
                     <div id="tags">
-                        Tags:
-                        {% for tag in tags %}
+                        <p>Chapter: <a href="/{{ base_dir }}/tagged.html?tag={{ tags[0] }}">{{ tags[0] }}</a></p>
+                        <p>Tags:
+                        {% for tag in tags[1:] %}
                         <a href="/{{ base_dir }}/tagged.html?tag={{ tag }}">{{ tag }}</a>
+                            {%- if not loop.last -%}
+                            ,
+                            {% endif %}
                         {% endfor %}
+                        </p>
                     </div>
                 </div>
         <!--    Commence the post! -->
                 <div id="post-content">
-                {{ post_html }}
+                    <em>Author's Notes:</em>
+                    <p>{{ post_html }}</p>
                 </div>
+                <div id='discourse-comments'></div>
+
+                <script type="text/javascript">
+                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
+                        discourseEmbedUrl: 'http://localhost:63342/comic_git/comic/{{ page_id }}.html' };
+
+                    (function() {
+                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                </script>
             </div>
         </div>
+    </div>
+    <div id="footer">
+        <p>Tamberlane is designed with <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
     </div>
     </body>
 </html>

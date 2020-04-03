@@ -150,6 +150,7 @@ ul#links-menu .liveStream a {
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+    padding-bottom: 30px;
 }
 
 #comic-page {
@@ -251,7 +252,7 @@ ul#links-menu .liveStream a {
     line-height: 0.5em;
 }
 
-#patreon-button, #coffee-button {
+#patreon-button, #coffee-button, #share-button {
     display: inline-block;
     font-weight: bold;
     padding: 10px 15px;
@@ -259,7 +260,7 @@ ul#links-menu .liveStream a {
     transition: ease 0.2s;
 }
 
-#patreon-button a, #coffee-button a {
+#patreon-button a, #coffee-button a, #share-button a {
     color: white;
 }
 
@@ -282,9 +283,59 @@ ul#links-menu .liveStream a {
     transition: ease 0.2s;
 }
 
+#share-button {
+    background-color: #68ad43;
+    transition: ease 0.2s;
+}
+
+#share-button:hover {
+    background-color: #e33e2a;
+    transition: ease 0.2s;
+}
+
 #comic-content {
     background-color: #FDF1DC;
-    max-width: 80%;
-    margin: auto;
+    max-width: 75%;
     padding: 30px;
+    margin: auto;
+}
+
+#comic-post {
+    display: grid;
+    grid: auto-flow / repeat(auto-fill, minmax(250px, 1fr));
+}
+
+#metadata {
+    padding: 10px 30px;
+    grid-column-start: 1;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-right: double 5px #341a09;
+    text-align: center;
+}
+
+#post-content {
+    grid-column-start: 2;
+    padding: 20px;
+    align-self: center;
+}
+
+#post-content p {
+    padding-left: 20px;
+}
+
+#post-content em {
+    font-family: 'Underdog', cursive;
+}
+
+#discourse-comments {
+    width: 100%;
+}
+
+#footer {
+    border-top: #341a09 solid 30px;
+    color: white;
+    font-size: small;
+    text-align: center;
+    padding: 1em;
 }

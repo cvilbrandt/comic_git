@@ -2,6 +2,8 @@
 <html lang="en">
 
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src forum.tamberlanecomic.com;">
         <link rel="stylesheet" type="text/css" href="../src/css/comic.css">
         <link rel="stylesheet" type="text/css" href="../src/css/icons.css">
         <title>Page 200 | Tamberlane</title>
@@ -60,6 +62,7 @@
             <div id="support-buttons">
                 <div id="patreon-button"><a href="http://www.patreon.com/tamberlane">Become a Patron</a></div>
                 <div id="coffee-button"><a href="http://www.ko-fi.com/justcaytlin">Buy the Creator a Coffee</a></div>
+                <div id="share-button"><a href="">Share the Comic</a></div>
             </div>
         </div>
         <div id="comic-content">
@@ -68,26 +71,43 @@
             <div id="comic-post">
                 <div id="metadata">
                     <h1>Page 200</h1>
-                    <div>Posted on: December 18, 2019</div>
+                    <div><p id="postdate">Posted on December 18, 2019</p></div>
                     <div id="tags">
-                        Tags:
+                        <p>Chapter: <a href="/comic_git/tagged.html?tag=Chapter 4 (section 2)">Chapter 4 (section 2)</a></p>
+                        <p>Tags:
                         
-                        <a href="/comic_git/tagged.html?tag=Chapter 4 (section 2)">Chapter 4 (section 2)</a>
-                        
-                        <a href="/comic_git/tagged.html?tag=Belfry">Belfry</a>
+                        <a href="/comic_git/tagged.html?tag=Belfry">Belfry</a>,
+                            
                         
                         <a href="/comic_git/tagged.html?tag=Tamberlane">Tamberlane</a>
                         
+                        </p>
                     </div>
                 </div>
         <!--    Commence the post! -->
                 <div id="post-content">
-                <p>A big thank you to the lovely Caytlin Vilbrandt for allowing me to use her web comic as the example for this project!</p>
+                    <em>Author's Notes:</em>
+                    <p><p>A big thank you to the lovely Caytlin Vilbrandt for allowing me to use her web comic as the example for this project!</p>
 
-<p>If you'd like to check out more of this amazing comic (and I recommend you do), you can read more at <a href="https://www.tamberlanecomic.com/">https://www.tamberlanecomic.com/</a></p>
+<p>If you'd like to check out more of this amazing comic (and I recommend you do), you can read more at <a href="https://www.tamberlanecomic.com/">https://www.tamberlanecomic.com/</a></p></p>
                 </div>
+                <div id='discourse-comments'></div>
+
+                <script type="text/javascript">
+                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
+                        discourseEmbedUrl: 'http://localhost:63342/comic_git/comic/.html' };
+
+                    (function() {
+                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                </script>
             </div>
         </div>
+    </div>
+    <div id="footer">
+        <p>Tamberlane is designed with <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
     </div>
     </body>
 </html>

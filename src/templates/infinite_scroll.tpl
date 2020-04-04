@@ -2,9 +2,13 @@
 {% block content %}
     <div id="jump-to">
         <h2>Jump to...</h2>
-        {%- for section in archive_sections %}
-            <a class="chapter-links" href="infinite_scroll.html#{{ section.pages[0].page_name }}">{{ section.name }}</a>
-        {%- endfor %}
+        <div id="jump-to-sections">
+            {%- for section in archive_sections %}
+            <div id="infinite-{{ section.name | replace(' ', '-') }}" class="infinite-section">
+                <a class="chapter-links" href="infinite_scroll.html#{{ section.pages[0].page_name }}">{{ section.name }}</a>
+            </div>
+            {%- endfor %}
+        </div>
     </div>
     <div id="load-older" hidden>
         <button id="load-older-button">Load Older</button>
@@ -16,6 +20,8 @@
     </div>
     <div id="caught-up-notification" hidden>
         <h2>You're all caught up!</h2>
+        <p>Dying for more pages? Pages are posted early on Patreon!</p>
+        <div id="patreon-button"><a href="http://www.patreon.com/tamberlane">Become a Patron</a></div>
     </div>
 {% endblock %}
 {% block script %}

@@ -11,7 +11,7 @@
     <body>
     <header>
         <div id="logo">
-            <a href="http://www.tamberlanecomic.com"></a>
+            <a href="/{{ base_dir }}"></a>
         </div>
         <ul id="social-links">
             <li><span>&#9753;</span></li>
@@ -26,10 +26,10 @@
             <li><span>&#10087;</span></li>
         </ul>
         <ul id="links-menu">
-            <li><h3><a href="/latest">Latest</a></h3></li>
-            <li><h3><a href="/archive">Archive</a></h3></li>
-            <li><h3><a href="/about">About</a></h3></li>
-            <li><h3><a href="/cast">Cast</a></h3></li>
+            <li><h3><a href="/{{ base_dir }}/latest.html">Latest</a></h3></li>
+            <li><h3><a href="/{{ base_dir }}/archive.html">Archive</a></h3></li>
+            <li><h3><a href="/{{ base_dir }}/about.html">About</a></h3></li>
+            <li><h3><a href="/{{ base_dir }}/cast.html">Cast</a></h3></li>
             <li><h3><a href="https://shop.tamberlanecomic.com">Shop</a></h3></li>
             <li><h3><a href="http://www.patreon.com/tamberlane">Patreon</a></h3></li>
             <li class="liveStream"><a href="http://www.twitch.tv/tamberlanecomic"><i class="icon-twitch"></i><h3>&nbsp;Now Live</h3></a></li>

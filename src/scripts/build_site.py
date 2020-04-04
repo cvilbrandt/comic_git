@@ -46,7 +46,8 @@ def get_links_list(comic_info: RawConfigParser):
 
 def delete_output_file_space():
     shutil.rmtree("comic", ignore_errors=True)
-    for f in ["index.html", "archive.html", "tagged.html", "feed.xml", "infinite_scroll.html"]:
+    for f in ["index.html", "archive.html", "tagged.html", "feed.xml", "infinite_scroll.html", "latest.html",
+              "cast.html", "about.html", "404.html"]:
         if os.path.isfile(f):
             os.remove(f)
 
@@ -132,15 +133,13 @@ def get_ids(comic_list: List[Dict], index):
     first_id = comic_list[0]["page_name"]
     last_id = comic_list[-1]["page_name"]
     return {
-        "first_id": first_id,
         "previous_id": first_id if index == 0 else comic_list[index - 1]["page_name"],
         "current_id": comic_list[index]["page_name"],
-        "next_id": last_id if index == (len(comic_list) - 1) else comic_list[index + 1]["page_name"],
-        "last_id": last_id
+        "next_id": last_id if index == (len(comic_list) - 1) else comic_list[index + 1]["page_name"]
     }
 
 
-def create_comic_data(page_info: dict, first_id: str, previous_id: str, current_id: str, next_id: str, last_id: str):
+def create_comic_data(page_info: dict, previous_id: str, current_id: str, next_id: str):
     print("Building page {}...".format(page_info["page_name"]))
     with open("your_content/comics/{}/post.html".format(page_info["page_name"]), "rb") as f:
         post_html = f.read().decode("utf-8")
@@ -156,11 +155,9 @@ def create_comic_data(page_info: dict, first_id: str, previous_id: str, current_
             os.path.splitext(page_info["Filename"])[0] + "_thumbnail.jpg"
         ),
         "alt_text": html.escape(page_info["Alt text"]),
-        "first_id": first_id,
         "previous_id": previous_id,
         "current_id": current_id,
         "next_id": next_id,
-        "last_id": last_id,
         "page_title": page_info["Title"],
         "post_date": page_info["Post date"],
         "tags": page_info["Tags"],
@@ -212,7 +209,7 @@ def process_comic_images(comic_info, comic_data_dicts: List[Dict]):
     create_low_quality = comic_info.getboolean(section, "Create low-quality versions of images")
     if create_thumbnails or create_low_quality:
         for comic_data in comic_data_dicts:
-            process_comic_image(comic_info, comic_data["comic_path"][3:], create_thumbnails, create_low_quality)
+            process_comic_image(comic_info, comic_data["comic_path"], create_thumbnails, create_low_quality)
 
 
 def get_archive_sections(comic_info: RawConfigParser, comic_data_dicts: List[Dict]) -> List[Dict[str, List]]:
@@ -232,12 +229,16 @@ def write_to_template(template_path, html_path, data_dict=None):
     if data_dict is None:
         data_dict = {}
     template = JINJA_ENVIRONMENT.get_template(template_path)
+    first_id = comic_data_dicts[0]["page_name"]
+    last_id = comic_data_dicts[-1]["page_name"]
     with open(html_path, "wb") as f:
         rendered_template = template.render(
             autogenerate_warning=AUTOGENERATE_WARNING,
             comic_title=COMIC_TITLE,
             base_dir=BASE_DIRECTORY,
             links=LINKS_LIST,
+            first_id=first_id,
+            last_id=last_id,
             **data_dict
         )
         f.write(bytes(rendered_template, "utf-8"))
@@ -250,8 +251,8 @@ def write_comic_pages(comic_data_dicts: List[Dict], create_index_file=True):
         write_to_template("comic.tpl", html_path, comic_data_dict)
     if create_index_file:
         # Write index redirect HTML page
-        print("Building index page...")
-        write_to_template("index.tpl", "index.html", comic_data_dicts[-1])
+        print("Building latest page...")
+        write_to_template("latest.tpl", "latest.html", comic_data_dicts[-1])
 
 
 def write_archive_page(comic_info: RawConfigParser, comic_data_dicts: List[Dict]):
@@ -268,6 +269,21 @@ def write_tagged_page():
     print("Building tagged page...")
     write_to_template("tagged.tpl", "tagged.html", {"page_title": "Tagged posts"})
 
+def write_cast_page():
+    print("Building cast page...")
+    write_to_template("cast.tpl", "cast.html", {"page_title": "Cast"})
+
+def write_index_page():
+    print("Building index page...")
+    write_to_template("index.tpl", "index.html", {"page_title": "Home"})
+
+def write_about_page():
+        print("Building about page...")
+        write_to_template("about.tpl", "about.html", {"page_title": "About Tamberlane"})
+
+def write_404_page():
+        print("404 Building Page Not Found...")
+        write_to_template("404.tpl", "404.html", {"page_title": "404: Page Not Found"})
 
 def write_infinite_scroll_page(comic_info: RawConfigParser, comic_data_dicts: List[Dict]):
     print("Building infinite scroll page...")
@@ -276,7 +292,6 @@ def write_infinite_scroll_page(comic_info: RawConfigParser, comic_data_dicts: Li
         "page_title": "Infinite scroll",
         "archive_sections": archive_sections
     })
-
 
 def print_processing_times(processing_times: List[Tuple[str, float]]):
     last_processed_time = None
@@ -289,7 +304,7 @@ def print_processing_times(processing_times: List[Tuple[str, float]]):
 
 
 def main():
-    global COMIC_TITLE, LINKS_LIST
+    global COMIC_TITLE, LINKS_LIST, comic_data_dicts
     processing_times = [("Start", time())]
 
     # Setup output file space
@@ -326,6 +341,10 @@ def main():
     write_comic_pages(comic_data_dicts)
     write_archive_page(comic_info, comic_data_dicts)
     write_tagged_page()
+    write_index_page()
+    write_cast_page()
+    write_about_page()
+    write_404_page()
     write_infinite_scroll_page(comic_info, comic_data_dicts)
     processing_times.append(("Write HTML files", time()))
 

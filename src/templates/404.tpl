@@ -1,6 +1,6 @@
 {% extends "base.tpl" %}
 {% block content %}
-
+<p>THIS SHIT BROKE YO</p>
 <!--    <h1 id="page-title">&#9753; Archive &#10087;</h1>-->
 <!--    <div id="archive-blurb">-->
 <!--        <p>Prefer to read the archive in an infinite scroll?</p>-->

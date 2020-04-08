@@ -4,7 +4,7 @@
 <head>
     {%- block head %}
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik|Underdog&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./src/css/icons.css">
 
@@ -12,7 +12,7 @@
     <title>{{ page_title }} | {{ comic_title }}</title>
     {%- endblock %}
 </head>
-<div>
+<body>
 {% block body %}
 <header>
     <div id="logo">
@@ -49,9 +49,7 @@
 
 </header>
 <div id="page">
-    <div id="content">
         {% block content %}{% endblock %}
-    </div>
 </div>
 
 <div id="footer">

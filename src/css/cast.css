@@ -1,0 +1,327 @@
+/* ==================================================================== */
+/*                            THE BONES                                 */
+/* ==================================================================== */
+
+#cast-header h1, #cast-header p{
+    text-align: center;
+}
+
+#cast-header p {
+    line-height: 1.3em;
+}
+
+/* Containers for each type of cast categories */
+
+.cast-section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    padding: 25px 0 0 0;
+}
+
+/* The headers for each section of the cast page */
+.cast-section h2 {
+    width: 100%;
+    font-size: xx-large;
+    text-align: center;
+    align-self: start;
+    color: white;
+    margin: 10px;
+    padding: 15px 0 15px 7px;
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    background-color: #271b1a;
+}
+
+/* The summary for each cast section */
+.cast-section-summary {
+    background-color: rgba(39, 27, 26, 0.8);
+    padding: 30px;
+}
+
+.cast-section-summary p {
+    color: white;
+    line-height: 1.3em;
+}
+
+
+/* ==================================================================== */
+/*                        THE CAST SECTIONS                             */
+/* ==================================================================== */
+
+#primary-cast, #secondary-cast, #patreon-cast {
+    display: grid;
+    grid-template-columns: minmax(30px, 50px) 4fr 2fr;
+    column-gap: 25px;
+}
+
+#primary-cast {
+    grid-template-areas:
+            "PrimaryTitle PrimaryCast PrimarySummary";
+}
+
+#secondary-cast {
+    grid-template-areas:
+            "SecondaryTitle SecondaryCast SecondarySummary";
+}
+
+#patreon-cast {
+    grid-template-areas:
+            "PatreonTitle PatreonCast PatreonSummary";
+}
+
+div#patreon-cast.cast-section h2#PatreonCastTitle {
+    background-color: #F35E36;
+}
+
+#patreon-button {
+    align-self: center;
+}
+
+.cast-section #primary-cast h2#PrimaryCastTitle {
+    grid-area: PrimaryTitle;
+}
+
+.cast-section #secondary-cast h2#SecondaryCastTitle {
+    grid-area: SecondaryTitle;
+}
+
+.cast-section #patreon-cast h2#PatreonCastTitle {
+    grid-area: PatreonTitle;
+}
+
+.cast-section #primary-cast .cast-section-summary {
+    grid-area: PrimarySummary;
+}
+.cast-section #secondary-cast .cast-section-summary {
+    grid-area: SecondarySummary;
+}
+.cast-section #patreon-cast .cast-section-summary {
+    grid-area: PatreonSummary;
+}
+
+/* ==================================================================== */
+/*                           CAST PORTRAITS                             */
+/* ==================================================================== */
+
+.cast-section-portraits {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(233, 216, 174, 0.8);
+    border-radius: 0.4em;
+    padding: 15px;
+    margin-left: -10px;
+}
+
+.portrait {
+    display: block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #663403;
+    margin: 2px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0);
+}
+
+.portrait span{
+    text-align: center;
+    display: block;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    opacity: 0;
+    color: white;
+    text-decoration: none;
+    font-family: 'Underdog', cursive;
+    line-height: 1em;
+}
+
+.portrait:hover {
+    transition: ease 0.3s;
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+}
+
+.portrait:active {
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+}
+
+.portrait span:active {
+    opacity: 1.0;
+}
+
+.portrait span:hover{
+    opacity: 1.0;
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+#primaryBelfry {  background-image: url("../../your_content/images/cast/Belfry.png");}
+#primaryOakewood {  background-image: url("../../your_content/images/cast/Oakewood.png");}
+#primaryTamberlane{  background-image: url("../../your_content/images/cast/Tamberlane.png");}
+
+#secondaryAinsley {  background-image: url("../../your_content/images/cast/Ainsley.png");}
+#secondaryAnthony {  background-image: url("../../your_content/images/cast/Anthony.png");}
+#secondaryAvery {  background-image: url("../../your_content/images/cast/Avery.png");}
+#secondaryBriar {  background-image: url("../../your_content/images/cast/Briar.png");}
+#secondaryHenry {  background-image: url("../../your_content/images/cast/Henry.png");}
+#secondaryMarie {  background-image: url("../../your_content/images/cast/Marie.png");}
+#secondaryNora {  background-image: url("../../your_content/images/cast/Nora.png");}
+#secondaryParsley {  background-image: url("../../your_content/images/cast/Parsley.png");}
+#secondaryPenny {  background-image: url("../../your_content/images/cast/Penny.png");}
+#secondaryPiper {  background-image: url("../../your_content/images/cast/Piper.png");}
+#secondaryTess {  background-image: url("../../your_content/images/cast/Tess.png");}
+#secondaryWalter {  background-image: url("../../your_content/images/cast/Walter.png");}
+
+#patreonArtieHattie {  background-image: url("../../your_content/images/cast/ArtieHattie.png");}
+#patreonCallie {  background-image: url("../../your_content/images/cast/Calllie.PNG");}
+#patreonCur {  background-image: url("../../your_content/images/cast/Cur.png");}
+#patreonDanger {  background-image: url("../../your_content/images/cast/Danger.PNG");}
+#patreonGillian {  background-image: url("../../your_content/images/cast/Gillian.png");}
+#patreonIsaiah {  background-image: url("../../your_content/images/cast/Isaiah.png"); }
+#patreonJackie {  background-image: url("../../your_content/images/cast/Jackie.PNG"); }
+#patreonJason {  background-image: url("../../your_content/images/cast/Jason.png"); }
+#patreonJentzen {  background-image: url("../../your_content/images/cast/Jentzen.PNG"); }
+#patreonJonas {  background-image: url("../../your_content/images/cast/Jonas.PNG"); }
+#patreonKira {  background-image: url("../../your_content/images/cast/Kira.png"); }
+#patreonMilo {  background-image: url("../../your_content/images/cast/Milo.png"); }
+#patreonPeek {  background-image: url("../../your_content/images/cast/Peek.PNG"); }
+#patreonRhode {  background-image: url("../../your_content/images/cast/Rhode.PNG"); }
+#patreonScott {  background-image: url("../../your_content/images/cast/Scott.png"); }
+#patreonStoker {  background-image: url("../../your_content/images/cast/Stoker.PNG"); }
+#patreonSylvia {  background-image: url("../../your_content/images/cast/Sylvia.png"); }
+#patreonTagg {  background-image: url("../../your_content/images/cast/Tagg.PNG"); }
+#patreonTerra {  background-image: url("../../your_content/images/cast/Terra.png"); }
+#patreonTimmothy {  background-image: url("../../your_content/images/cast/Timmothy.PNG"); }
+#patreonTwitchel {  background-image: url("../../your_content/images/cast/Twitchel.PNG"); }
+#patreonWinnie {  background-image: url("../../your_content/images/cast/Winnie.png"); }
+
+/* ==================================================================== */
+/*                        ACTUAL CAST PROFILES                          */
+/* ==================================================================== */
+
+#cast-content {
+    margin: 30px auto 0 auto;
+    border-top: solid black 4px;
+}
+
+#cast-profile {
+    display: grid;
+    align-content: center;
+    grid-template-rows: auto;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    grid-template-areas:
+            "Title Title Title Title Title Title Title Title"
+            "Photo Stats1 Stats1 Stats1 Stats1 Stats2 Stats2 Stats2"
+            "Info Info Info Info Info Info Info Info"
+            "Story Story Story Story Story Story Story Story";
+    padding: 0 30px;
+}
+
+h2#cast-title {
+    grid-area: Title;
+    text-align: center;
+    color: #FDF1DC;
+    font-size: 2.75em;
+    line-height: 1.2em;
+    text-shadow: 0px 2px 1px #1B0600;
+    padding: 0;
+    margin: 40px 0 -20px 0;
+}
+
+#cast-photo {
+    background-image: url("../../your_content/images/cast/Belfry.png");
+    width: 250px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    transform: rotate(-5deg);
+    border-radius: 1em;
+    grid-area: Photo;
+    border: 5px solid #008552;
+    margin: 0 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+#cast-stats {
+    grid-area: Stats1;
+    /*width: 90%;*/
+    margin: 0 20px;
+    background-color: #f2e3c2;
+}
+
+#cast-stats-2 ul {
+    list-style-type: square;
+    width: 85%;
+
+}
+
+#cast-stats h3, #cast-stats-2 h3 {
+    background-image: linear-gradient(to right, #007e85 2px, rgb(0, 169, 88));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white;
+    margin: 10px 0 0 0;
+    padding: 2px 0 2px 8px;
+    font-size: 1.2em;
+}
+
+#cast-stats p, #cast-stats-2 p {
+    padding: 5px;
+    margin: 5px 0 0 0;
+}
+
+#cast-stats-2 {
+    grid-area: Stats2;
+}
+
+#cast-info {
+    grid-area: Info;
+}
+
+#cast-info p {
+    line-height: 1.3em;
+}
+
+#cast-story {
+    grid-area: Story;
+}
+
+#cast-story p {
+    padding: 0 2em;
+    line-height: 1.3em;
+}
+
+/* ==================================================================== */
+/*                             TO THE TOP                               */
+/* ==================================================================== */
+
+#to-top {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#to-top a {
+    padding: 15px;
+    background-color: #557b23;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5em;
+    transition: 0.3s ease;
+}
+
+#to-top a:hover {
+    background-color: #213415;
+    transition: 0.3s ease;
+}

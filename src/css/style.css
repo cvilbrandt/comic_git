@@ -1,13 +1,21 @@
 /* ADVANCED OPTIONS -- CHANGE AT YOUR OWN RISK */
-
+/*"C:\Users\artis\AppData\Local\Programs\Python\Python38\python.exe" src\scripts\build_site.py*/
 html, body {
-    min-height: 100%;
     width: 100%;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../../your_content/images/Banner.jpg");
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-size: cover;
 }
 
 p, ul, a, em, b {
@@ -233,14 +241,25 @@ ul#links-menu .liveStream a {
     background-attachment: fixed;
     background-size: cover;
     background-position: top center;
+    min-height: 100%;
 }
 
-#content {
+.content {
     background-color: #FDF1DC;
     box-shadow: 0 0 15px black;
     max-width: 75%;
     padding: 30px;
     margin: auto;
+}
+
+#index-about {
+    text-align: center;
+    padding: 0 4em;
+}
+
+#index-shop {
+    text-align: center;
+    margin-top: 40px;
 }
 
 #archive-blurb {
@@ -354,7 +373,7 @@ ul#links-menu .liveStream a {
     text-align: center;
 }
 
-#patreon-button {
+.button {
     display: inline-block;
     font-weight: bold;
     padding: 10px 15px;
@@ -362,15 +381,25 @@ ul#links-menu .liveStream a {
     transition: ease 0.2s;
 }
 
-#patreon-button a {
+.button a {
     color: white;
 }
 
-#patreon-button {
+.patreon-button {
+    /*background-color: #F35E36;*/
+}
+
+.patreon-button a {
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 1.2em;
+    transition: ease 0.2s;
     background-color: #F35E36;
 }
 
-#patreon-button:hover {
+.patreon-button a:hover {
     background-color: #052d49;
     transition: ease 0.2s;
 }
@@ -380,10 +409,7 @@ ul#links-menu .liveStream a {
     font-size: small;
     text-align: center;
     padding: 1em;
-    background-image: url("../../your_content/images/Banner.png");
-    background-attachment: fixed;
-    background-position: center bottom;
-    background-size: cover;
+    height: 100%;
 }
 
 #footer p {

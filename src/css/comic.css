@@ -150,7 +150,7 @@ ul#links-menu .liveStream a {
     align-items: center;
 }
 
-#content {
+#page {
     background-image: url("../../your_content/images/bgTest3.png");
     background-repeat: no-repeat;
     background-position: top center;
@@ -259,7 +259,7 @@ ul#links-menu .liveStream a {
     line-height: 0.5em;
 }
 
-#patreon-button, #coffee-button, #share-button {
+.button {
     display: inline-block;
     font-weight: bold;
     padding: 10px 15px;
@@ -267,7 +267,7 @@ ul#links-menu .liveStream a {
     transition: ease 0.2s;
 }
 
-#patreon-button a, #coffee-button a, #share-button a {
+.button a {
     color: white;
 }
 

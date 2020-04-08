@@ -1,6 +1,6 @@
 {% extends "base.tpl" %}
 {% block content %}
-
+<div class="content">
     <h1 id="page-title">&#9753; Archive &#10087;</h1>
     <div id="archive-blurb">
         <p>Prefer to read the archive in an infinite scroll?</p>
@@ -45,4 +45,5 @@
     </ul>
     {%- endif %}
     </div>
+</div>
 {% endblock %}

@@ -1,7 +1,8 @@
 {% extends "base.tpl" %}
 {% block content %}
 <div class="content">
-<p>THIS SHIT BROKE YO</p>
+    <div id="page-title"><h1>404: Page Not Found</h1></div>
+<p>THIS SHIT BROKE YO!</p>
 </div>
 <!--    <h1 id="page-title">&#9753; Archive &#10087;</h1>-->
 <!--    <div id="archive-blurb">-->

@@ -59,4 +59,5 @@
 {% endblock %}
 </body>
 {% block script %}{% endblock %}
+<script src="./src/js/main.js"></script>
 </html>

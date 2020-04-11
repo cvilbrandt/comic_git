@@ -1,5 +1,6 @@
 {% extends "base.tpl" %}
 {% block content %}
+<div class="content">
     <div id="jump-to">
         <h2>Jump to...</h2>
         <div id="jump-to-sections">
@@ -21,8 +22,9 @@
     <div id="caught-up-notification" hidden>
         <h2>You're all caught up!</h2>
         <p>Dying for more pages? Pages are posted early on Patreon!</p>
-        <div id="patreon-button"><a href="http://www.patreon.com/tamberlane">Become a Patron</a></div>
+        <div class="patreon-button" class="button"><a href="http://www.patreon.com/tamberlane">Become a Patron</a></div>
     </div>
+</div>
 {% endblock %}
 {% block script %}
 <script type="module">

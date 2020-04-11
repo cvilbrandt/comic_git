@@ -18,7 +18,7 @@ body {
     background-size: cover;
 }
 
-p, ul, a, em, b {
+p, ul, a, em, b, span {
     font-family:'Rubik',sans-serif;
     color: #341a09;
 }
@@ -28,6 +28,10 @@ h1, h2, h3, h4 {
     /*color: #341a09;*/
 }
 
+h1 {
+    font-size: 2em;
+}
+
 h3 {
     font-size: 1.25em;
 }
@@ -35,6 +39,12 @@ h3 {
 a {
     text-decoration: none;
     color: #68ad43;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: #1f6b64;
+    transition: 0.2s ease;
 }
 
 header {
@@ -163,21 +173,26 @@ header ul#social-links li {
     text-align: center;
     margin: 0 3px 0 3px;
     font-size: x-large;
+    width: 30px;
+    height: 40px;
     color: #341a09;
 }
 
 header ul#social-links li a {
     text-decoration: none;
     width: 30px;
-    height: 100%;
+    height: 50px;
     color: #f5debd;
     text-shadow: 0 0 3px #F35E36;
+    font-size: x-large;
     transition: 0.2s ease;
+    box-sizing: border-box;
 }
 
 header #social-links li a:hover {
     color: #fff;
     text-shadow: 0 0 5px #F35E36, 0 0 10px #fffad3;
+    font-size: 1.5em;
     transition: 0.2s ease;
 }
 
@@ -223,9 +238,9 @@ header ul#links-menu li a:hover {
     transition: ease 0.2s;
 }
 
-/*.liveStream {*/
-/*    display: none;*/
-/*}*/
+.liveStream {
+    display: none;
+}
 
 ul#links-menu .liveStream a {
     display: grid;
@@ -234,6 +249,67 @@ ul#links-menu .liveStream a {
     grid-template-areas:
             "icon label label";
     align-items: center;
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 0;
+    }
+    40% {
+        text-shadow: 0 0 2px #302B54, 0 0 4px #551A8B, 0 0 5px #6B238E	;
+    }
+    50% {
+        text-shadow: 0 0 2px #302B54, 0 0 4px #551A8B, 0 0 5px #6B238E	;
+    }
+    60% {
+        text-shadow: 0 0 2px #302B54, 0 0 4px #551A8B, 0 0 5px #6B238E	;
+    }
+    100% {
+        text-shadow: 0 0 0;
+    }
+}
+
+@keyframes fading {
+    0% {
+        opacity: 75%;
+    }
+    40% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    60% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 75%;
+    }
+}
+
+#links-menu .liveStream .icon-twitch{
+    grid-area: icon;
+    color: #9146FF;
+    animation: glowing 1500ms infinite;
+    text-shadow: -1px 0 #5C246E, 0 1px #5C246E, 1px 0 #5C246E, 0 -1px #5C246E;
+}
+
+.liveStream h3 {
+    grid-area: label;
+    color: #AB82FF;
+    animation: fading 1500ms infinite;
+    text-decoration: none;
+}
+
+.liveStream:hover {
+    background-color: #2E0854;
+    transition: background-color 0.20s;
+}
+
+.liveStream h3:hover {
+    animation: none;
+    color: white;
+    transition: color 0.20s;
 }
 
 #page {
@@ -252,14 +328,153 @@ ul#links-menu .liveStream a {
     margin: auto;
 }
 
+#index-image {
+    background-image: url("../../your_content/images/Group Support.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 300px;
+    height: 275px;
+    margin: auto;
+}
+
 #index-about {
     text-align: center;
     padding: 0 4em;
 }
 
+.break {
+    width: 100%;
+    height: 20px;
+}
+
 #index-shop {
     text-align: center;
-    margin-top: 40px;
+    padding: 0 4em;
+}
+
+#index-shop-image {
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0);
+    transition: 0.2s ease;
+    background-image: url("../../your_content/images/Books-Merch.png");
+    width: 100%;
+    height: 358px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+#index-shop-image:hover {
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
+    transition: 0.2s ease;
+}
+
+#index-shop-image a {
+    display: block;
+    width: 100%;
+    height: 350px;
+    opacity: 0;
+    transition: 0.2s ease;
+    color: white;
+    font-family: 'Underdog', cursive;
+    font-size: xx-large;
+    line-height: 350px
+}
+
+#index-shop-image a:hover {
+    opacity: 1;
+    transition: 0.2s ease;
+}
+
+#index-patrons {
+    text-align: center;
+    padding: 0 4em;
+}
+
+#index-patrons p {
+    line-height: 1.4em;
+}
+
+#patreon-stats {
+    padding: 15px;
+}
+
+#index-patreon-thanks ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: small;
+}
+
+#index-patreon-thanks ul li {
+    padding-top: 4px;
+}
+
+#index-patreon-thanks {
+    display: grid;
+    grid-template-areas:
+        "Special Special Special Special"
+        "Five Five Five Five"
+        "Four Three Two One"
+    ;
+    grid-template-columns: repeat(auto-fill);
+    grid-template-rows: auto;
+    gap: 5px 5px;
+    margin: auto;
+    text-align: center;
+    padding: 0 4em;
+}
+
+#index-patreon-special {
+    grid-area: Special;
+    text-align: center;
+}
+
+#index-patreon-special p {
+    font-size: medium;
+}
+
+#patrons-5-years p, #patrons-4-years li, #patrons-3-years li {
+    color: white;
+}
+
+#patrons-5-years {
+    grid-area: Five;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px;
+}
+
+#patrons-4-years {
+    grid-area: Four;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0 15px;
+}
+
+#patrons-3-years {
+    grid-area: Three;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0 15px;
+}
+
+#patrons-2-years {
+    grid-area: Two;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0 15px;
+}
+
+#patrons-2-years p, #patrons-1-year p{
+    font-size: small;
+    color: white;
+}
+
+#patrons-1-year {
+    grid-area: One;
+    background-color: rgba(0,0,0,0.7);
+    padding: 0 15px;
+    color: white;
 }
 
 #archive-blurb {
@@ -403,6 +618,40 @@ ul#links-menu .liveStream a {
     background-color: #052d49;
     transition: ease 0.2s;
 }
+
+#rogues-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.patron-photo {
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin: auto;
+}
+
+.patron-info {
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.patron-profile {
+    width: 200px;
+}
+
+.patron-donated-text {
+    line-height: 0.2em;
+}
+
+.patron-donated {
+    line-height: 0.2em;
+}
+
+#gillian-photo { background-image: url("../../your_content/images/cast/Gillian.png");}
+#winnie-photo { background-image: url("../../your_content/images/cast/Winnie.png");}
 
 #footer {
     border-top: #341a09 solid 30px;

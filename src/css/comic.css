@@ -137,9 +137,9 @@ header ul#links-menu li a:hover {
     transition: ease 0.2s;
 }
 
-/*.liveStream {*/
-/*    display: none;*/
-/*}*/
+.liveStream {
+    display: none;
+}
 
 ul#links-menu .liveStream a {
     display: grid;
@@ -148,6 +148,67 @@ ul#links-menu .liveStream a {
     grid-template-areas:
             "icon label label";
     align-items: center;
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 0;
+    }
+    40% {
+        text-shadow: 0 0 2px #302B54, 0 0 4px #551A8B, 0 0 5px #6B238E	;
+    }
+    50% {
+        text-shadow: 0 0 2px #302B54, 0 0 4px #551A8B, 0 0 5px #6B238E	;
+    }
+    60% {
+        text-shadow: 0 0 2px #302B54, 0 0 4px #551A8B, 0 0 5px #6B238E	;
+    }
+    100% {
+        text-shadow: 0 0 0;
+    }
+}
+
+@keyframes fading {
+    0% {
+        opacity: 75%;
+    }
+    40% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    60% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 75%;
+    }
+}
+
+#links-menu .liveStream .icon-twitch{
+    grid-area: icon;
+    color: #9146FF;
+    animation: glowing 1500ms infinite;
+    text-shadow: -1px 0 #5C246E, 0 1px #5C246E, 1px 0 #5C246E, 0 -1px #5C246E;
+}
+
+.liveStream h3 {
+    grid-area: label;
+    color: #AB82FF;
+    animation: fading 1500ms infinite;
+    text-decoration: none;
+}
+
+.liveStream:hover {
+    background-color: #2E0854;
+    transition: background-color 0.20s;
+}
+
+.liveStream h3:hover {
+    animation: none;
+    color: white;
+    transition: color 0.20s;
 }
 
 #page {

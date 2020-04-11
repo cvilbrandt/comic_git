@@ -47,7 +47,7 @@ def get_links_list(comic_info: RawConfigParser):
 def delete_output_file_space():
     shutil.rmtree("comic", ignore_errors=True)
     for f in ["index.html", "archive.html", "tagged.html", "feed.xml", "infinite_scroll.html", "latest.html",
-              "cast.html", "about.html", "404.html"]:
+              "cast.html", "about.html", "404.html", "patreon-cast.html"]:
         if os.path.isfile(f):
             os.remove(f)
 
@@ -273,13 +273,19 @@ def write_cast_page():
     print("Building cast page...")
     write_to_template("cast.tpl", "cast.html", {"page_title": "Cast"})
 
-def write_index_page():
+def write_index_page(scheduled_post_count: int):
     print("Building index page...")
-    write_to_template("index.tpl", "index.html", {"page_title": "Home"})
+    write_to_template("index.tpl", "index.html", {
+        "page_title": "Home",
+        "scheduled_post_count": scheduled_post_count} )
 
 def write_about_page():
         print("Building about page...")
         write_to_template("about.tpl", "about.html", {"page_title": "About Tamberlane"})
+
+def write_patreon_cast_page():
+        print("Building patreon cast page...")
+        write_to_template("patreon-cast.tpl", "patreon-cast.html", {"page_title": "Patreon Cast"})
 
 def write_404_page():
         print("404 Building Page Not Found...")
@@ -341,10 +347,11 @@ def main():
     write_comic_pages(comic_data_dicts)
     write_archive_page(comic_info, comic_data_dicts)
     write_tagged_page()
-    write_index_page()
+    write_index_page(scheduled_post_count)
     write_cast_page()
     write_about_page()
     write_404_page()
+    write_patreon_cast_page()
     write_infinite_scroll_page(comic_info, comic_data_dicts)
     processing_times.append(("Write HTML files", time()))
 

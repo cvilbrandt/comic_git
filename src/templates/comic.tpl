@@ -99,21 +99,22 @@
                 </div>
                 <div id='discourse-comments'></div>
 
-                <script type="text/javascript">
-                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
-                        discourseEmbedUrl: 'http://localhost:63342/comic_git/comic/{{ page_id }}.html' };
+<!--                <script type="text/javascript">-->
+<!--                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',-->
+<!--                        discourseEmbedUrl: 'http://localhost:63342/comic_git/comic/{{ page_id }}.html' };-->
 
-                    (function() {
-                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-                    })();
-                </script>
+<!--                    (function() {-->
+<!--                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;-->
+<!--                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';-->
+<!--                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);-->
+<!--                    })();-->
+<!--                </script>-->
             </div>
         </div>
     </div>
     <div id="footer">
         <p>Tamberlane is designed with <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
     </div>
+    <script src="./src/js/main.js"></script>
     </body>
 </html>

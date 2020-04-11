@@ -74,7 +74,7 @@
     </div>
     <div class="cast-section-summary"><p>Patreon supporters at $50+ have the opportunity to be featured in the comic as
         a non-speaking minor character, while supporters of $100+ get speaking roles. This list contains patron character
-        cameos that have spoken so far. If you'd like to see the full patreon cast, check out the <a href="/patreoncast.html">Rogue's Gallery</a>!</p>
+        cameos that have spoken so far. If you'd like to see the full patreon cast, check out the <a href="patreon-cast.html">Rogue's Gallery</a>!</p>
         <p>Want to be included in the comic and become a canonical part of the Tamberlane universe?</p>
         <div class="patreon-button" id="patreon-button"><a href="http://www.patreon.com/tamberlane">Become a Patron</a></div></div>
 </div>
@@ -86,42 +86,36 @@
         <div id="cast-stats">
             <div id="castSpecies">
                 <h3>Species</h3>
-                <p id="textSpecies">Bat/Lemur-Squirrel(?)</p>
+                <p id="textSpecies" class="cast-stats-p">Bat/Lemur-Squirrel(?)</p>
             </div>
             <div id="castGender">
                 <h3>Gender</h3>
-                <p id="textGender">Female</p>
+                <p id="textGender" class="cast-stats-p">Female</p>
             </div>
             <div id="castBirthday">
                 <h3>Birthday</h3>
-                <p id="textBirthday">February 1st</p>
+                <p id="textBirthday" class="cast-stats-p">February 1st</p>
             </div>
             <div id="castAge">
                 <h3>Age (at First Appearance)</h3>
-                <p id="textAge">19</p>
+                <p id="textAge" class="cast-stats-p">19</p>
             </div>
             <div id="castOccupation">
                 <h3>Occupation</h3>
-                <p id="textOccupation">Waitress at Hubba Grub</p>
+                <p id="textOccupation" class="cast-stats-p">Waitress at Hubba Grub</p>
             </div>
             <div id="castBirthplace">
                 <h3>Birthplace</h3>
-                <p id="textBirthplace">Treehollow, Silver Sage</p>
+                <p id="textBirthplace" class="cast-stats-p">Treehollow, Silver Sage</p>
             </div>
             <div id="castFamily">
                 <h3>Family</h3>
-                <p id="textFamily">Tess (mom), Walter (dad), Briar (sister), Koss (bio mom), Jeremy (bio dad)</p>
-            </div>
-        </div>
-        <div id="cast-stats-2">
-            <div id="castAppearance">
-                <h3>First Appeared</h3>
-                <p id="textAppearance">Page 3</p>
+                <p id="textFamily" class="cast-stats-p">Tess (mom), Walter (dad), Briar (sister), Koss (bio mom), Jeremy (bio dad)</p>
             </div>
             <div id="cast-links">
                 <h3>Links</h3>
-                    <p id="cast-tagged"><a href="/tagged.html?tag=Belfry">All pages featuring Belfry</a></p>
-                    <p id="cast-refsheet"><a href="/your_content/images/sheets/Belfry.png">Belfry's Reference Sheet</a></p>
+                <p id="cast-tagged" class="cast-stats-p">&#10087; <a href="./tagged.html?tag=Belfry">All pages featuring Belfry</a></p>
+                <p id="cast-refsheet" class="cast-stats-p">&#10087; <a href="./your_content/images/sheets/Belfry.png">Belfry's Reference Sheet</a></p>
             </div>
         </div>
         <div id="cast-info">

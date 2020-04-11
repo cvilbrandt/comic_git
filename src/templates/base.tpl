@@ -53,7 +53,7 @@
 </div>
 
 <div id="footer">
-    <p>Tamberlane is designed with <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
+    <p>Tamberlane is powered by <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
 </div>
 
 {% endblock %}

@@ -359,7 +359,7 @@ ul#links-menu .liveStream a {
     background-image: url("../../your_content/images/Books-Merch.png");
     width: 100%;
     height: 358px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
 }

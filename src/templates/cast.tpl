@@ -50,6 +50,7 @@
     <h2 id="PatreonCastTitle">Patreon Cast</h2>
     <div id="patreonCastPortraits" class="cast-section-portraits">
         <div id="patreonArtieHattie" class="portrait"><span>Artie & Hattie</span></div>
+        <div id="patreonBleddyn" class="portrait"><span>Bleddyn</span></div>
         <div id="patreonCallie" class="portrait"><span>Callie</span></div>
         <div id="patreonCur" class="portrait"><span>Cur</span></div>
         <div id="patreonDanger" class="portrait"><span>Danger</span></div>

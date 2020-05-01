@@ -351,6 +351,22 @@ let directory = {
             "Info":"TBD",
             "Story":`<p>TBD</p>`
         },
+        "Bleddyn":
+            {
+                    "Title": "Bleddyn Bricolage, the Town Handyman",
+                    "Photo":"Bleddyn.png",
+                    "Species":"Wolf",
+                    "Gender":"Male",
+                    "Birthday": "TBD",
+                    "Age":"TBD",
+                    "Occupation":"Architectural Councilman and Town Handyman",
+                    "Birthplace":"TBD",
+                    "Family":"TBD",
+                    "First Appeared":"",
+                    "RefSheet":"",
+                    "Info":"TBD",
+                    "Story":`<p>TBD</p>`
+            },
     "Callie":
         {
             "Title": "Callie Teacher",

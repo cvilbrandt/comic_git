@@ -371,7 +371,7 @@ ul#links-menu .liveStream a {
 
 #comic-post {
     display: grid;
-    grid: auto-flow / repeat(auto-fill, minmax(350px, 3fr));
+    grid: auto-flow / 1fr 3fr;
 }
 
 #metadata {

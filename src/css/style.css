@@ -1,4 +1,5 @@
 /* ADVANCED OPTIONS -- CHANGE AT YOUR OWN RISK */
+/* cd WebstormProjects/comic_git */
 /*"C:\Users\artis\AppData\Local\Programs\Python\Python38\python.exe" src\scripts\build_site.py*/
 html, body {
     width: 100%;
@@ -289,20 +290,20 @@ ul#links-menu .liveStream a {
 
 #links-menu .liveStream .icon-twitch{
     grid-area: icon;
-    color: #9146FF;
+    color: #a767ff;
     animation: glowing 1500ms infinite;
     text-shadow: -1px 0 #5C246E, 0 1px #5C246E, 1px 0 #5C246E, 0 -1px #5C246E;
 }
 
 .liveStream h3 {
     grid-area: label;
-    color: #AB82FF;
+    color: #c39fff;
     animation: fading 1500ms infinite;
     text-decoration: none;
 }
 
 .liveStream:hover {
-    background-color: #2E0854;
+    /*background-color: #2E0854;*/
     transition: background-color 0.20s;
 }
 
@@ -416,7 +417,7 @@ ul#links-menu .liveStream a {
         "Five Five Five Five"
         "Four Three Two One"
     ;
-    grid-template-columns: repeat(auto-fill);
+    grid-template-columns: repeat(auto-fill, 1fr);
     grid-template-rows: auto;
     gap: 5px 5px;
     margin: auto;

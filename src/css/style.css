@@ -19,7 +19,7 @@ body {
     background-size: cover;
 }
 
-p, ul, a, em, b, span {
+p, ul, a, em, b, span, label {
     font-family:'Rubik',sans-serif;
     color: #341a09;
 }
@@ -147,7 +147,7 @@ header #FirstComicFrame, #LatestComicFrame {
 }
 
 #FirstComicFrame h2, #LatestComicFrame h2 {
-    margin-top: 3px;
+    margin-top: 12px;
     font-variant: small-caps;
     font-size: 1.3em;
 }
@@ -323,10 +323,11 @@ ul#links-menu .liveStream a {
 
 .content {
     background-color: #FDF1DC;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 15px 15px black;
     max-width: 75%;
     padding: 30px;
     margin: auto;
+    z-index: 1;
 }
 
 #index-image {
@@ -653,6 +654,45 @@ ul#links-menu .liveStream a {
 
 #gillian-photo { background-image: url("../../your_content/images/cast/Gillian.png");}
 #winnie-photo { background-image: url("../../your_content/images/cast/Winnie.png");}
+
+#belfry404 {
+    background-image: url("../../your_content/images/404.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto -50px auto;
+    max-width: 100%;
+    height: 500px;
+    z-index: 5;
+    padding: 0.5em;
+    position: relative;
+}
+
+#page404 {
+    max-width: 75%;
+    box-shadow: 0 0 15px black;
+    margin: auto;
+}
+
+#content404 {
+    background-color: #FDF1DC;
+    padding: 50px 30px 30px 30px;
+    margin: auto;
+    z-index: 1;
+    text-align: center;
+}
+
+.mc-field-group {
+    padding-top: 5px;
+}
+
+.mc-field-group.input-group {
+    padding-top: 15px;
+}
+
+.mc-field-group li {
+    list-style-type: none;
+}
 
 #footer {
     border-top: #341a09 solid 30px;

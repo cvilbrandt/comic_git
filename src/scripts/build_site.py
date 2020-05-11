@@ -47,7 +47,7 @@ def get_links_list(comic_info: RawConfigParser):
 def delete_output_file_space():
     shutil.rmtree("comic", ignore_errors=True)
     for f in ["index.html", "archive.html", "tagged.html", "feed.xml", "infinite_scroll.html", "latest.html",
-              "cast.html", "about.html", "404.html", "patreon-cast.html"]:
+              "cast.html", "about.html", "404.html", "patreon-cast.html", "subscribe.html"]:
         if os.path.isfile(f):
             os.remove(f)
 
@@ -265,9 +265,13 @@ def write_archive_page(comic_info: RawConfigParser, comic_data_dicts: List[Dict]
     })
 
 
+def write_subscribe_page():
+    print("Building subscribe page...")
+    write_to_template("subscribe.tpl", "subscribe.html", {"page_title": "Subscribe by Email"})
+
 def write_tagged_page():
-    print("Building tagged page...")
-    write_to_template("tagged.tpl", "tagged.html", {"page_title": "Tagged posts"})
+        print("Building tagged page...")
+        write_to_template("tagged.tpl", "tagged.html", {"page_title": "Tagged posts"})
 
 def write_cast_page():
     print("Building cast page...")
@@ -352,6 +356,7 @@ def main():
     write_about_page()
     write_404_page()
     write_patreon_cast_page()
+    write_subscribe_page()
     write_infinite_scroll_page(comic_info, comic_data_dicts)
     processing_times.append(("Write HTML files", time()))
 

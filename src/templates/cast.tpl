@@ -11,6 +11,7 @@
         flavor to the comic’s plot through their bold personalities and evolving, complex
         relationships with one another.</p>
     <p>Click on each character portrait to learn more about them!</p>
+    <noscript>This page needs javascript to work! Don't worry, it's very lightweight and doesn't trace your information.</noscript>
 </div>
 <div id="primary-cast" class="cast-section">
     <h2 id="PrimaryCastTitle">Primary Cast<a name="top"></a></h2>

@@ -1,8 +1,13 @@
 {% extends "base.tpl" %}
 {% block content %}
-<div class="content">
-    <div id="page-title"><h1>404: Page Not Found</h1></div>
-<p>THIS SHIT BROKE YO!</p>
+<div id="page404">
+    <div id="belfry404"></div>
+    <div id="content404">
+        <div id="page-title"><h1>404: Page Not Found</h1></div>
+        <p>Whoopsidoodle! Whatever page you were looking for, it looks like Belfry misplaced it! Sorry about that...</p>
+        <p>Check the spelling in your URL, or maybe try one of these links on for size:</p>
+        <p><a href="/index.html">Home</a> &nbsp;|&nbsp; <a href="/latest.html">Latest Comic</a> &nbsp;|&nbsp; <a href="https://shop.tamberlanecomic.com">Shop</a></p>
+    </div>
 </div>
 <!--    <h1 id="page-title">&#9753; Archive &#10087;</h1>-->
 <!--    <div id="archive-blurb">-->

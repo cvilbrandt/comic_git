@@ -29,7 +29,46 @@ If you want to edit any of these files, edit their *.tpl versions in src/templat
 COMIC_TITLE = ""
 BASE_DIRECTORY = os.path.basename(os.getcwd())
 LINKS_LIST = []
-
+CAST_LIST = [
+    ["Abigail", "Abigail Herbalist", "Terri Delgado"],
+    ["Aria", "Aria Messenger", "Steve Streza"],
+    ["ArtieHattie", "Artie & Hattie Conjure", "Lightfox Lowell"],
+    ["Asher", "Asher Merchant", "Asher"],
+    ["Becca", "Becca Cartographer", "Specs AK"],
+    ["Bleddyn", "Bleddyn Bricolage", "Dorian Inman"],
+    ["Callie", "Callie Teacher", "Zaukodar"],
+    ["Cur", "Cur", "Chaon"],
+    ["Danger", "Danger Trader", "Uncool Dana"],
+    ["Finn", "Finn Fisher", "Logan Madiso"],
+    ["Gillian", "Captain Gillian Shipsman", "Hindae"],
+    ["Gunner", "Gunner Engineer", "GunnyWaffle"],
+    ["Houdini", "Houdini", "D. G. Speirs"],
+    ["Isaiah", "Isaiah Gaffer", "Note Worthy"],
+    ["Jackie", "Jackie Tavern", "StrayXIII"],
+    ["Jentzen", "Jentzen Prentice", "CrookedGlasses"],
+    ["John", "John Troubador", "LongJohn"],
+    ["Jonas", "Jonas Maziton", "Jonas"],
+    ["Kira", "Kira", "Ashley Nichols"],
+    ["Luna", "Luna Baker", "MrAMP"],
+    ["Mary", "Mary Fighter", "Allaze Eroller"],
+    ["Milo", "Milo", "Milo Academique"],
+    ["Mimfry", "Mimfry Scavenge", "StarshineBeast"],
+    ["Peek", "Peek Livres", "PK"],
+    ["Puck", "Puck Toymacher", "Codesign"],
+    ["Reno", "Reno Dockhand", "DireTaco"],
+    ["Rhode", "Rhode Botanist", "RainbowJuice"],
+    ["Scott", "Scott Author", "Scott Fraser"],
+    ["Shu", "Shu Messenger", "ShuTheSquirrel"],
+    ["Stoker", "Stoker Bărbier", "Stoker Bramwell"],
+    ["Sylvia", "Sylvia Gardner", "Lavender"],
+    ["Tagg", "Tagg Miner", "Taggianto"],
+    ["Terra", "Terra Prentice", "Neon Noble"],
+    ["Timmothy", "Timmothy Councilman", "Timmo Warner"],
+    ["Trisha", "Trisha Keep", "Patrick Kingsley"],
+    ["Twitchel", "Twitchel Apothek", "Vertis Sidus"],
+    ["Vessie", "Vessie Chaplain", "CitizenRob"],
+    ["Winnie", "Winnifred Chef-Gardner", "Makuru"],
+]
 
 def path(rel_path: str):
     if rel_path.startswith("/"):
@@ -289,7 +328,7 @@ def write_about_page():
 
 def write_patreon_cast_page():
         print("Building patreon cast page...")
-        write_to_template("patreon-cast.tpl", "patreon-cast.html", {"page_title": "Patreon Cast"})
+        write_to_template("patreon-cast.tpl", "patreon-cast.html", {"page_title": "Patreon Cast", "cast": CAST_LIST})
 
 def write_404_page():
         print("404 Building Page Not Found...")

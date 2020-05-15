@@ -803,18 +803,7 @@ ul#links-menu .liveStream a {
 
 /* =============== MEDIA QUERIES ================= */
 
-@media only screen and (max-width: 600px) {
-    #page {
-        width: 100%;
-    }
-
-    .content {
-        max-width: 90%;
-        width: 90%;
-    }
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
     #page {
         width: 100%;
     }
@@ -831,5 +820,40 @@ ul#links-menu .liveStream a {
         border-radius: 2em;
         font-size: large;
         padding: 20px 25px;
+    }
+
+    #comic-page {
+        width: 100%;
+    }
+
+    #comic-page a img{
+        max-width: 99%;
+        height: auto;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #page {
+        width: 100%;
+    }
+
+    .content {
+        max-width: 90%;
+        width: 90%;
+        padding: 15px;
+    }
+
+    #index-about, #index-shop, #index-patrons, #index-reviews {
+        padding: 0 1em;
+    }
+
+    #comic-page {
+        width: 100%;
+    }
+
+    #comic-page img{
+        max-width: 99%;
+        margin: auto;
     }
 }

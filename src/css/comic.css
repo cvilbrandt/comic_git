@@ -412,3 +412,67 @@ ul#links-menu .liveStream a {
 #footer p {
     color: #FDF1DC;
 }
+
+@media only screen and (max-width: 600px) {
+    #comic-page img {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    #comic-support h3 {
+        line-height: 1em;
+    }
+
+    #comic-support .button, #comic-support .patreon-button {
+        margin: 0 0 10px 0;
+    }
+
+    .patreon-button a {
+        color: white;
+        display: inline-block;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 1.2em;
+        transition: ease 0.2s;
+        background-color: #F35E36;
+    }
+
+    .patreon-button a:hover {
+        background-color: #052d49;
+        transition: ease 0.2s;
+    }
+
+    #first-invalid, #previous-invalid, #next-invalid, #latest-invalid, #page-number {
+        display: none;
+    }
+
+    #comic-navigation {
+        grid-template-areas:
+            "PreviousPage NextPage"
+            "FirstPage LatestPage";
+        width: 100%;
+        align-content: center;
+    }
+
+    #comic-post {
+        display: block;
+    }
+
+    #post-content {
+        padding: 0;
+    }
+
+    #comic-content {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    #metadata {
+        border: none;
+        padding: 10px;
+    }
+
+    #metadata p {
+        line-height: 1em;
+    }
+}

@@ -231,11 +231,17 @@ header ul#links-menu li a {
     text-decoration: none;
     font-family: 'Underdog', cursive;
     transition: ease 0.2s;
+    width: 100%;
 }
 
-header ul#links-menu li a:hover {
+header ul#links-menu li:hover a {
     color: #fff;
     text-shadow: 0 0 2px #F35E36, 0 0 3px #fffad3;
+    transition: ease 0.2s;
+}
+
+header ul#links-menu li:hover {
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
     transition: ease 0.2s;
 }
 
@@ -838,6 +844,93 @@ ul#links-menu .liveStream a {
         width: 100%;
     }
 
+    header {
+        display: block;
+        width: 100vw;
+    }
+
+    #logo a {
+        height: 100px;
+        width: 100vw;
+    }
+
+    #ComicLinks {
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #341a09;
+    }
+
+    header #FirstComic, header #LatestComic {
+        background-image: none;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        margin: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #FirstComic a, #LatestComic a{
+        width: auto;
+        height: auto;
+        padding: 15px;
+        opacity: 1;
+        font-size: 1.25em;
+    }
+
+    #FirstComic a:before {
+        content: "First Comic: "
+    }
+    #LatestComic a:before {
+        content: "Latest Comic: "
+    }
+
+    #FirstComicFrame, #LatestComicFrame {
+        display: none;
+    }
+
+    #Flourish {
+        display: none;
+    }
+
+    #social-links li:first-child, #social-links li:last-child{
+        display: none;
+    }
+
+    header ul#social-links {
+        margin: 0;
+    }
+
+    header ul#social-links li {
+        width: 20%;
+        height: auto;
+        margin: 5px;
+    }
+
+    header ul#social-links li a{
+        font-size: xx-large;
+    }
+
+    header ul#social-links li a:hover{
+        font-size: xx-large;
+    }
+
+    #social-links {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #341a09;
+        padding: 10px;
+    }
+
+    ul#links-menu {
+        flex-wrap: wrap;
+    }
+
+    #links-menu li{
+        width: 100%;
+    }
+
     .content {
         max-width: 90%;
         width: 90%;
@@ -846,6 +939,10 @@ ul#links-menu .liveStream a {
 
     #index-about, #index-shop, #index-patrons, #index-reviews {
         padding: 0 1em;
+    }
+
+    #index-patreon-thanks {
+        padding: 0;
     }
 
     #comic-page {

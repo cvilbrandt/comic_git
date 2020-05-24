@@ -29,6 +29,16 @@
         <div id="Flourish"></div>
         <div id="LatestComicFrame"><h2>Latest Page</h2></div>
     </div>
+    <ul id="links-menu">
+        <li><h3><a href="/{{ base_dir }}/comic/{{ first_id }}.html#comic-page">First Comic</a></h3></li>
+        <li><h3><a href="/{{ base_dir }}/latest.html">Latest Comic</a></h3></li>
+        <li><h3><a href="/{{ base_dir }}/archive.html">Archive</a></h3></li>
+        <li><h3><a href="/{{ base_dir }}/about.html">About</a></h3></li>
+        <li><h3><a href="/{{ base_dir }}/cast.html">Cast</a></h3></li>
+        <li><h3><a href="https://shop.tamberlanecomic.com">Shop</a></h3></li>
+        <li><h3><a href="http://www.patreon.com/tamberlane">Patreon</a></h3></li>
+        <li class="liveStream"><a href="http://www.twitch.tv/tamberlanecomic"><i class="icon-twitch"></i><h3>&nbsp;Now Live</h3></a></li>
+    </ul>
     <ul id="social-links">
         <li><span>&#9753;</span></li>
         <li><a href="https://www.webtoons.com/en/challenge/tamberlane/list?title_no=372674" title="Read Tamberlane on Webtoon"><i class="icon-webtoon"><span style="color: #663403;" class="Label">&nbsp;Webtoons</span></i></a></li>
@@ -40,15 +50,6 @@
         <li><a href="https://www.tamberlanecomic.com/feed/"><i class="icon-rss" title="Subscribe on RSS"><span style="color: #663403;" class="Label">&nbsp;RSS</span></i></a></li>
         <li><a href="/{{base_dir}}/subscribe.html" title="Subscribe via Email"><i class="icon-envelope"><span style="color: #663403;" class="Label">&nbsp;Subscribe</span></i></a></li>
         <li><span>&#10087;</span></li>
-    </ul>
-    <ul id="links-menu">
-        <li><h3><a href="/{{ base_dir }}/latest.html">Latest</a></h3></li>
-        <li><h3><a href="/{{ base_dir }}/archive.html">Archive</a></h3></li>
-        <li><h3><a href="/{{ base_dir }}/about.html">About</a></h3></li>
-        <li><h3><a href="/{{ base_dir }}/cast.html">Cast</a></h3></li>
-        <li><h3><a href="https://shop.tamberlanecomic.com">Shop</a></h3></li>
-        <li><h3><a href="http://www.patreon.com/tamberlane">Patreon</a></h3></li>
-        <li class="liveStream"><a href="http://www.twitch.tv/tamberlanecomic"><i class="icon-twitch"></i><h3>&nbsp;Now Live</h3></a></li>
     </ul>
 
 </header>

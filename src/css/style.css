@@ -225,6 +225,10 @@ header ul#links-menu li {
     margin: 0 1px;
 }
 
+header ul#links-menu li:first-child {
+    display: none;
+}
+
 header ul#links-menu li a {
     color: #f5debd;
     text-shadow: 0 0 3px #F35E36;
@@ -860,37 +864,33 @@ ul#links-menu .liveStream a {
         background-color: #341a09;
     }
 
-    header #FirstComic, header #LatestComic {
-        background-image: none;
-        width: 100%;
-        height: auto;
-        box-shadow: none;
-        margin: 0;
-        position: relative;
-        top: 0;
-        left: 0;
-    }
+    /*header #FirstComic, header #LatestComic {*/
+    /*    background-image: none;*/
+    /*    width: 100%;*/
+    /*    height: auto;*/
+    /*    box-shadow: none;*/
+    /*    margin: 0;*/
+    /*    position: relative;*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*}*/
 
-    #FirstComic a, #LatestComic a{
-        width: auto;
-        height: auto;
-        padding: 15px;
-        opacity: 1;
-        font-size: 1.25em;
-    }
+    /*#FirstComic a, #LatestComic a{*/
+    /*    width: auto;*/
+    /*    height: auto;*/
+    /*    padding: 15px;*/
+    /*    opacity: 1;*/
+    /*    font-size: 1.25em;*/
+    /*}*/
 
-    #FirstComic a:before {
-        content: "First Comic: "
-    }
-    #LatestComic a:before {
-        content: "Latest Comic: "
-    }
+    /*#FirstComic a:before {*/
+    /*    content: "First Comic: "*/
+    /*}*/
+    /*#LatestComic a:before {*/
+    /*    content: "Latest Comic: "*/
+    /*}*/
 
-    #FirstComicFrame, #LatestComicFrame {
-        display: none;
-    }
-
-    #Flourish {
+    #FirstComicFrame, #LatestComicFrame, #FirstComic, #LatestComic, #Flourish {
         display: none;
     }
 
@@ -906,6 +906,7 @@ ul#links-menu .liveStream a {
         width: 20%;
         height: auto;
         margin: 5px;
+        align-self: stretch;
     }
 
     header ul#social-links li a{
@@ -927,8 +928,18 @@ ul#links-menu .liveStream a {
         flex-wrap: wrap;
     }
 
-    #links-menu li{
+    #links-menu li {
+        flex-grow: 1;
         width: 100%;
+    }
+
+    ul#links-menu li a {
+        width: 100%;
+        display: block;
+    }
+
+    header ul#links-menu li:first-child {
+        display: block;
     }
 
     .content {

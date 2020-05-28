@@ -269,9 +269,8 @@ h2#cast-title {
     grid-area: Stats1;
     /*width: 90%;*/
     margin: 0 20px;
-    background-color: rgba(199, 182, 162, 0.89);
+    background-color: rgba(226, 215, 199, 0.89);
     padding: 1em;
-    color: #44806c;
 }
 
 #cast-stats-2 {
@@ -300,7 +299,7 @@ h2#cast-title {
     /*background-image: linear-gradient(to right, #60a8c3 2px, rgb(115, 158, 102));*/
     /*-webkit-background-clip: text;*/
     /*-webkit-text-fill-color: transparent;*/
-    color: #1d3b2b;
+    color: #366d51;
     margin: 10px 0 0 0;
     padding: 2px 0 2px 8px;
     font-size: 1.2em;
@@ -309,7 +308,6 @@ h2#cast-title {
 .cast-stats-p {
     padding-left: 1.5em;
     margin: 5px 0 0 0;
-    color: #226352;
 }
 
 #cast-links a {

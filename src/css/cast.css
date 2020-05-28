@@ -336,6 +336,10 @@ h2#cast-title {
     line-height: 1.3em;
 }
 
+.patreon-button {
+    text-align: center;
+}
+
 /* ==================================================================== */
 /*                             TO THE TOP                               */
 /* ==================================================================== */
@@ -361,7 +365,7 @@ h2#cast-title {
     transition: 0.3s ease;
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 850px) {
     #primary-cast, #secondary-cast, #patreon-cast {
         display: block;
     }

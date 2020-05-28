@@ -995,10 +995,10 @@ ul.links-menu .liveStream a {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     #mobile-menu-button {
-        font-size: x-large;
+        font-size: xx-large;
     }
 
     #mobile-menu {
-        font-size: x-large;
+        font-size: xx-large;
     }
 }

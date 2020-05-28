@@ -126,6 +126,6 @@
 <div id="footer">
     <p>Tamberlane is powered by <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
 </div>
-<script src="./src/js/main.js"></script>
+<script src="./src/js/comic.js"></script>
 </body>
 </html>

@@ -154,6 +154,10 @@ header ul.links-menu li a {
     transition: ease 0.2s;
 }
 
+header ul.links-menu li:first-child {
+    display: none;
+}
+
 header ul.links-menu li a:hover {
     color: #fff;
     text-shadow: 0 0 2px #F35E36, 0 0 3px #fffad3;
@@ -250,6 +254,7 @@ ul.links-menu .liveStream a {
 
 #comic-page img {
     box-shadow: 0 0 15px black;
+    max-width: 100%;
 }
 
 #comic-navigation {
@@ -404,6 +409,7 @@ ul.links-menu .liveStream a {
     border-bottom-right-radius: 2em;
     border-right: double 5px #341a09;
     text-align: center;
+    font-size: small;
 }
 
 #post-content {
@@ -436,7 +442,11 @@ ul.links-menu .liveStream a {
     color: #FDF1DC;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
+    p {
+        font-size: 1.1em;
+    }
+
     #comic-page img {
         max-width: 100%;
         margin: auto;
@@ -450,29 +460,8 @@ ul.links-menu .liveStream a {
         margin: 0 0 10px 0;
     }
 
-    .patreon-button a {
-        color: white;
-        display: inline-block;
-        font-weight: bold;
-        padding: 10px 20px;
-        border-radius: 1.2em;
-        transition: ease 0.2s;
-        background-color: #F35E36;
-    }
-
-    .patreon-button a:hover {
-        background-color: #052d49;
-        transition: ease 0.2s;
-    }
-
-    #first-invalid, #previous-invalid, #next-invalid, #latest-invalid, #page-number {
-        display: none;
-    }
-
     #comic-navigation {
-        grid-template-areas:
-            "PreviousPage NextPage"
-            "FirstPage LatestPage";
+        grid-template-areas: "PreviousPage NextPage" "FirstPage LatestPage";
         width: 100%;
         align-content: center;
     }
@@ -498,9 +487,7 @@ ul.links-menu .liveStream a {
     #metadata p {
         line-height: 1em;
     }
-}
 
-@media only screen and (max-width: 670px) {
     #page {
         width: 100%;
     }
@@ -524,12 +511,10 @@ ul.links-menu .liveStream a {
 
     #mobile-menu {
         display: none;
-        grid-template-areas:
-            "navigation"
-            "social";
+        grid-template-areas: "navigation" "social";
     }
 
-    .social-links li:first-child, .social-links li:last-child{
+    .social-links li:first-child, .social-links li:last-child {
         display: none;
     }
 
@@ -544,11 +529,11 @@ ul.links-menu .liveStream a {
         align-self: stretch;
     }
 
-    header ul.social-links li a{
+    header ul.social-links li a {
         font-size: xx-large;
     }
 
-    header ul.social-links li a:hover{
+    header ul.social-links li a:hover {
         font-size: xx-large;
     }
 
@@ -584,18 +569,20 @@ ul.links-menu .liveStream a {
         display: block;
     }
 
-    .content {
+    .content, #comic-content {
         max-width: 90%;
         width: 90%;
         padding: 15px;
     }
 
-    #comic-page {
-        width: 100%;
+
+    #page-number {
+        display: none;
     }
 
-    #comic-page img{
-        max-width: 99%;
-        margin: auto;
+    .button a {
+        border-radius: 2em;
+        font-size: large;
+        padding: 20px 25px;
     }
 }

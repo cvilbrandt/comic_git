@@ -63,8 +63,9 @@ header {
 #mobile-menu {
     display: grid;
     grid-template-areas:
-        "navigation"
-        "social";
+        "comiclinks"
+        "social"
+        "navigation";
 }
 
 #logo {
@@ -837,9 +838,6 @@ ul.links-menu .liveStream a {
         width: 100%;
     }
 
-    p {
-        font-size: 1.5em;
-    }
     .content {
         max-width: 90%;
         width: 90%;
@@ -867,6 +865,10 @@ ul.links-menu .liveStream a {
         width: 100%;
     }
 
+    p {
+        font-size: 1.1em;
+    }
+
     header {
         display: block;
         width: 100vw;
@@ -886,6 +888,9 @@ ul.links-menu .liveStream a {
 
     #mobile-menu {
         display: none;
+        grid-template-areas:
+            "navigation"
+            "social";
     }
 
     #mobile-menu.open {
@@ -977,5 +982,13 @@ ul.links-menu .liveStream a {
     #comic-page img{
         max-width: 99%;
         margin: auto;
+    }
+
+    #page404 {
+        max-width: 100%;
+    }
+
+    #belfry404 {
+        height: 350px;
     }
 }

@@ -269,8 +269,9 @@ h2#cast-title {
     grid-area: Stats1;
     /*width: 90%;*/
     margin: 0 20px;
-    background-color: #f2ecda;
+    background-color: rgba(199, 182, 162, 0.89);
     padding: 1em;
+    color: #44806c;
 }
 
 #cast-stats-2 {
@@ -296,10 +297,10 @@ h2#cast-title {
 /*}*/
 
 #cast-stats h3, #cast-stats-2 h3 {
-    background-image: linear-gradient(to right, #007e85 2px, rgb(0, 169, 88));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: white;
+    /*background-image: linear-gradient(to right, #60a8c3 2px, rgb(115, 158, 102));*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #1d3b2b;
     margin: 10px 0 0 0;
     padding: 2px 0 2px 8px;
     font-size: 1.2em;
@@ -308,6 +309,15 @@ h2#cast-title {
 .cast-stats-p {
     padding-left: 1.5em;
     margin: 5px 0 0 0;
+    color: #226352;
+}
+
+#cast-links a {
+    color: #46813b;
+}
+
+#cast-links a:hover {
+    color: #2E0854;
 }
 
 
@@ -351,4 +361,47 @@ h2#cast-title {
 #to-top a:hover {
     background-color: #213415;
     transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 670px) {
+    #primary-cast, #secondary-cast, #patreon-cast {
+        display: block;
+    }
+
+    .cast-section-portraits {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .cast-section {
+        width: 100%;
+    }
+
+    .cast-section h2 {
+        writing-mode: horizontal-tb;
+        text-orientation: upright;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.5em;
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    .cast-section-summary {
+        text-align: center;
+    }
+
+    #cast-profile {
+        grid-template-areas:
+                "Title Title Title"
+                "Photo Photo Photo"
+                "Stats1 Stats1 Stats1"
+                "Stats2 Stats2 Stats2"
+                "Info Info Info"
+                "Story Story Story";
+        padding: 0 15px;
+    }
+
+    #cast-story p {
+        padding: 0 1em;
+    }
 }

@@ -993,3 +993,12 @@ ul.links-menu .liveStream a {
         height: 350px;
     }
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    #mobile-menu-button {
+        font-size: x-large;
+    }
+
+    #mobile-menu {
+        font-size: x-large;
+    }
+}

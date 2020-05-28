@@ -4,6 +4,7 @@
 <head>
     {%- block head %}
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik|Underdog&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./src/css/icons.css">

@@ -20,8 +20,8 @@
         <button id="load-newer-button">Load Newer</button>
     </div>
     <div id="caught-up-notification" hidden>
-        <h2>You're all caught up!</h2>
-        <p>Dying for more pages? Pages are posted early on Patreon!</p>
+        <h2>Dying to read more?</h2>
+        <p>Pages are posted early on Patreon!</p>
         <div class="patreon-button" class="button"><a href="http://www.patreon.com/tamberlane">Become a Patron</a></div>
     </div>
 </div>

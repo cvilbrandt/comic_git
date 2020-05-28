@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src forum.tamberlanecomic.com;">-->
     <link rel="stylesheet" type="text/css" href="src/css/comic.css">
     <link rel="stylesheet" type="text/css" href="src/css/icons.css">

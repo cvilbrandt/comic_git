@@ -47,7 +47,7 @@
             </div>
         </div>
         <p>You can also read media reviews of Tamberlane elsewhere on the web:</p>
-        <ul>
+        <ul id="media-reviews">
             <li><a href="http://www.freakinawesomenetwork.net/2017/04/clash-of-the-webcomics-tamberlane/">Freakin' Awesome Network</a></li>
             <li><a href="https://bagogames.com/artist-interview-caytlin-vilbrandt-part-1/">BagoGames</a></li>
             <li><a href="https://webcoreview.home.blog/2019/08/09/new-kit-in-town-tamberlane/">WebcoReview</a></li>

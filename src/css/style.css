@@ -1001,4 +1001,8 @@ ul.links-menu .liveStream a {
     #mobile-menu {
         font-size: xx-large;
     }
+
+    .links-menu li {
+        height: 68px;
+    }
 }

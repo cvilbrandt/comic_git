@@ -4,6 +4,7 @@ import random
 import re
 import shutil
 import string
+import requests
 from configparser import RawConfigParser
 from glob import glob
 from json import dumps
@@ -342,6 +343,7 @@ def write_infinite_scroll_page(comic_info: RawConfigParser, comic_data_dicts: Li
         "archive_sections": archive_sections
     })
 
+
 def print_processing_times(processing_times: List[Tuple[str, float]]):
     last_processed_time = None
     print("")
@@ -350,6 +352,7 @@ def print_processing_times(processing_times: List[Tuple[str, float]]):
             print("{}: {:.2f} ms".format(name, (t - last_processed_time) * 1000))
         last_processed_time = t
     print("{}: {:.2f} ms".format("Total time", (processing_times[-1][1] - processing_times[0][1]) * 1000))
+
 
 
 def main():

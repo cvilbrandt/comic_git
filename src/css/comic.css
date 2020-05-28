@@ -38,8 +38,7 @@ header {
     display: grid;
     grid-template-areas:
         "logo"
-        "social"
-        "navigation";
+        "menu";
     width: 100%;
 }
 
@@ -61,7 +60,31 @@ header {
     margin: auto;
 }
 
-header ul#social-links {
+#mobile-menu {
+    display: grid;
+    grid-template-areas:
+            "social"
+            "navigation";
+}
+
+#mobile-menu-button {
+    display: none;
+    grid-area: menu;
+    width: 100%;
+    background-color: #341A09;
+    text-align: center;
+    padding: 1px;
+    height: 48px;
+    font-family: 'Underdog', cursive;
+    text-decoration: none;
+}
+
+#mobile-menu-button h3 {
+    color: #f5debd;
+    text-shadow: 0 0 3px #F35E36;
+}
+
+header ul.social-links {
     grid-area: social;
     display: flex;
     justify-content: center;
@@ -73,14 +96,14 @@ header ul#social-links {
     padding-left: 0;
 }
 
-header ul#social-links li {
+header ul.social-links li {
     text-align: center;
     margin: 0 3px 0 3px;
     font-size: x-large;
     color: #341a09;
 }
 
-header ul#social-links li a {
+header ul.social-links li a {
     text-decoration: none;
     width: 30px;
     height: 100%;
@@ -89,21 +112,21 @@ header ul#social-links li a {
     transition: 0.2s ease;
 }
 
-header #social-links li a:hover {
+header .social-links li a:hover {
     color: #fff;
     text-shadow: 0 0 5px #F35E36, 0 0 10px #fffad3;
     transition: 0.2s ease;
 }
 
-header ul#social-links li:nth-child(1) a {
+header ul.social-links li:nth-child(1) a {
     padding-right: 5px;
 }
 
-header ul#social-links li a span {
+header ul.social-links li a span {
     display: none;
 }
 
-header ul#links-menu {
+header ul.links-menu {
     grid-area: navigation;
     display: flex;
     justify-content: center;
@@ -116,14 +139,14 @@ header ul#links-menu {
     padding-left: 0;
 }
 
-header ul#links-menu li {
+header ul.links-menu li {
     min-width: 40px;
     padding: 0 10px;
     text-align: center;
     margin: 0 1px;
 }
 
-header ul#links-menu li a {
+header ul.links-menu li a {
     color: #f5debd;
     text-shadow: 0 0 3px #F35E36;
     text-decoration: none;
@@ -131,7 +154,7 @@ header ul#links-menu li a {
     transition: ease 0.2s;
 }
 
-header ul#links-menu li a:hover {
+header ul.links-menu li a:hover {
     color: #fff;
     text-shadow: 0 0 2px #F35E36, 0 0 3px #fffad3;
     transition: ease 0.2s;
@@ -141,7 +164,7 @@ header ul#links-menu li a:hover {
     display: none;
 }
 
-ul#links-menu .liveStream a {
+ul.links-menu .liveStream a {
     display: grid;
     grid-template-columns: 8px 1fr;
     grid-gap: 0.5em;
@@ -186,7 +209,7 @@ ul#links-menu .liveStream a {
     }
 }
 
-#links-menu .liveStream .icon-twitch{
+.links-menu .liveStream .icon-twitch{
     grid-area: icon;
     color: #9146FF;
     animation: glowing 1500ms infinite;
@@ -474,5 +497,105 @@ ul#links-menu .liveStream a {
 
     #metadata p {
         line-height: 1em;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    #page {
+        width: 100%;
+    }
+
+    header {
+        display: block;
+        width: 100vw;
+    }
+
+    #logo a {
+        height: 100px;
+        width: 100vw;
+    }
+
+    #mobile-menu-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #mobile-menu {
+        display: none;
+        grid-template-areas:
+            "navigation"
+            "social";
+    }
+
+    .social-links li:first-child, .social-links li:last-child{
+        display: none;
+    }
+
+    header ul.social-links {
+        margin: 0;
+    }
+
+    header ul.social-links li {
+        width: 20%;
+        height: auto;
+        margin: 5px;
+        align-self: stretch;
+    }
+
+    header ul.social-links li a{
+        font-size: xx-large;
+    }
+
+    header ul.social-links li a:hover{
+        font-size: xx-large;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #341a09;
+        padding: 10px;
+    }
+
+    ul.links-menu {
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .links-menu li {
+        flex-grow: 1;
+        width: 100%;
+        height: 48px;
+    }
+
+    ul.links-menu li a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    ul.links-menu li h3 {
+        margin: 13px;
+    }
+
+    header ul.links-menu li:first-child {
+        display: block;
+    }
+
+    .content {
+        max-width: 90%;
+        width: 90%;
+        padding: 15px;
+    }
+
+    #comic-page {
+        width: 100%;
+    }
+
+    #comic-page img{
+        max-width: 99%;
+        margin: auto;
     }
 }

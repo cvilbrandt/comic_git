@@ -52,14 +52,19 @@ header {
     display: grid;
     grid-template-areas:
             "logo"
-            "comiclinks"
-            "social"
-            "navigation";
+            "menu";
     width: 100%;
     background-image: url("../../your_content/images/Banner.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center top;
+}
+
+#mobile-menu {
+    display: grid;
+    grid-template-areas:
+        "navigation"
+        "social";
 }
 
 #logo {
@@ -80,11 +85,25 @@ header {
     margin: auto;
 }
 
+#mobile-menu-button {
+    display: none;
+    grid-area: comiclinks;
+    width: 100%;
+    background-color: #341A09;
+    text-align: center;
+    padding: 1px;
+    height: 48px;
+    font-family: 'Underdog', cursive;
+    color: #f5debd;
+    text-shadow: 0 0 3px #F35E36;
+    text-decoration: none;
+}
+
 #ComicLinks {
     position: relative;
     grid-area: comiclinks;
     display: flex;
-    margin: 0 auto 0 auto;
+    margin: auto;
 }
 
 #FirstComic {
@@ -158,7 +177,7 @@ header #LatestComic {  background-image: url("../../your_content/images/Latest_T
 header #LatestComicFrame {  background-image: url("../../your_content/images/Latest_Frame.png");}
 header #Flourish { background-image: url("../../your_content/images/vineflourish.png");}
 
-header ul#social-links {
+header ul.social-links {
     grid-area: social;
     display: flex;
     justify-content: center;
@@ -170,7 +189,7 @@ header ul#social-links {
     padding-left: 0;
 }
 
-header ul#social-links li {
+header ul.social-links li {
     text-align: center;
     margin: 0 3px 0 3px;
     font-size: x-large;
@@ -179,7 +198,7 @@ header ul#social-links li {
     color: #341a09;
 }
 
-header ul#social-links li a {
+header ul.social-links li a {
     text-decoration: none;
     width: 30px;
     height: 50px;
@@ -190,22 +209,22 @@ header ul#social-links li a {
     box-sizing: border-box;
 }
 
-header #social-links li a:hover {
+header .social-links li a:hover {
     color: #fff;
     text-shadow: 0 0 5px #F35E36, 0 0 10px #fffad3;
     font-size: 1.5em;
     transition: 0.2s ease;
 }
 
-header ul#social-links li:nth-child(1) a {
+header ul.social-links li:nth-child(1) a {
     padding-right: 5px;
 }
 
-header ul#social-links li a span {
+header ul.social-links li a span {
     display: none;
 }
 
-header ul#links-menu {
+header ul.links-menu {
     grid-area: navigation;
     display: flex;
     justify-content: center;
@@ -218,18 +237,18 @@ header ul#links-menu {
     padding-left: 0;
 }
 
-header ul#links-menu li {
+header ul.links-menu li {
     min-width: 40px;
     padding: 0 10px;
     text-align: center;
     margin: 0 1px;
 }
 
-header ul#links-menu li:first-child {
+header ul.links-menu li:first-child {
     display: none;
 }
 
-header ul#links-menu li a {
+header ul.links-menu li a {
     color: #f5debd;
     text-shadow: 0 0 3px #F35E36;
     text-decoration: none;
@@ -238,13 +257,13 @@ header ul#links-menu li a {
     width: 100%;
 }
 
-header ul#links-menu li:hover a {
+header ul.links-menu li:hover a {
     color: #fff;
     text-shadow: 0 0 2px #F35E36, 0 0 3px #fffad3;
     transition: ease 0.2s;
 }
 
-header ul#links-menu li:hover {
+header ul.links-menu li:hover {
     box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
     transition: ease 0.2s;
 }
@@ -253,7 +272,7 @@ header ul#links-menu li:hover {
     display: none;
 }
 
-ul#links-menu .liveStream a {
+ul.links-menu .liveStream a {
     display: grid;
     grid-template-columns: 8px 1fr;
     grid-gap: 0.5em;
@@ -298,7 +317,7 @@ ul#links-menu .liveStream a {
     }
 }
 
-#links-menu .liveStream .icon-twitch{
+.links-menu .liveStream .icon-twitch{
     grid-area: icon;
     color: #a767ff;
     animation: glowing 1500ms infinite;
@@ -813,7 +832,7 @@ ul#links-menu .liveStream a {
 
 /* =============== MEDIA QUERIES ================= */
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
     #page {
         width: 100%;
     }
@@ -843,7 +862,7 @@ ul#links-menu .liveStream a {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
     #page {
         width: 100%;
     }
@@ -858,87 +877,82 @@ ul#links-menu .liveStream a {
         width: 100vw;
     }
 
+    #mobile-menu-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #mobile-menu {
+        display: none;
+    }
+
+    #mobile-menu.open {
+    }
+
     #ComicLinks {
         flex-wrap: wrap;
         justify-content: center;
         background-color: #341a09;
     }
 
-    /*header #FirstComic, header #LatestComic {*/
-    /*    background-image: none;*/
-    /*    width: 100%;*/
-    /*    height: auto;*/
-    /*    box-shadow: none;*/
-    /*    margin: 0;*/
-    /*    position: relative;*/
-    /*    top: 0;*/
-    /*    left: 0;*/
-    /*}*/
-
-    /*#FirstComic a, #LatestComic a{*/
-    /*    width: auto;*/
-    /*    height: auto;*/
-    /*    padding: 15px;*/
-    /*    opacity: 1;*/
-    /*    font-size: 1.25em;*/
-    /*}*/
-
-    /*#FirstComic a:before {*/
-    /*    content: "First Comic: "*/
-    /*}*/
-    /*#LatestComic a:before {*/
-    /*    content: "Latest Comic: "*/
-    /*}*/
-
     #FirstComicFrame, #LatestComicFrame, #FirstComic, #LatestComic, #Flourish {
         display: none;
     }
 
-    #social-links li:first-child, #social-links li:last-child{
+    .social-links li:first-child, .social-links li:last-child{
         display: none;
     }
 
-    header ul#social-links {
+    header ul.social-links {
         margin: 0;
     }
 
-    header ul#social-links li {
+    header ul.social-links li {
         width: 20%;
         height: auto;
         margin: 5px;
         align-self: stretch;
     }
 
-    header ul#social-links li a{
+    header ul.social-links li a{
         font-size: xx-large;
     }
 
-    header ul#social-links li a:hover{
+    header ul.social-links li a:hover{
         font-size: xx-large;
     }
 
-    #social-links {
+    .social-links {
         flex-wrap: wrap;
         justify-content: space-evenly;
         background-color: #341a09;
         padding: 10px;
     }
 
-    ul#links-menu {
+    ul.links-menu {
         flex-wrap: wrap;
+        align-content: center;
     }
 
-    #links-menu li {
+    .links-menu li {
         flex-grow: 1;
         width: 100%;
+        height: 48px;
     }
 
-    ul#links-menu li a {
+    ul.links-menu li a {
         width: 100%;
+        height: 100%;
         display: block;
     }
 
-    header ul#links-menu li:first-child {
+    ul.links-menu li h3 {
+        margin: 13px;
+    }
+
+    header ul.links-menu li:first-child {
         display: block;
     }
 

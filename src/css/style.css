@@ -891,6 +891,7 @@ ul.links-menu .liveStream a {
         grid-template-areas:
             "navigation"
             "social";
+        width: 100%;
     }
 
     #mobile-menu.open {

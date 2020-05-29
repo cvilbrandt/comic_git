@@ -247,7 +247,7 @@ header ul.links-menu li {
     margin: 0 1px;
 }
 
-header ul.links-menu li:first-child {
+header ul.links-menu li:first-child, header ul.links-menu li:nth-child(2) {
     display: none;
 }
 
@@ -357,7 +357,7 @@ ul.links-menu .liveStream a {
     background-color: #FDF1DC;
     box-shadow: 0 15px 15px black;
     max-width: 75%;
-    padding: 30px;
+    padding: 2em;
     margin: auto;
     z-index: 1;
 }
@@ -605,9 +605,15 @@ ul.links-menu .liveStream a {
 
 }
 
-img.infinite-page-image {
+#infinite-scroll a {
     max-width: 100%;
 }
+
+#infinite-scroll img {
+    display: block;
+    margin: auto;
+}
+
 .infinite-section {
     text-align: center;
     background-size: contain;
@@ -925,7 +931,7 @@ img.infinite-page-image {
         margin: 13px;
     }
 
-    header ul.links-menu li:first-child {
+    header ul.links-menu li:first-child, header ul.links-menu li:nth-child(2) {
         display: block;
     }
 

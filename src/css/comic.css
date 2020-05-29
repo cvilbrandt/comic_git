@@ -155,7 +155,7 @@ header ul.links-menu li a {
     transition: ease 0.2s;
 }
 
-header ul.links-menu li:first-child {
+header ul.links-menu li:first-child, header ul.links-menu li:nth-child(2) {
     display: none;
 }
 
@@ -566,7 +566,7 @@ ul.links-menu .liveStream a {
         margin: 13px;
     }
 
-    header ul.links-menu li:first-child {
+    header ul.links-menu li:first-child, header ul.links-menu li:nth-child(2) {
         display: block;
     }
 

@@ -109,6 +109,14 @@
                     <em>Author's Notes:</em>
                     <p>{{ post_html }}</p>
                 </div>
+                {% if transcripts %}
+                <div id="transcripts-container">
+                {% for language, transcript in transcripts.items() %}
+                    <div>{{ language }}</div>
+                    <div>{{ transcript }}</div>
+                {% endfor %}
+                </div>
+                {% endif %}
                 <div id='discourse-comments'></div>
 
 <!--                <script type="text/javascript">-->

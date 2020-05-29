@@ -183,6 +183,11 @@ def create_comic_data(page_info: dict, previous_id: str, current_id: str, next_i
     print("Building page {}...".format(page_info["page_name"]))
     with open("your_content/comics/{}/post.html".format(page_info["page_name"]), "rb") as f:
         post_html = f.read().decode("utf-8")
+    transcripts = {}
+    for path in glob(f"tamberlane-transcripts/{page_info['page_name']}/*.txt"):
+        language = os.path.splitext(os.path.basename(path))[0]
+        with open(path) as f:
+            transcripts[language] = f.read().replace("\n", "<br>\n")
     return {
         "page_name": page_info["page_name"],
         "filename": page_info["Filename"],
@@ -201,7 +206,8 @@ def create_comic_data(page_info: dict, previous_id: str, current_id: str, next_i
         "page_title": page_info["Title"],
         "post_date": page_info["Post date"],
         "tags": page_info["Tags"],
-        "post_html": post_html
+        "post_html": post_html,
+        "transcripts": transcripts
     }
 
 

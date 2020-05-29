@@ -22,6 +22,7 @@ jobs:
         run: |
           git fetch --all --no-tags
           git reset --hard origin/working
+          git submodule update --remote
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v1
         with:

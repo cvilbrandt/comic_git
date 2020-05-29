@@ -360,6 +360,7 @@ ul.links-menu .liveStream a {
     padding: 2em;
     margin: auto;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 #index-image {

@@ -1,0 +1,3 @@
+[submodule "tamberlane-transcripts"]
+	path = tamberlane-transcripts
+	url = https://github.com/cvilbrandt/tamberlane-transcripts

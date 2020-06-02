@@ -7,7 +7,7 @@
         #mergeRow-gdpr fieldset label {font-weight: normal;}
         #mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
     </style>
-    <div id="page-title">&#9753; Subscribe to Email Updates &#10087;</div>
+    <h1 id="page-title">&#9753; Subscribe to Email Updates &#10087;</h1>
     <div id="mc_embed_signup">
         <form action="https://tamberlanecomic.us14.list-manage.com/subscribe/post?u=1019a29148e4e5193c1f0bbdd&amp;id=6612f3a2e9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">

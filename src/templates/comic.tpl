@@ -119,17 +119,33 @@
                 </div>
         <!--    Commence the post! -->
                 <div id="post-content">
-                    <em>Author's Notes:</em>
+                    <h3>Author's Notes:</h3>
                     <p>{{ post_html }}</p>
+
+                    {% if transcripts %}
+                    <div id="transcripts-container">
+                        <div id="transcript-panel">
+                            <h3>Transcript</h3>
+                            <div id="active-transcript">
+                            {% for language, transcript in transcripts.items() %}
+                                <div id='{{ language }}-transcript'>
+                                    <p>{{ transcript }}</p>
+                                </div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <div id="language-list">
+                            <h3>Languages</h3>
+                            <select id="language-select" size="7">
+                                {% for language in transcripts.keys() %}
+                                <option>{{ language }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div id="submit-transcript-button" class="button"><a href='https://github.com/cvilbrandt/tamberlane-transcripts/tree/master/{{ current_id }}'>Submit a Transcript</a></div>
                 </div>
-                {% if transcripts %}
-                <div id="transcripts-container">
-                {% for language, transcript in transcripts.items() %}
-                    <div>{{ language }}</div>
-                    <div>{{ transcript }}</div>
-                {% endfor %}
-                </div>
-                {% endif %}
                 <div id='discourse-comments'></div>
 
 <!--                <script type="text/javascript">-->

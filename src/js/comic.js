@@ -1,10 +1,10 @@
+// ......DISPLAY MOBILE MENU...... //
+
 let button = document.getElementById("mobile-menu-button");
 let menu = document.getElementById("mobile-menu");
 console.log(menu);
 button.onclick = function toggleMobileMenu() {
-    // If class is open, then set display to none and set innertext to Menu
-    // Else set display to block and set class to open and change innertext to Hide Menu
-    // if () {
+
     if (menu.classList.contains("open")) {
         menu.style.display = null;
         button.innerHTML = `<h3>Menu</h3>`;
@@ -20,8 +20,9 @@ button.onclick = function toggleMobileMenu() {
         button.style.textShadow = "none";
         menu.classList.add("open");
     }
-    // }
 };
+
+// ......COPY URL TO CLIPBOARD WHEN SHARE BUTTON IS CLICKED...... //
 
 let share_button = document.getElementById("share-button");
 
@@ -41,3 +42,24 @@ share_button.onclick = function copyURL() {
 
     setTimeout(function(){modal.className = modal.className.replace("show","");}, 3000);
 }
+
+// ...... TRANSCRIPT SELECTION ...... //
+let languageList = document.getElementById("language-select");
+let transcriptList = document.getElementById("active-transcript");
+let transcripts = transcriptList.children;
+
+// if (languageList.selectedIndex === -1){
+    languageList.selectedIndex = 0;
+// }
+transcripts[languageList.selectedIndex].style.display = "block";
+
+languageList.addEventListener("click",function() {
+
+    for (let i = 0; i < transcripts.length; i++) {
+        if (i === languageList.selectedIndex) {
+            transcripts[i].style.display = "block";
+        } else {
+            transcripts[i].style.display = "none";
+        }
+    }
+})

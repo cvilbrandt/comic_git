@@ -199,8 +199,8 @@ def create_comic_data(comic_info: RawConfigParser, page_info: dict,
     transcripts = {}
     for path in glob(f"tamberlane-transcripts/{page_info['page_name']}/*.txt"):
         language = os.path.splitext(os.path.basename(path))[0]
-        with open(path) as f:
-            transcripts[language] = f.read().replace("\n", "<br>\n")
+        with open(path, "rb") as f:
+            transcripts[language] = f.read().decode("utf-8").replace("\n", "<br>\n")
     return {
         "page_name": page_info["page_name"],
         "filename": page_info["Filename"],

@@ -475,6 +475,42 @@ ul.links-menu .liveStream a {
     font-family: 'Underdog', cursive;
 }
 
+#transcripts-container {
+    display: grid;
+    grid-template-areas:
+        "transcript transcript languages";
+}
+
+#active-transcript {
+    grid-area: transcript;
+}
+
+#active-transcript > * {
+    display: none;
+}
+
+#language-list {
+    grid-area: languages;
+}
+
+#language-select {
+    height: 85%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: medium;
+    margin: 10px;
+}
+
+#language-select option:checked {
+    box-shadow: 0 0 10px 100px #68ad43 inset;
+}
+
+#submit-transcript-button {
+    background-color: #68ad43;
+    margin-left: 1em;
+}
+
 #discourse-comments {
     width: 100%;
     display: none;
@@ -535,6 +571,17 @@ ul.links-menu .liveStream a {
 
     #metadata p {
         line-height: 1em;
+    }
+
+    #transcripts-container {
+        grid-template-areas:
+                "transcript"
+                "languages";
+    }
+
+    #language-select {
+        height: auto;
+        margin: 0 0 2em 0;
     }
 
     #page {

@@ -657,6 +657,16 @@ ul.links-menu .liveStream a {
     text-align: center;
 }
 
+#about-photo {
+    background-image: url("../../your_content/images/caytlin.jpg");
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    margin: 15px;
+}
+
 .button {
     display: inline-block;
     font-weight: bold;
@@ -667,6 +677,25 @@ ul.links-menu .liveStream a {
 
 .button a {
     color: white;
+}
+
+#support-buttons #patreon-button {
+    background-color: #F35E36;
+}
+
+#support-buttons #patreon-button:hover {
+    background-color: #052d49;
+    transition: ease 0.2s;
+}
+
+#support-buttons #coffee-button {
+    background-color: #29ABE0;
+    transition: ease 0.2s;
+}
+
+#support-buttons #coffee-button:hover {
+    background-color: #FBAA19;
+    transition: ease 0.2s;
 }
 
 .patreon-button {

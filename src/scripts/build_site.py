@@ -13,6 +13,7 @@ from PIL import Image
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 
 from build_rss_feed import build_rss_feed
+from build_patreon_data import build_patreon_data
 
 VERSION = "0.1.0"
 
@@ -346,7 +347,8 @@ def write_other_pages(comic_info: RawConfigParser, comic_data_dicts: List[Dict])
     last_comic_page.update({
         "use_thumbnails": comic_info.getboolean("Archive", "Use thumbnails"),
         "storylines": storylines,
-        "cast": CAST_LIST
+        "cast": CAST_LIST,
+        "patreon_list": build_patreon_data()
     })
     pages_list = get_pages_list(comic_info)
     for page in pages_list:

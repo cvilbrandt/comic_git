@@ -92,75 +92,42 @@
         </div>
         <div id="patrons-5-years">
             <h3>5+ Years</h3>
-                <p>♚ D'Archangel</p>
+            <ul>
+                {%- for name in patreon_list[5] %}
+                <li>{{ name }}</li>
+                {%- endfor %}
+            </ul>
         </div>
         <div id="patrons-4-years">
             <h3>4 Years</h3>
             <ul>
-                <li>This is a placeholder name.</li>
-                <li>♣ Berwyn</li>
-                <li>Foal Papers</li>
-                <li>Koyunlu</li>
-                <li>Leo</li>
-                <li>Meesh Oglesby-Cunningham</li>
-                <li>♥ Ross</li>
-                <li>S.A.B.</li>
-                <li>Vertis Sidus</li>
-                <li>Zaukodar</li>
+                {%- for name in patreon_list[4] %}
+                <li>{{ name }}</li>
+                {%- endfor %}
             </ul>
         </div>
         <div id="patrons-3-years">
             <h3>3 Years</h3>
             <ul>
-                <li>This is a placeholder name.</li>
-                <li>Bean</li>
-                <li>Bluesparks</li>
-                <li>Couch Crusader</li>
-                <li>★ Daniel Oakley</li>
-                <li>Darkspeeds</li>
-                <li>♣️ DireTaco</li>
-                <li>Doorman</li>
-                <li>♣️ Dorian Inman</li>
-                <li>gabapple</li>
-                <li>James Clapham</li>
-                <li>♥️ Long John</li>
-                <li>Jose Rivera</li>
-                <li>Jykinturah</li>
-                <li>♛ Michael "Neon Noble" Nicolosi</li>
-                <li>♣️ Nolan "Note Worthy" Slover</li>
-                <li>Onnanoko</li>
-                <li>Riccardo Broccoletti</li>
-                <li>Ryebread</li>
-                <li>Simon Tesla</li>
-                <li>Skandranon Rashkae</li>
-                <li>Stubat</li>
-                <li>♣️ Whyahalooh</li>
+                {%- for name in patreon_list[3] %}
+                <li>{{ name }}</li>
+                {%- endfor %}
             </ul>
         </div>
         <div id="patrons-2-years">
             <h3>2 Years</h3>
             <p>
-                Placeholder. Aaron L. Knol, Aerdan, aj, Alaares, ♣️ Allaze-Eroler, Alun Rundle, Arinmal Vultee, Arroyo,
-                Bullet_blyat, Callum, Christopher Lehner, CTVulpin, Danger, Daphne Pfister, djikoz, DragonAmongUs,
-                Elizabeth Sayed Ahmad, Erhannis Kirran, Erik Sieurin, Foxy Foundry, Garrison j Moncher, gary13931,
-                Gerald Sears, ♥️ Gunny Waffle, Hades, Hukley, Ido Shalev, Indigo Stride, James Birdsall, Jay D,
-                Jeff Barrow, Jim Keebaugh, Jonathan Helfrich, JP Burke, Katie Holland, ★ Lightfox Lowell, Londa,
-                Luke Ede, MajinKoba, Mako, ♥️ Makuru, ♥️ Marco McCain, Matthew J. Knighton, Niklas, Patricia Jaderborg,
-                Paul Bibb, Preston Moore, Rawinteli, Remony Ravine, Restless Cavy, Richard V., Rick Griffin,
-                Sarah Kosalos, Shu, StarshineBeast/Sarah Messerly, Steamed Hams, Steven Miller, ♥️ Stoker Bramwell,
-                ♥️ StrayXIII (Wes), taggianto, Temrin, Tim Latshaw, VGR, Vigilant Watch, Welsh Rat, Wilford B. Wolf,
-                zerofox55, Zobeid Zuma
+                {%- for name in patreon_list[2] %}
+                {{ name }}{% if not loop.last %}, {% endif %}
+                {%- endfor %}
             </p>
         </div>
         <div id="patrons-1-year">
             <h3>1 Year</h3>
             <p>
-                Placeholder. A. Douglas "FaultBat", Airvynk, Alex, Allan C Ecker, Amethyst, Armin Silvane, Ashley Nichols, Calvin,
-                ♣️ Chaon, Chiropica, Claire Revell, Connie Smith, Coralkuma, CrookedGlasses, Dalethmann, Dana Simpson,
-                Darque Hellmutt, Digital Phoenix, Elizabeth Sayed Ahmad, EchoNightfury, Ember Saffron, Felinaeus,
-                Fovx, izzybrownie, JC Amberlyn, Jonas, Kat Miller, LBassettArtworks, Madiso, Magera Gordon,
-                Matthew Lane, Metajoker, Nickel, R.S, Ragg Topp, SCPilot, SenGrisane, Sentient Cactus, Sky Wolf,
-                StudioRat Productions, tchaikovsky2, Tiddlebupkins, William Kennard, Zaukodar
+                {%- for name in patreon_list[1] %}
+                {{ name }}{% if not loop.last %}, {% endif %}
+                {%- endfor %}
             </p>
         </div>
     </div>

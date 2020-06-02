@@ -1,9 +1,11 @@
 {% extends "base.tpl" %}
 {% block content %}
-    <h1 id="page-title">&nbsp;</h1>
+    <div class="content">
+        <h1 id="page-title">&nbsp;</h1>
 
-    <div id="blurb">
-        <div id="tagged">Loading tags...</div>
+        <div id="archive-content">
+            <div id="tagged">Loading tags...</div>
+        </div>
     </div>
 {% endblock %}
 {% block script %}

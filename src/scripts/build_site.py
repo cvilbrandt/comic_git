@@ -155,6 +155,10 @@ def get_page_info_list(date_format: str, delete_scheduled_posts=True) -> Tuple[L
             page_info["Storyline"] = page_info.get("Storyline", "")
             page_info["Characters"] = str_to_list(page_info.get("Characters", ""))
             page_info["Tags"] = str_to_list(page_info.get("Tags", ""))
+            page_info["thumbnail_path"] = "your_content/comics/{}/{}".format(
+                page_info["page_name"],
+                os.path.splitext(page_info["Filename"])[0] + "_thumbnail.jpg"
+            )
             page_info_list.append(page_info)
 
     page_info_list = sorted(
@@ -204,10 +208,7 @@ def create_comic_data(comic_info: RawConfigParser, page_info: dict,
             page_info["page_name"],
             page_info["Filename"]
         ),
-        "thumbnail_path": "your_content/comics/{}/{}".format(
-            page_info["page_name"],
-            os.path.splitext(page_info["Filename"])[0] + "_thumbnail.jpg"
-        ),
+        "thumbnail_path": page_info["thumbnail_path"],
         "alt_text": html.escape(page_info["Alt text"]),
         "first_id": first_id,
         "previous_id": previous_id,

@@ -16,22 +16,29 @@ async function fetch_all_json_data() {
 
 function build_tagged_list(json_list, tag) {
     console.log(json_list);
-    let html = "<ul>\n";
+    let html = "";
     json_list.forEach(comic_json => {
-        if (comic_json["Tags"].includes(tag)) {
+        if (comic_json["Characters"].includes(tag) || comic_json["Tags"].includes(tag)) {
             html += build_page_link(comic_json);
         }
     });
-    html += "</ul>";
-    if (html === "<ul>\n</ul>") {
+    if (html === "") {
         html = "No posts found.";
+    } else {
+        html = `    <div class="archive-grid">${html}</div>`;
     }
     document.getElementById("tagged").innerHTML = html;
 }
 
 function build_page_link(comic_json) {
     console.log(comic_json);
-    let html = "        <li><a href='./comic/" + comic_json["page_name"] + ".html'>" + comic_json["Title"] + "</a>";
-    html += " -- " + comic_json["Post date"] +"</li>\n";
-    return html;
+    return `
+    <a href="comic/${comic_json["page_name"]}.html">
+    <div class="archive-thumbnail">
+        <div class="archive-thumbnail-page"><img src="${comic_json["thumbnail_path"]}" alt="${comic_json["Alt text"]}"></div>
+        <div class="archive-thumbnail-title">${comic_json["Title"]}</div>
+        <div class="archive-thumbnail-post-date">${comic_json["Post date"]}</div>
+    </div>
+    </a>
+    `;
 }

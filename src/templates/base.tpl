@@ -67,6 +67,7 @@
 
 {% endblock %}
 </body>
-{% block script %}{% endblock %}
+{% block script %}
 <script src="./src/js/main.js"></script>
+{% endblock %}
 </html>

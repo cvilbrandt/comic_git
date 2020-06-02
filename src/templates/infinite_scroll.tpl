@@ -4,9 +4,9 @@
     <div id="jump-to">
         <h2>Jump to...</h2>
         <div id="jump-to-sections">
-            {%- for section in archive_sections %}
-            <div id="infinite-{{ section.name | replace(' ', '-') }}" class="infinite-section">
-                <a class="chapter-links" href="infinite_scroll.html#{{ section.pages[0].page_name }}">{{ section.name }}</a>
+            {%- for storyline in storylines %}
+            <div id="infinite-{{ storyline.name | replace(' ', '-') }}" class="infinite-section">
+                <a class="chapter-links" href="infinite_scroll.html#{{ storyline.pages[0].page_name }}">{{ storyline.name }}</a>
             </div>
             {%- endfor %}
         </div>

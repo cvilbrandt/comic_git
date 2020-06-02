@@ -834,7 +834,7 @@ ul.links-menu .liveStream a {
     }
 }
 
-@media only screen and (max-width: 650px) , screen and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 650px) {
     #page {
         width: 100%;
     }

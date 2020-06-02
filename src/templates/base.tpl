@@ -27,7 +27,7 @@
     <div id="mobile-menu">
         <div id="ComicLinks">
             <div id="FirstComic"><a href="/{{ base_dir }}/comic/{{ first_id }}.html#comic-page">Page 1</a></div>
-            <div id="LatestComic"><a href="/{{ base_dir }}/comic/latest.html#comic-page">Page {{ last_id }}</a></div>
+            <div id="LatestComic"><a href="/{{ base_dir }}/latest.html#comic-page">Page {{ last_id }}</a></div>
             <div id="FirstComicFrame"><h2>Start Here</h2></div>
             <div id="Flourish"></div>
             <div id="LatestComicFrame"><h2>Latest Page</h2></div>

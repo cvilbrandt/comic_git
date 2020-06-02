@@ -21,7 +21,7 @@
                     <h2>{{full_name}}</h2>
                     <p class="patron-donated-text"><em>donated by</em></p>
                     <h3 class="patron-donated">{{patron}}</h3>
-                    <p><a href="/tagged.html?tag={{character}}">Appearances</a></p>
+                    <p><a href="tagged.html?tag={{character}}">Appearances</a></p>
                 </div>
             </div>
         {% endfor %}

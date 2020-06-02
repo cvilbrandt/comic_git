@@ -92,17 +92,27 @@
             <div id="metadata">
                 <h1>{{ page_title }}</h1>
                 <div><p id="postdate">Posted on {{ post_date }}</p></div>
-                <div id="tags">
-                    <p>Chapter: <a href="/{{ base_dir }}/tagged.html?tag={{ tags[0] }}">{{ tags[0] }}</a></p>
-                    <p>Tags:
-                        {% for tag in tags[1:] %}
-                        <a href="/{{ base_dir }}/tagged.html?tag={{ tag }}">{{ tag }}</a>
-                        {%- if not loop.last -%}
-                        ,
-                        {% endif %}
-                        {% endfor %}
+                {%- if storyline %}
+                    <p id="storyline">
+                        Chapter: <a href="/{{ base_dir }}/comic/{{ storyline_id }}.html#comic-page">{{ storyline }}</a>
                     </p>
-                </div>
+                {%- endif %}
+                {%- if characters %}
+                    <p id="characters">
+                    Characters:
+                    {%- for character in characters %}
+                        <a href="/{{ base_dir }}/tagged.html?tag={{ character }}">{{ character }}</a>{% if not loop.last %}, {% endif %}
+                    {%- endfor %}
+                    </p>
+                {%- endif %}
+                {%- if tags %}
+                    <p id="tags">
+                    Tags:
+                    {%- for tag in tags %}
+                        <a class="tag-link" href="/{{ base_dir }}/tagged.html?tag={{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                    {%- endfor %}
+                    </p>
+                {%- endif %}
             </div>
             <!--    Commence the post! -->
             <div id="post-content">

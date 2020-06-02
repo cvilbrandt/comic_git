@@ -176,7 +176,7 @@ header #FirstComicFrame, #LatestComicFrame {
 
 header #FirstComic{  background-image: url("../../your_content/images/First_Thumb.png");}
 header #FirstComicFrame {  background-image: url("../../your_content/images/First_Frame.png");}
-header #LatestComic {  background-image: url("../../your_content/images/Latest_Thumb.png");}
+/*header #LatestComic {  background-image: url("../../your_content/comics/{{ last_id }}/Page_203_small.png");}*/
 header #LatestComicFrame {  background-image: url("../../your_content/images/Latest_Frame.png");}
 header #Flourish { background-image: url("../../your_content/images/vineflourish.png");}
 

@@ -117,7 +117,7 @@
             <div id="cast-links">
                 <h3>Links</h3>
                 <p id="cast-tagged" class="cast-stats-p">&#10087; <a href="./tagged.html?tag=Belfry">All pages featuring Belfry</a></p>
-                <p id="cast-refsheet" class="cast-stats-p">&#10087; <a href="./your_content/images/sheets/Belfry.png">Belfry's Reference Sheet</a></p>
+                <p id="cast-refsheet" class="cast-stats-p">&#10087; <a href="./your_content/images/sheets/Belfry.png">Belfry's Reference Sheet</a> <span><br>(contains nudity)</span></p>
             </div>
         </div>
         <div id="cast-info">

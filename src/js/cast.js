@@ -767,11 +767,23 @@ for (let member of portraits) {
         document.getElementById("cast-tagged").innerHTML = `&#10087; <a href="tagged.html?tag=`+ castInfo +`">All pages featuring ` + castInfo + `</a>`;
 
 
-        if (castMember["RefSheet"] === ""){
-                document.getElementById("cast-refsheet").innerHTML = ``;
-        } else {
-                document.getElementById("cast-refsheet").innerHTML = `&#10087; <a href="your_content/images/sheets/` + castInfo +`.png">`+ castInfo + `'s Reference Sheet</a>`;
-        }
+        // if (castMember["RefSheet"] === ""){
+        //         document.getElementById("cast-refsheet").innerHTML = ``;
+        // } else {
+        //         document.getElementById("cast-refsheet").innerHTML = `&#10087; <a href="your_content/images/sheets/` + castInfo +`.png">`+ castInfo + `'s Reference Sheet</a>`;
+        // }
+            XHR = new XMLHttpRequest();
+            let URL = `your_content/images/sheets/` + castInfo +`.png`;
+            XHR.open("GET", URL);
+            XHR.send();
+            console.log(XHR);
+            XHR.onload = function() {
+                    if (XHR.response.includes("404 Not Found")) {
+                            document.getElementById("cast-refsheet").innerHTML = ``;
+                    } else {
+                            document.getElementById("cast-refsheet").innerHTML = `&#10087; <a href="your_content/images/sheets/` + castInfo +`.png">`+ castInfo + `'s Reference Sheet</a> <span><br>(contains nudity)</span>`;
+                    }
+            };
 
 
         let offset = document.getElementById("cast-title").offsetTop;

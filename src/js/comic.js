@@ -22,3 +22,22 @@ button.onclick = function toggleMobileMenu() {
     }
     // }
 };
+
+let share_button = document.getElementById("share-button");
+
+share_button.onclick = function copyURL() {
+    let URL = window.location.href;
+    let dummy = document.createElement('input');
+    let modal = document.getElementById("copy-modal");
+
+    document.body.appendChild(dummy);
+    dummy.value = URL;
+    dummy.select();
+    document.execCommand('Copy');
+    document.body.removeChild(dummy);
+
+    modal.className = "show";
+    console.log(modal);
+
+    setTimeout(function(){modal.className = modal.className.replace("show","");}, 3000);
+}

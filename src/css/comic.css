@@ -355,10 +355,58 @@ ul.links-menu .liveStream a {
     padding: 10px 15px;
     border-radius: 1.2em;
     transition: ease 0.2s;
+    cursor: pointer;
 }
 
-.button a {
+.button a, .button span, .button i {
     color: white;
+}
+
+#copy-modal {
+    visibility: hidden;
+    display: table;
+    margin: auto;
+    margin-left: -150px;
+    min-width: 250px;
+    border-radius: 0.6em;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    bottom: 30px;
+    text-align: center;
+}
+
+#copy-info {
+    padding: 1em 2em;
+    background-color: #1B0600;
+    color: #f5debd;
+    font-family: 'Rubik', sans-serif;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+#copy-modal.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 #patreon-button {

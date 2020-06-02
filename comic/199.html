@@ -14,12 +14,12 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" type="image/x-icon" >
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" type="image/x-icon" >
         <link rel="manifest" href="/site.webmanifest">
-        <title>{{ page_title }} | {{ comic_title }}</title>
+        <title>Page 199 | Tamberlane</title>
     </head>
     <body>
     <header>
         <div id="logo">
-            <a href="/{{ base_dir }}"></a>
+            <a href="/comic_git"></a>
         </div>
         <div id="mobile-menu-button"><h3>Menu</h3></div>
         <div id="mobile-menu">
@@ -36,11 +36,11 @@
                 <li><span>&#10087;</span></li>
             </ul>
             <ul class="links-menu">
-                <li><h3><a href="/{{ base_dir }}/comic/{{ first_id }}.html#comic-page">First Comic</a></h3></li>
-                <li><h3><a href="/{{ base_dir }}/latest.html">Latest Comic</a></h3></li>
-                <li><h3><a href="/{{ base_dir }}/archive.html">Archive</a></h3></li>
-                <li><h3><a href="/{{ base_dir }}/about.html">About</a></h3></li>
-                <li><h3><a href="/{{ base_dir }}/cast.html">Cast</a></h3></li>
+                <li><h3><a href="/comic_git/comic/197.html#comic-page">First Comic</a></h3></li>
+                <li><h3><a href="/comic_git/latest.html">Latest Comic</a></h3></li>
+                <li><h3><a href="/comic_git/archive.html">Archive</a></h3></li>
+                <li><h3><a href="/comic_git/about.html">About</a></h3></li>
+                <li><h3><a href="/comic_git/cast.html">Cast</a></h3></li>
                 <li><h3><a href="https://shop.tamberlanecomic.com">Shop</a></h3></li>
                 <li><h3><a href="http://www.patreon.com/tamberlane">Patreon</a></h3></li>
                 <li class="liveStream"><a href="http://www.twitch.tv/tamberlanecomic"><i class="icon-twitch"></i><h3>&nbsp;Now Live</h3></a></li>
@@ -51,31 +51,23 @@
     <div id="page">
         <div id="comic-page">
         <!--     Makes the comic image a Next link. -->
-            <a href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page">
-                <img src="/{{ base_dir }}/{{ comic_path }}" title="{{ alt_text }}"/>
+            <a href="/comic_git/comic/200.html#comic-page">
+                <img src="/comic_git/your_content/comics/199/Page_199.png" title="&quot;Yeah, I&#x27;ll start a fight. And I&#x27;ll end it too!! From time out!!&quot;"/>
             </a>
         </div>
             <div id="comic-navigation">
             <!--Disable the navigation links if you're at the first or latest comic. -->
-                    {% if first_id == current_id %}
-                        <a id="first-invalid">First</a>
-                        <a id="previous-invalid">Previous</a>
-                    {% else %}
-                        <a href="/{{ base_dir }}/comic/{{ first_id }}.html#comic-page" id="first-link">First</a>
-                        <a href="/{{ base_dir }}/comic/{{ previous_id }}.html#comic-page" id="previous-link">Previous</a>
-                    {% endif %}
-                    {% if page_name|int %}
-                        <div id="page-number"><span>{{ page_name }}</span></div>
-                    {% else %}
-                        <div id="page-interlude"><span>Interlude</span></div>
-                    {% endif %}
-                    {% if last_id == current_id %}
-                        <a id="next-invalid">Next</a>
-                        <a id="latest-invalid">Last</a>
-                    {% else %}
-                        <a href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page" id="next-link">Next</a>
-                        <a href="/{{ base_dir }}/latest.html#comic-page" id="latest-link">Last</a>
-                    {% endif %}
+                    
+                        <a href="/comic_git/comic/197.html#comic-page" id="first-link">First</a>
+                        <a href="/comic_git/comic/198.html#comic-page" id="previous-link">Previous</a>
+                    
+                    
+                        <div id="page-number"><span>199</span></div>
+                    
+                    
+                        <a href="/comic_git/comic/200.html#comic-page" id="next-link">Next</a>
+                        <a href="/comic_git/latest.html#comic-page" id="latest-link">Last</a>
+                    
             </div>
         <div id="comic-support">
             <h3>Enjoying the Comic? Show Your Support!</h3>
@@ -93,48 +85,32 @@
         <!--    Commence the metadata! -->
             <div id="comic-post">
                 <div id="metadata">
-                    <h1>{{ page_title }}</h1>
-                    <div><p id="postdate">Posted on {{ post_date }}</p></div>
-                    {%- if storyline %}
+                    <h1>Page 199</h1>
+                    <div><p id="postdate">Posted on December 11, 2019</p></div>
                         <p id="storyline">
-                            Chapter: <a href="/{{ base_dir }}/comic/{{ storyline_id }}.html#comic-page">{{ storyline }}</a>
+                            Chapter: <a href="/comic_git/comic/.html#comic-page">Chapter 4</a>
                         </p>
-                    {%- endif %}
-                    {%- if characters %}
                         <p id="characters">
                         Characters:
-                        {%- for character in characters %}
-                            <a href="/{{ base_dir }}/tagged.html?tag={{ character }}">{{ character }}</a>{% if not loop.last %}, {% endif %}
-                        {%- endfor %}
+                            <a href="/comic_git/tagged.html?tag=Anthony">Anthony</a>, 
+                            <a href="/comic_git/tagged.html?tag=Belfry">Belfry</a>, 
+                            <a href="/comic_git/tagged.html?tag=Piper">Piper</a>, 
+                            <a href="/comic_git/tagged.html?tag=Tamberlane">Tamberlane</a>
                         </p>
-                    {%- endif %}
-                    {%- if tags %}
-                        <p id="tags">
-                        Tags:
-                        {%- for tag in tags %}
-                            <a class="tag-link" href="/{{ base_dir }}/tagged.html?tag={{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-                        {%- endfor %}
-                        </p>
-                    {%- endif %}
                 </div>
         <!--    Commence the post! -->
                 <div id="post-content">
                     <em>Author's Notes:</em>
-                    <p>{{ post_html }}</p>
+                    <p><p>Anthony has all the answers! And Piper ... well, Piper is unapologetically her.
+
+<p>Saturday's my birthday! Yay! Happy birthday to me 😀 Thank you all for the wonderful birthday gift of reading my little story here. It means a lot to me!</p>
                 </div>
-                {% if transcripts %}
-                <div id="transcripts-container">
-                {% for language, transcript in transcripts.items() %}
-                    <div>{{ language }}</div>
-                    <div>{{ transcript }}</div>
-                {% endfor %}
-                </div>
-                {% endif %}
+                
                 <div id='discourse-comments'></div>
 
 <!--                <script type="text/javascript">-->
 <!--                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',-->
-<!--                        discourseEmbedUrl: 'http://localhost:63342/comic_git/comic/{{ page_id }}.html' };-->
+<!--                        discourseEmbedUrl: 'http://localhost:63342/comic_git/comic/.html' };-->
 
 <!--                    (function() {-->
 <!--                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;-->

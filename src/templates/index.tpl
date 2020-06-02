@@ -133,3 +133,7 @@
     </div>
 </div>
 {%- endblock %}
+{%- block script %}
+    {{ super() }}
+    <script type="application/javascript">patreon_total()</script>
+{%- endblock %}

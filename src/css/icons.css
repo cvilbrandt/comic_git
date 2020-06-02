@@ -4,9 +4,9 @@
   font-family: "socialicons";
   src:url("../fonts/socialicons.eot");
   src:url("../fonts/socialicons.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/socialicons.woff") format("woff"),
-  url("../fonts/socialicons.ttf") format("truetype"),
-  url("../fonts/socialicons.svg#socialicons") format("svg");
+    url("../fonts/socialicons.woff") format("woff"),
+    url("../fonts/socialicons.ttf") format("truetype"),
+    url("../fonts/socialicons.svg#socialicons") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -39,7 +39,7 @@
 }
 
 .icon-webtoon:before {
-  content: "\61";
+  content: "\77";
 }
 .icon-banknote:before {
   content: "\62";
@@ -70,4 +70,10 @@
 }
 .icon-coins:before {
   content: "\6b";
+}
+.icon-copy:before {
+  content: "\6c";
+}
+.icon-arrow:before {
+  content: "\6e";
 }

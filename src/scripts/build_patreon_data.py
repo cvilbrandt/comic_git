@@ -1,7 +1,7 @@
 import os
 import re
 from datetime import datetime
-from json import load
+from json import load, dump
 from pprint import pprint
 
 import requests
@@ -51,11 +51,11 @@ def call_patreon():
 
 def build_patreon_data():
     nicknames = load_nicknames_sheet()
-    patrons = call_patreon()
+#    patrons = call_patreon()
     # with open("src/scripts/patrons.json", "w") as f:
     #     dump(patrons, f)
-    # with open("src/scripts/patrons.json") as f:
-    #     patrons = load(f)
+    with open("src/scripts/patrons.json") as f:
+        patrons = load(f)
 
     years_dict = {6: [], 5: [], 4: [], 3: [], 2: [], 1: []}
     tier_list = {6000: "👑", 5000: "🌟", 4000: "♠", 3000: "♥", 2000: "♣", 1000: "♦"}

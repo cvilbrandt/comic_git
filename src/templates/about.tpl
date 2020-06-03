@@ -1,6 +1,7 @@
 {% extends "base.tpl" %}
 {% block content %}
 <div class="content">
+    <h1 id="page-title">&#9753; About the Author &#10087;</h1>
     <div id="about-photo"></div>
     <div id="about-text"><p>Tamberlane is written, drawn, and maintained by Caytlin Vilbrandt.</p>
 
@@ -15,9 +16,15 @@
             from marginalized backgrounds going on adventures that have nothing whatsoever to do with the trials and
             tribulations of their marginalized identity.</p>
 
+        <p>She is also known for her work in previous projects such as the My Little Pony fandom-made shipping card game,
+        Twilight Sparkle's Secret Shipfic Folder; former webcomics, like Walking on Broken Glass and Tar and Feathers;
+        and work on various Roan Arts games, such as Hunters and MLP:RiM.</p>
+
         <p>She lives with her husband and two cats, and spends a lot of time listening to Broadway musical soundtracks
             or watching true crime docuseries on Netflix. She also dabbles in game design, web design, and tabletop
             RPGs.</p>
+
+        <h2>An Important Note to All Readers...</h2>
 
         <p>Caytlin lives with fibromyalgia, a disorder which means she's in varying levels of pain 100% of the time. Her
             health always comes first, and therefore sometimes the comic has to go on brief breaks while she rests and
@@ -43,9 +50,9 @@
                 guys rock!</p>
 
             <h2>Contact Me</h2>
-            <a href="mailto:artist@cvilbrandt.com"><i class="icon-envelope"></i> artist@cvilbrandt.com</a>
+            &#10087; <a href="mailto:artist@cvilbrandt.com"><i class="icon-envelope"></i> artist@cvilbrandt.com</a>
             <br>
-            <a href="http://www.twitter.com/justcaytlin"><i class="icon-twitter"></i> @JustCaytlin</a>
+            &#10087; <a href="http://www.twitter.com/justcaytlin"><i class="icon-twitter"></i> @JustCaytlin</a>
 </div>
 {% endblock %}
 </div>

@@ -88,7 +88,9 @@
             <h1>Special Thanks to Long-Standing Patrons</h1>
             <p>Patrons who show extraordinary support, either in length of time or amount contributed, are added to
                 the list below! Thank you so, so much for your unending enthusiasm!</p>
-            <p>Mithril Club ♚ | Platinum Club ♛  |  Gold Club ★  |  Silver Club ♥  |  Bronze Club ♣</p>
+            <div id = "index-patreon-key"><span class="tier-6000">Adamantine Club 👑</span> |  <span class="tier-5000">Mithril Club 🌟</span> |
+                <span class="tier-4000">Platinum Club ♠</span>  |  <span class="tier-3000">Gold Club ♥</span>  |
+                <span class="tier-2000">Silver Club  ♣</span>  |  <span class="tier-1000">Bronze Club ♦</span></div>
         </div>
         <div id="patrons-5-years">
             <h3>5+ Years</h3>

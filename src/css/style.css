@@ -515,7 +515,7 @@ ul.links-menu .liveStream a {
     font-size: medium;
 }
 
-#patrons-5-years p, #patrons-4-years li, #patrons-3-years li {
+#patrons-5-years li, #patrons-4-years li, #patrons-3-years li, #patrons-2-years li, #patrons-1-year li {
     color: white;
 }
 
@@ -529,13 +529,47 @@ ul.links-menu .liveStream a {
     flex-grow: 1;
 }
 
+#index-patreon-key {
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.7em;
+}
+
 
 #patrons-2-years p, #patrons-1-year p{
     font-size: small;
     color: white;
 }
 
+.tier-1000 {
+    color: #f58181;
+    white-space: nowrap;
+}
 
+.tier-2000 {
+    color: #ffb861;
+    white-space: nowrap;
+}
+
+.tier-3000 {
+    color: #fff19b;
+    white-space: nowrap;
+}
+
+.tier-4000 {
+    color: #b7e788;
+    white-space: nowrap;
+}
+
+.tier-5000 {
+    color: #98ffff;
+    white-space: nowrap;
+}
+
+.tier-6000 {
+    color: #7cb7ff;
+    white-space: nowrap;
+}
 
 #archive-blurb {
     text-align: center;

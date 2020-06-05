@@ -148,8 +148,6 @@
                     {% endif %}
                     <div id="submit-transcript-button" class="button"><a href='https://github.com/cvilbrandt/tamberlane-transcripts/tree/master/{{ current_id }}'>Submit a Transcript</a></div>
                 </div>
-                <div id='discourse-comments'></div>
-                <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
                 <div class="commentbox"></div>
             </div>
         </div>
@@ -158,5 +156,6 @@
         <p>Tamberlane is designed with <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
     </div>
     <script src="../src/js/comic.js"></script>
+    <script src="../src/js/commentBox.js"></script>
     </body>
 </html>

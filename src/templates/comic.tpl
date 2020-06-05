@@ -149,19 +149,8 @@
                     <div id="submit-transcript-button" class="button"><a href='https://github.com/cvilbrandt/tamberlane-transcripts/tree/master/{{ current_id }}'>Submit a Transcript</a></div>
                 </div>
                 <div id='discourse-comments'></div>
-
-                <script type="text/javascript">
-                    let pageID = {{ current_id|tojson }};
-                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
-                        discourseEmbedUrl: `http://localhost:8023/comic_git/comic/` + pageID + `.html` };
-                    console.log(DiscourseEmbed);
-
-                    (function() {
-                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-                    })();
-                </script>
+                <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+                <div class="commentbox"></div>
             </div>
         </div>
     </div>

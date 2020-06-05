@@ -1,3 +1,5 @@
+import commentBox from 'commentbox.io';
+
 // ......DISPLAY MOBILE MENU...... //
 
 let button = document.getElementById("mobile-menu-button");
@@ -65,7 +67,5 @@ languageList.addEventListener("click",function() {
 })
 
 // ...... COMMENTBOX ...... //
-
-import commentBox from 'commentbox.io';
 
 commentBox('5657642357751808-proj');

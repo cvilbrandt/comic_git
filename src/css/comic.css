@@ -513,7 +513,7 @@ ul.links-menu .liveStream a {
 
 #discourse-comments {
     width: 100%;
-    display: none;
+    /*display: none;*/
 }
 
 #footer {

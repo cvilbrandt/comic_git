@@ -150,16 +150,18 @@
                 </div>
                 <div id='discourse-comments'></div>
 
-<!--                <script type="text/javascript">-->
-<!--                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',-->
-<!--                        discourseEmbedUrl: 'http://localhost:63342/comic_git/comic/{{ page_id }}.html' };-->
+                <script type="text/javascript">
+                    let pageID = {{ current_id|tojson }};
+                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
+                        discourseEmbedUrl: `http://localhost:8023/comic_git/comic/` + pageID + `.html` };
+                    console.log(DiscourseEmbed);
 
-<!--                    (function() {-->
-<!--                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;-->
-<!--                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';-->
-<!--                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);-->
-<!--                    })();-->
-<!--                </script>-->
+                    (function() {
+                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                </script>
             </div>
         </div>
     </div>

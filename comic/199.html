@@ -9,11 +9,13 @@
         <link rel="stylesheet" type="text/css" href="../src/css/icons.css">
         <link href="https://fonts.googleapis.com/css?family=Rubik|Underdog&display=swap" rel="stylesheet">
 
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" type="image/x-icon" >
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" type="image/x-icon" >
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" type="image/x-icon" >
-        <link rel="manifest" href="/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="theme-color" content="#ffffff">
         <title>Page 199 | Tamberlane</title>
     </head>
     <body>
@@ -110,16 +112,18 @@
                 </div>
                 <div id='discourse-comments'></div>
 
-<!--                <script type="text/javascript">-->
-<!--                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',-->
-<!--                        discourseEmbedUrl: 'http://localhost:63342/comic_git/comic/.html' };-->
+                <script type="text/javascript">
+                    let pageID = "199";
+                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
+                        discourseEmbedUrl: `http://localhost:8023/comic_git/comic/` + pageID + `.html` };
+                    console.log(DiscourseEmbed);
 
-<!--                    (function() {-->
-<!--                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;-->
-<!--                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';-->
-<!--                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);-->
-<!--                    })();-->
-<!--                </script>-->
+                    (function() {
+                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                </script>
             </div>
         </div>
     </div>

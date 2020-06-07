@@ -18,11 +18,13 @@ jobs:
     steps:
       - name: Checkout master branch and build website
         uses: actions/checkout@v2
+        with:
+          submodules: true
       - name: Reset master to point to working's HEAD
         run: |
           git fetch --all --no-tags
           git reset --hard origin/working
-          git submodule update --remote
+#          git submodule update --remote
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v1
         with:

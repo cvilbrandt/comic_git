@@ -512,8 +512,9 @@ ul.links-menu .liveStream a {
 }
 
 #discourse-comments, #comments-header {
-    width: 100%;
+    width: 95%;
     grid-column: span 3;
+    margin: 0.6em auto;
 }
 
 #footer {

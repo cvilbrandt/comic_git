@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout master branch and build website
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         with:
           submodules: true
       - name: Reset master to point to working's HEAD

@@ -63,7 +63,3 @@ languageList.addEventListener("click",function() {
         }
     }
 })
-
-// ...... COMMENTBOX ...... //
-
-commentBox('5657642357751808-proj');

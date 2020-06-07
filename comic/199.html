@@ -108,19 +108,18 @@
 <p>Saturday's my birthday! Yay! Happy birthday to me 😀 Thank you all for the wonderful birthday gift of reading my little story here. It means a lot to me!</p>
 
                     
-                    <div id="submit-transcript-button" class="button"><a href='https://github.com/cvilbrandt/tamberlane-transcripts/tree/master/199'>Submit a Transcript</a></div>
+                    <a href='https://github.com/cvilbrandt/tamberlane-transcripts/tree/master/199'>Submit a Transcript</a>
                 </div>
+                <h3 id="comments-header">Comments</h3>
                 <div id='discourse-comments'></div>
 
                 <script type="text/javascript">
-                    let pageID = "199";
-                    DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
-                        discourseEmbedUrl: `http://localhost:8023/comic_git/comic/` + pageID + `.html` };
-                    console.log(DiscourseEmbed);
+                    window.DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
+                        discourseEmbedUrl: 'http://cvilbrandt.github.io/tamberlane/comic/199.html' };
 
                     (function() {
                         var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-                        d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                        d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
                         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
                     })();
                 </script>

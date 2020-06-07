@@ -511,9 +511,9 @@ ul.links-menu .liveStream a {
     margin-left: 1em;
 }
 
-#discourse-comments {
+#discourse-comments, #comments-header {
     width: 100%;
-    /*display: none;*/
+    grid-column: span 3;
 }
 
 #footer {

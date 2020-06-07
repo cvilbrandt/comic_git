@@ -148,7 +148,18 @@
                     {% endif %}
                     <div id="submit-transcript-button" class="button"><a href='https://github.com/cvilbrandt/tamberlane-transcripts/tree/master/{{ current_id }}'>Submit a Transcript</a></div>
                 </div>
-                <div class="commentbox"></div>
+                <div id='discourse-comments'></div>
+
+                <script type="text/javascript">
+                    window.DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
+                        discourseEmbedUrl: 'http://cvilbrandt.github.io/tamberlane/comic/{{ current_id }}.html' };
+
+                    (function() {
+                        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                        d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                </script>
             </div>
         </div>
     </div>

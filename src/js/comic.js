@@ -1,5 +1,3 @@
-// import commentBox from 'https://commentbox.io';
-
 // ......DISPLAY MOBILE MENU...... //
 
 let button = document.getElementById("mobile-menu-button");

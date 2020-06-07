@@ -155,7 +155,7 @@
     <div id="footer">
         <p>Tamberlane is designed with <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
     </div>
-    <script type="module" src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script type="module" src="../src/js/commentBox.js"></script>
     <script src="../src/js/comic.js"></script>
     </body>
 </html>

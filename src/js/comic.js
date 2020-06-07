@@ -1,4 +1,4 @@
-import commentBox from 'commentbox.io';
+import commentBox from 'https://commentbox.io';
 
 // ......DISPLAY MOBILE MENU...... //
 

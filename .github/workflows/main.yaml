@@ -19,7 +19,7 @@ jobs:
       - name: Checkout master branch and build website
         uses: actions/checkout@v1
         with:
-          submodules: true
+          submodules: recursive
       - name: Reset master to point to working's HEAD
         run: |
           git fetch --all --no-tags

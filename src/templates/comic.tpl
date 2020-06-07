@@ -5,15 +5,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
 <!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src forum.tamberlanecomic.com;">-->
-        <link rel="stylesheet" type="text/css" href="../src/css/comic.css">
-        <link rel="stylesheet" type="text/css" href="../src/css/icons.css">
+        <link rel="stylesheet" type="text/css" href="/{{ base_dir }}/src/css/comic.css">
+        <link rel="stylesheet" type="text/css" href="/{{ base_dir }}/src/css/icons.css">
         <link href="https://fonts.googleapis.com/css?family=Rubik|Underdog&display=swap" rel="stylesheet">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="/{{ base_dir }}/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/{{ base_dir }}/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/{{ base_dir }}/favicon-16x16.png">
+        <link rel="manifest" href="/{{ base_dir }}/site.webmanifest">
+        <link rel="mask-icon" href="/{{ base_dir }}/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#00aba9">
         <meta name="theme-color" content="#ffffff">
         <title>{{ page_title }} | {{ comic_title }}</title>
@@ -33,7 +33,7 @@
                 <li><a href="http://tamberlanecomic.tumblr.com/" title="Get Updates on Tumblr"><i class="icon-tumblr"><span style="color: #663403;" class="Label">&nbsp;Tumblr</span></i></a></li>
                 <li><a href="http://www.twitch.tv/tamberlanecomic" title="Watch Comic Livestreams on Twitch"><i class="icon-twitch"><span style="color: #663403;" class="Label">&nbsp;Twitch</span></i></a></li>
                 <li><a href="http://www.youtube.com/c/pixelprism" title="Watch Speeddraws on YouTube"><i class="icon-youtube-play"><span style="color: #663403;" class="Label">&nbsp;YouTube</span></i></a></li>
-                <li><a href="https://www.tamberlanecomic.com/feed/"><i class="icon-rss" title="Subscribe on RSS"><span style="color: #663403;" class="Label">&nbsp;RSS</span></i></a></li>
+                <li><a href="/{{ base_dir }}/feed.xml"><i class="icon-rss" title="Subscribe on RSS"><span style="color: #663403;" class="Label">&nbsp;RSS</span></i></a></li>
                 <li><a href="http://www.webtoons.com" title="Subscribe via Email"><i class="icon-envelope"><span style="color: #663403;" class="Label">&nbsp;Subscribe</span></i></a></li>
                 <li><span>&#10087;</span></li>
             </ul>
@@ -167,6 +167,6 @@
     <div id="footer">
         <p>Tamberlane is designed with <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
     </div>
-    <script src="../src/js/comic.js"></script>
+    <script src="/{{ base_dir }}/src/js/comic.js"></script>
     </body>
 </html>

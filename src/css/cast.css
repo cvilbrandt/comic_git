@@ -407,3 +407,11 @@ h2#cast-title {
         padding: 0 1em;
     }
 }
+
+@media only screen and (min-width: 1800px) {
+    #cast-profile {
+        grid-template-areas:
+                "Title Title Title Title"
+                "Photo Stats1 Info Story";
+    }
+}

@@ -43,6 +43,7 @@
                 <li><h3><a href="/{{ base_dir }}/archive.html">Archive</a></h3></li>
                 <li><h3><a href="/{{ base_dir }}/about.html">About</a></h3></li>
                 <li><h3><a href="/{{ base_dir }}/cast.html">Cast</a></h3></li>
+                <li><h3><a href="https://forum.tamberlanecomic.com">Forum</a></h3></li>
                 <li><h3><a href="https://shop.tamberlanecomic.com">Shop</a></h3></li>
                 <li><h3><a href="http://www.patreon.com/tamberlane">Patreon</a></h3></li>
                 <li class="liveStream"><a href="http://www.twitch.tv/tamberlanecomic"><i class="icon-twitch"></i><h3>&nbsp;Now Live</h3></a></li>

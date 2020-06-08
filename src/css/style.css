@@ -1031,30 +1031,117 @@ ul.links-menu .liveStream a {
         height: 350px;
     }
 }
-/*@media only screen and (-webkit-min-device-pixel-ratio: 2) {*/
-/*    #mobile-menu-button {*/
-/*        font-size: xx-large;*/
-/*    }*/
 
-/*    #mobile-menu h3{*/
-/*        font-size: 3em;*/
-/*        padding: 0;*/
-/*    }*/
+@media only screen and (min-width: 1800px) {
+    h1 {
+        font-size: 2.5em;
+    }
 
-/*    header ul.social-links li {*/
-/*        width: 20%;*/
-/*        height: 3em;*/
-/*    }*/
+    h2 {
+        font-size: 2em;
+    }
 
-/*    .icon {*/
-/*        font-size: 3em;*/
-/*    }*/
+    h3 {
+        font-size: 1.75em;
+    }
 
-/*    .links-menu li, #mobile-menu-button {*/
-/*        height: 150px;*/
-/*    }*/
+    h4 {
+        font-size: 1.5em;
+    }
 
-/*    ul.links-menu {*/
-/*        align-items: center;*/
-/*    }*/
-/*}*/
+    body {
+        display: grid;
+        grid: auto-flow / 1fr 3fr;
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../your_content/images/Banner.jpg");
+    }
+
+    #footer {
+        grid-column: span 3;
+        font-size: medium;
+    }
+
+    header {
+        align-self: start;
+        grid-template-areas:
+                "logo"
+                "menu"
+                "clear";
+        background-image: none;
+        padding-top: 2em;
+    }
+
+    header ul.social-links {
+        margin: 0;
+        padding-top: 2.5em;
+    }
+
+    header ul.social-links li {
+        width: 8%;
+        height: auto;
+        margin: 5px;
+        align-self: stretch;
+        font-size: 2em;
+    }
+
+    ul.social-links li span {
+        color: #d29166;
+    }
+
+    header ul.social-links li a{
+        font-size: 1.25em;
+    }
+
+    header ul.social-links li a:hover{
+        font-size: 1.25em;
+    }
+
+    .social-links {
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    header ul.links-menu {
+        flex-wrap: wrap;
+        align-content: center;
+        background-color: transparent;
+        padding-top: 1em;
+    }
+
+    .links-menu li {
+        flex-grow: 1;
+        width: 100%;
+        /*height: 48px;*/
+        font-size: 1.5em;
+    }
+
+    ul.links-menu li a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    #page {
+        border-left: rgba(52,26,9,1) 10px solid;
+    }
+
+    #index-image {
+        height: 500px;
+        width: 459px;
+    }
+
+    #index-patreon-special {
+        width: 100%;
+    }
+
+    #patrons-5-years li, #patrons-4-years li, #patrons-3-years li, #patrons-2-years li, #patrons-1-year li, #patrons-5-years p, #patrons-4-years p, #patrons-3-years p, #patrons-2-years p, #patrons-1-year p {
+        font-size: medium;
+        line-height: normal;
+    }
+
+    /*#large-desktop-container {*/
+    /*    background: linear-gradient(rgba(52,26,9,1) 100%, rgba(0,0,0,0) 0%);*/
+    /*    height: 100vh;*/
+    /*    width: 100%;*/
+    /*    grid-area: clear;*/
+    /*}*/
+}

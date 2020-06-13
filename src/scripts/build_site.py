@@ -189,7 +189,7 @@ def get_ids(comic_list: List[Dict], index):
     }
 
 
-def create_comic_data(comic_info: RawConfigParser, page_info: dict,
+def create_comic_data(comic_info: RawConfigParser, page_info: dict, scheduled_post_count: int,
                       first_id: str, previous_id: str, current_id: str, next_id: str, last_id: str):
     print("Building page {}...".format(page_info["page_name"]))
     archive_post_date = strftime(comic_info.get("Archive", "Date format"),
@@ -222,14 +222,16 @@ def create_comic_data(comic_info: RawConfigParser, page_info: dict,
         "characters": page_info["Characters"],
         "tags": page_info["Tags"],
         "post_html": post_html,
-        "transcripts": transcripts
+        "transcripts": transcripts,
+        "scheduled_post_count": scheduled_post_count
     }
 
 
-def build_comic_data_dicts(comic_info: RawConfigParser, page_info_list: List[Dict]) -> List[Dict]:
+def build_comic_data_dicts(comic_info: RawConfigParser, page_info_list: List[Dict],
+                           scheduled_post_count: int) -> List[Dict]:
     comic_data_dicts = []
     for i, page_info in enumerate(page_info_list):
-        comic_dict = create_comic_data(comic_info, page_info, **get_ids(page_info_list, i))
+        comic_dict = create_comic_data(comic_info, page_info, scheduled_post_count, **get_ids(page_info_list, i))
         comic_data_dicts.append(comic_dict)
     return comic_data_dicts
 
@@ -400,7 +402,7 @@ def main():
     processing_times.append(("Save page_info_list.json file", time()))
 
     # Build full comic data dicts, to build templates with
-    comic_data_dicts = build_comic_data_dicts(comic_info, page_info_list)
+    comic_data_dicts = build_comic_data_dicts(comic_info, page_info_list, scheduled_post_count)
     processing_times.append(("Build full comic data dicts", time()))
 
     # Create low-res and thumbnail versions of all the comic pages

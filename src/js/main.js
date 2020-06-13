@@ -45,26 +45,26 @@ function patreon_total() {
         patron_count.innerText = fetch_patron_count;
     };
 
-    XHR = new XMLHttpRequest();
-    XHR.open("GET", "/comic_git/comic/page_info_list.json");
-    XHR.send();
-    XHR.onload = function() {
-        let response = JSON.parse(this.response);
-        let scheduled_posts = response.scheduled_post_count;
-        let scheduled_text;
-
-        if (scheduled_posts === 1 ) {
-            scheduled_text = "next week's page!"
-        } else if (scheduled_posts === 2) {
-            scheduled_text = "2 extra pages!"
-        } else if (scheduled_posts > 2 ) {
-            scheduled_text = "up to " + scheduled_posts + " extra pages!"
-        } else {
-            scheduled_text = "all pages before they're made public!"
-        }
-
-        document.getElementById("patreon-buffer").innerText = scheduled_text;
-    };
+    // XHR = new XMLHttpRequest();
+    // XHR.open("GET", "/comic_git/comic/page_info_list.json");
+    // XHR.send();
+    // XHR.onload = function() {
+    //     let response = JSON.parse(this.response);
+    //     let scheduled_posts = response.scheduled_post_count;
+    //     let scheduled_text;
+    //
+    //     if (scheduled_posts === 1 ) {
+    //         scheduled_text = "next week's page!"
+    //     } else if (scheduled_posts === 2) {
+    //         scheduled_text = "2 extra pages!"
+    //     } else if (scheduled_posts > 2 ) {
+    //         scheduled_text = "up to " + scheduled_posts + " extra pages!"
+    //     } else {
+    //         scheduled_text = "all pages before they're made public!"
+    //     }
+    //
+    //     document.getElementById("patreon-buffer").innerText = scheduled_text;
+    // };
 }
 
 

@@ -71,8 +71,17 @@
     <div id="index-patrons">
         <h1>Tamberlane is supported by our lovely patrons!</h1>
         <p>Folks who support the Tamberlane Patreon get all sorts of goodies, including <a href="/{{ base_dir}}/patreon-cast.html">
-            cameos in the comic,</a> monthly postcards, and early access to <span id="patreon-buffer">up to
-            {{ scheduled_post_count }} more pages!</span> And that's only scratching the surface.</p>
+            cameos in the comic,</a> monthly postcards, and early access to
+            {%- if scheduled_post_count == 1 %}
+                next week's page!
+            {%- elif scheduled_post_count == 2 %}
+                2 extra pages!
+            {%- elif scheduled_post_count > 2 %}
+                up to {{ scheduled_post_count }} extra pages!
+            {%- else %}
+                all pages before they're made public!
+            {%- endif %}
+            And that's only scratching the surface.</p>
         <p>More than that, patron support helps me pay my bills and hire the help I need as a disabled woman to keep
             producing this comic. Every little bit helps tremendously!</p>
         <div id="patreon-stats">

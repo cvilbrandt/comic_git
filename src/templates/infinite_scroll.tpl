@@ -1,8 +1,9 @@
 {% extends "base.tpl" %}
 {% block content %}
 <div class="content">
+    <h1 id="page-title">&#9753; Infinite Scroll Archive &#10087;</h1>
     <div id="jump-to">
-        <h2>Jump to...</h2>
+        <h2>Jump to Chapter...</h2>
         <div id="jump-to-sections">
             {%- for storyline in storylines %}
             <div id="infinite-{{ storyline.name | replace(' ', '-') }}" class="infinite-section">

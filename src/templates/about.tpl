@@ -2,35 +2,42 @@
 {% block content %}
 <div class="content">
     <h1 id="page-title">&#9753; About the Author &#10087;</h1>
-    <div id="about-photo"></div>
-    <div id="about-text"><p>Tamberlane is written, drawn, and maintained by Caytlin Vilbrandt.</p>
+    <div id="about-top">
+        <div id="about-photo"></div>
+        <div id="about-text"><p>Tamberlane is written, drawn, and maintained by Caytlin Vilbrandt.</p>
 
-        <p>Caytlin is a queer disabled woman from the Pacific Northwest who lives and breathes comics, art, and design.
-            She writes, draws, and maintains Tamberlane for her dayjob but also illustrates and does graphic design on
-            the side. Inspired heavily by the worlds of Beatrix Potter, Redwall, The Secret of Nimh, and others like
-            them, she created Tamberlane as a way to pour her childhood love of talking critters into an exciting new
-            adventure.</p>
+            <p>Caytlin is a queer disabled woman from the Pacific Northwest who lives and breathes comics, art, and design.
+                She writes, draws, and maintains Tamberlane for her dayjob but also illustrates and does graphic design on
+                the side. Inspired heavily by the worlds of Beatrix Potter, Redwall, The Secret of Nimh, and others like
+                them, she created Tamberlane as a way to pour her childhood love of talking critters into an exciting new
+                adventure.</p>
 
-        <p>Her greatest passion is telling emotionally complex stories where there is no blatant villain, for the most
-            common evils in the world are more complicated than Good and Bad. She is also passionate about characters
-            from marginalized backgrounds going on adventures that have nothing whatsoever to do with the trials and
-            tribulations of their marginalized identity.</p>
+            <p>Her greatest passion is telling emotionally complex stories where there is no blatant villain, for the most
+                common evils in the world are more complicated than Good and Bad. She is also passionate about characters
+                from marginalized backgrounds going on adventures that have nothing whatsoever to do with the trials and
+                tribulations of their marginalized identity.</p>
 
-        <p>She is also known for her work in previous projects such as the My Little Pony fandom-made shipping card game,
-        Twilight Sparkle's Secret Shipfic Folder; former webcomics, like Walking on Broken Glass and Tar and Feathers;
-        and work on various Roan Arts games, such as Hunters and MLP:RiM.</p>
+            <p>She is also known for her work in previous projects such as the My Little Pony fandom-made shipping card game,
+            Twilight Sparkle's Secret Shipfic Folder; former webcomics, like Walking on Broken Glass and Tar and Feathers;
+            and work on various Roan Arts games, such as Hunters and MLP:RiM.</p>
 
-        <p>She lives with her husband and two cats, and spends a lot of time listening to Broadway musical soundtracks
-            or watching true crime docuseries on Netflix. She also dabbles in game design, web design, and tabletop
-            RPGs.</p>
-
+            <p>She lives with her husband and two cats, and spends a lot of time listening to Broadway musical soundtracks
+                or watching true crime docuseries on Netflix. She also dabbles in game design, web design, and tabletop
+                RPGs.</p>
+        </div>
+    </div>
+    <div id="about-important">
         <h2>An Important Note to All Readers...</h2>
 
         <p>Caytlin lives with fibromyalgia, a disorder which means she's in varying levels of pain 100% of the time. Her
             health always comes first, and therefore sometimes the comic has to go on brief breaks while she rests and
             recovers. However, Tamberlane is her pride and joy, and she is always passionate about getting pages out as
             quickly and consistently as possible! Thank you for your enthusiasm and patience when she has to rest.</p>
-
+    </div>
+</div>
+<div class="break"></div>
+<div class="content">
+    <div id="about-support">
         <h1>Want to Support the Comic?</h1>
         <p>Monetary support of Tamberlane goes toward our rent and bills, purchasing merchandise to sell in the shop,
             and paying my assistants to help me out with the nitty gritty of keeping this operation going. As the

@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../../your_content/images/Banner.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../../your_content/images/bg-body-med.jpg");
     background-attachment: fixed;
     background-position: center bottom;
     background-size: cover;
@@ -56,7 +56,7 @@ header {
             "logo"
             "menu";
     width: 100%;
-    background-image: url("../../your_content/images/Banner.jpg");
+    background-image: url("../../your_content/images/bg-header-med.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center top;
@@ -347,7 +347,7 @@ ul.links-menu .liveStream a {
 }
 
 #page {
-    background-image: url("../../your_content/images/bgTest3.png");
+    background-image: url("../../your_content/images/bg-body-med.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: top center;
@@ -401,7 +401,7 @@ ul.links-menu .liveStream a {
     position: relative;
     box-sizing: border-box;
     margin: 0 5px 10px 5px;
-    background-image: url("../../your_content/images/bgTest3.png");
+    background-image: url("../../your_content/images/bg-body-sm.jpg");
     background-position: top center;
     box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.7);
     border-left: #68ad43 5px solid;
@@ -516,8 +516,10 @@ ul.links-menu .liveStream a {
     font-size: medium;
 }
 
-#patrons-5-years li, #patrons-4-years li, #patrons-3-years li, #patrons-2-years li, #patrons-1-year li {
+#patrons-5-years li, #patrons-4-years li, #patrons-3-years li, #patrons-2-years li, #patrons-1-year li,
+#patrons-5-years p, #patrons-4-years p, #patrons-3-years p, #patrons-2-years p, #patrons-1-year p{
     color: white;
+    font-size: small;
 }
 
 #patrons-5-years, #patrons-4-years, #patrons-3-years, #patrons-2-years, #patrons-1-year {
@@ -536,11 +538,6 @@ ul.links-menu .liveStream a {
     padding: 0.7em;
 }
 
-
-#patrons-2-years p, #patrons-1-year p{
-    font-size: small;
-    color: white;
-}
 
 .tier-1000 {
     color: #f58181;
@@ -576,6 +573,7 @@ ul.links-menu .liveStream a {
     text-align: center;
     padding: 0.25em 2em 1em 2em;
     margin-bottom: 1em;
+    border-bottom: double 5px #341a09;
 }
 
 #page-title {
@@ -583,11 +581,21 @@ ul.links-menu .liveStream a {
     padding-left: 0.5em;
 }
 
-#archive-Chapter-4 {
+a#archive-Chapter-1 {
+    background-image: url("../../your_content/images/Chapter 1.png");
+}
+a#archive-Chapter-2 {
+    background-image: url("../../your_content/images/Chapter 2.png");
+}
+a#archive-Chapter-3 {
+    background-image: url("../../your_content/images/Chapter 3.png");
+}
+a#archive-Chapter-4 {
     background-image: url("../../your_content/images/Chapter 4.png");
 }
 
 .archive-section {
+    display: block;
     text-align: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -595,6 +603,7 @@ ul.links-menu .liveStream a {
     height: 125px;
     width: auto;
     margin-bottom: 10px;
+    background-color: black;
 }
 
 .archive-section h2 {
@@ -627,18 +636,33 @@ ul.links-menu .liveStream a {
     display: none;
 }
 
-#infinite-Chapter-4 {
+h2#jump-to {
+    text-align: center;
+    margin: 1.5em 0 0 0;
+}
+
+#infinite-Chapter-1, #archive-icon-Chapter-1 {
+    background-image: url("../../your_content/images/Ch1.png");
+}
+#infinite-Chapter-2, #archive-icon-Chapter-2 {
+    background-image: url("../../your_content/images/Ch2.png");
+}
+#infinite-Chapter-3, #archive-icon-Chapter-3 {
+    background-image: url("../../your_content/images/Ch3.png");
+}
+#infinite-Chapter-4, #archive-icon-Chapter-4 {
     background-image: url("../../your_content/images/Ch4.png");
 }
 
-#jump-to-sections {
+#jump-to-sections, #archive-navigation {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
 }
 
-#loading-infinite-scroll {
-
+#jump-to h2 {
+    text-align: center;
 }
 
 #infinite-scroll a {
@@ -650,14 +674,14 @@ ul.links-menu .liveStream a {
     margin: auto;
 }
 
-.infinite-section {
+.infinite-section, .archive-icon-section {
     text-align: center;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
     height: 125px;
     width: 125px;
-    margin: 10px auto;
+    margin: 1em;
 }
 
 .chapter-links {
@@ -670,6 +694,7 @@ ul.links-menu .liveStream a {
 
 #load-older, #load-newer {
     text-align: center;
+    margin: 1em;
 }
 
 #load-newer-button, #load-older-button {
@@ -692,14 +717,33 @@ ul.links-menu .liveStream a {
     text-align: center;
 }
 
+#about-top {
+    display: grid;
+    grid-template-areas: "photo text";
+}
+
+#about-text {
+    grid-area: text;
+}
+
 #about-photo {
     background-image: url("../../your_content/images/caytlin.jpg");
     width: 250px;
     height: 350px;
     background-size: cover;
     background-position: center;
-    float: left;
     margin: 15px;
+    grid-area: photo;
+    align-self: center;
+}
+
+#about-important {
+    background-color: rgba(226, 215, 199, 0.89);
+    padding: 0.8em 2em;
+}
+
+#about-support {
+    text-align: center;
 }
 
 .button {
@@ -899,6 +943,11 @@ ul.links-menu .liveStream a {
 }
 
 @media only screen and (max-width: 650px) {
+
+    body {
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../../your_content/images/bg-body-sm.jpg");
+    }
+
     #page {
         width: 100%;
     }
@@ -910,6 +959,7 @@ ul.links-menu .liveStream a {
     header {
         display: block;
         width: 100vw;
+        background-image: url("../../your_content/images/bg-header-sm.jpg");
     }
 
     #logo a {
@@ -1031,6 +1081,12 @@ ul.links-menu .liveStream a {
     #belfry404 {
         height: 350px;
     }
+    #about-top {
+        display: block;
+    }
+    #about-photo {
+        margin: auto;
+    }
 }
 
 @media only screen and (min-width: 1800px) {
@@ -1053,7 +1109,7 @@ ul.links-menu .liveStream a {
     body {
         display: grid;
         grid: auto-flow / 1fr 3fr;
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../your_content/images/Banner.jpg");
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../your_content/images/bg-body-lg.jpg");
     }
 
     #footer {

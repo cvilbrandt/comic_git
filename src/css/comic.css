@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-image: url("../../your_content/images/bgTest2.png");
+    background-image: url("../../your_content/images/bg-header-comic.jpg");
     background-attachment: fixed;
     margin: 0;
     padding: 0;
@@ -240,7 +240,7 @@ ul.links-menu .liveStream a {
 }
 
 #page {
-    background-image: url("../../your_content/images/bgTest3.png");
+    background-image: url("../../your_content/images/bg-body-med.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;

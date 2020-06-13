@@ -97,33 +97,59 @@
             <h1>Special Thanks to Long-Standing Patrons</h1>
             <p>Patrons who show extraordinary support, either in length of time or amount contributed, are added to
                 the list below! Thank you so, so much for your unending enthusiasm!</p>
+            <p>Want to have your name on here too? You can find out all about how
+                <a href="https://www.patreon.com/posts/patreon-25349213">on the Patreon page!</a></p>
             <div id = "index-patreon-key"><span class="tier-6000">Adamantine Club 👑</span> |  <span class="tier-5000">Mithril Club 🌟</span> |
                 <span class="tier-4000">Platinum Club ♠</span>  |  <span class="tier-3000">Gold Club ♥</span>  |
                 <span class="tier-2000">Silver Club  ♣</span>  |  <span class="tier-1000">Bronze Club ♦</span></div>
         </div>
         <div id="patrons-5-years">
             <h3>5+ Years</h3>
+            {%- if patreon_list[5]|length > 9 %}
+                <p>
+                {%- for name in patreon_list[5] %}
+                {{ name }}{% if not loop.last %}, {% endif %}
+                {%- endfor %}
+                </p>
+            {%- else %}
             <ul>
                 {%- for name in patreon_list[5] %}
                 <li>{{ name }}</li>
                 {%- endfor %}
             </ul>
+            {%- endif %}
         </div>
         <div id="patrons-4-years">
             <h3>4 Years</h3>
+            {%- if patreon_list[4]|length > 9 %}
+                <p>
+                {%- for name in patreon_list[4] %}
+                {{ name }}{% if not loop.last %}, {% endif %}
+                {%- endfor %}
+                </p>
+            {%- else %}
             <ul>
                 {%- for name in patreon_list[4] %}
                 <li>{{ name }}</li>
                 {%- endfor %}
             </ul>
+            {%- endif %}
         </div>
         <div id="patrons-3-years">
             <h3>3 Years</h3>
+            {%- if patreon_list[3]|length > 9 %}
+                <p>
+                {%- for name in patreon_list[3] %}
+                {{ name }}{% if not loop.last %}, {% endif %}
+                {%- endfor %}
+                </p>
+            {%- else %}
             <ul>
                 {%- for name in patreon_list[3] %}
                 <li>{{ name }}</li>
                 {%- endfor %}
             </ul>
+            {%- endif %}
         </div>
         <div id="patrons-2-years">
             <h3>2 Years</h3>

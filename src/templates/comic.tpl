@@ -100,7 +100,7 @@
                     <div><p id="postdate">Posted on {{ post_date }}</p></div>
                     {%- if storyline %}
                         <p id="storyline">
-                            Chapter: <a href="/{{ base_dir }}/comic/{{ storyline_id }}.html#comic-page">{{ storyline }}</a>
+                            Chapter: <a href='/{{ base_dir }}/archive.html#archive-{{ storyline | replace(" ", "-") }}'>{{ storyline }}</a>
                         </p>
                     {%- endif %}
                     {%- if characters %}

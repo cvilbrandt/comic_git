@@ -189,6 +189,17 @@ def get_ids(comic_list: List[Dict], index):
     }
 
 
+def get_transcripts(page_info):
+    transcripts = OrderedDict()
+    for path in glob(f"tamberlane-transcripts/{page_info['page_name']}/*.txt"):
+        language = os.path.splitext(os.path.basename(path))[0]
+        with open(path, "rb") as f:
+            transcripts[language] = f.read().decode("utf-8").replace("\n", "<br>\n")
+    if "English" in transcripts:
+        transcripts.move_to_end("English", last=False)
+    return transcripts
+
+
 def create_comic_data(comic_info: RawConfigParser, page_info: dict, scheduled_post_count: int,
                       first_id: str, previous_id: str, current_id: str, next_id: str, last_id: str):
     print("Building page {}...".format(page_info["page_name"]))
@@ -196,11 +207,6 @@ def create_comic_data(comic_info: RawConfigParser, page_info: dict, scheduled_po
                                  strptime(page_info["Post date"], comic_info.get("Comic Settings", "Date format")))
     with open(f"your_content/comics/{page_info['page_name']}/post.html", "rb") as f:
         post_html = f.read().decode("utf-8")
-    transcripts = {}
-    for path in glob(f"tamberlane-transcripts/{page_info['page_name']}/*.txt"):
-        language = os.path.splitext(os.path.basename(path))[0]
-        with open(path, "rb") as f:
-            transcripts[language] = f.read().decode("utf-8").replace("\n", "<br>\n")
     return {
         "page_name": page_info["page_name"],
         "filename": page_info["Filename"],
@@ -222,7 +228,7 @@ def create_comic_data(comic_info: RawConfigParser, page_info: dict, scheduled_po
         "characters": page_info["Characters"],
         "tags": page_info["Tags"],
         "post_html": post_html,
-        "transcripts": transcripts,
+        "transcripts": get_transcripts(page_info),
         "scheduled_post_count": scheduled_post_count
     }
 

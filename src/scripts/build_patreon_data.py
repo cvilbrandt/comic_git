@@ -1,5 +1,6 @@
 import os
 import re
+import socket
 from datetime import datetime
 from json import load, dump
 from pprint import pprint
@@ -12,13 +13,19 @@ GOOGLE_SHEETS_DEVELOPER_KEY = os.environ["GOOGLE_SHEETS_DEVELOPER_KEY"]
 PATREON_AUTH_TOKEN = os.environ["PATREON_AUTH_TOKEN"]
 
 
-def load_nicknames_sheet():
+def load_nicknames_sheet(cache_reponse=False):
+    filepath = "src/scripts/nicknames.json"
+    if cache_reponse:
+        if os.path.exists(filepath):
+            with open(filepath) as f:
+                return load(f)
+
     print("Loading Google Sheet of patron info...")
-    RANGE = 'Current!B2:L'
+    range = 'Current!B2:L'
     service = build('sheets', 'v4', developerKey=GOOGLE_SHEETS_DEVELOPER_KEY)
     # Call the Sheets API
     sheet = service.spreadsheets()
-    result = sheet.values().get(spreadsheetId=SHEET_ID, range=RANGE).execute()
+    result = sheet.values().get(spreadsheetId=SHEET_ID, range=range).execute()
 
     nicknames = {}
     for row in result["values"]:
@@ -28,10 +35,20 @@ def load_nicknames_sheet():
         if alias and email:
             nicknames[email] = alias.strip()
 
+    if cache_reponse:
+        with open(filepath, "w") as f:
+            dump(nicknames, f)
+
     return nicknames
 
 
-def call_patreon():
+def call_patreon(cache_reponse=False):
+    filepath = "src/scripts/patrons.json"
+    if cache_reponse:
+        if os.path.exists(filepath):
+            with open(filepath) as f:
+                return load(f)
+
     print("Retrieving data from Patreon...")
     url = "https://www.patreon.com/api/oauth2/v2/campaigns/82133/members?include=currently_entitled_tiers&fields%5Bmember%5D=full_name,email,lifetime_support_cents,patron_status,pledge_relationship_start"
     headers = {"Authorization": PATREON_AUTH_TOKEN}
@@ -46,16 +63,19 @@ def call_patreon():
             break
         url = json_response["links"]["next"]
 
+    if cache_reponse:
+        with open(filepath, "w") as f:
+            dump(patrons, f)
+
     return patrons
 
 
 def build_patreon_data():
-    nicknames = load_nicknames_sheet()
-    patrons = call_patreon()
-    # with open("src/scripts/patrons.json", "w") as f:
-    #     dump(patrons, f)
-    # with open("src/scripts/patrons.json") as f:
-    #    patrons = load(f)
+    print(socket.gethostbyaddr(socket.gethostname())[0])
+    print(socket.getfqdn())
+    cache_response = False
+    nicknames = load_nicknames_sheet(cache_reponse=cache_response)
+    patrons = call_patreon(cache_reponse=cache_response)
 
     years_dict = {6: [], 5: [], 4: [], 3: [], 2: [], 1: []}
     tier_list = {6000: "👑", 5000: "🌟", 4000: "♠", 3000: "♥", 2000: "♣", 1000: "♦"}
@@ -70,7 +90,7 @@ def build_patreon_data():
         full_name = attr["full_name"]
         cents = attr["lifetime_support_cents"]
         start = attr["pledge_relationship_start"]
-        print("{:<25} | {:<6} | {}".format(full_name, cents, start))
+        # print("{:<25} | {:<6} | {}".format(full_name, cents, start))
 
         name = nicknames[email] if email in nicknames else full_name.strip()
 
@@ -87,7 +107,7 @@ def build_patreon_data():
         for years in (6, 5, 4, 3, 2, 1):
             past_dt = datetime(year=current_year - years, month=current_month, day=current_day, tzinfo=dt.tzinfo)
             if dt < past_dt:
-                print(f"Has pledged for {years} years")
+                # print(f"Has pledged for {years} years")
                 years_dict[years].append(name)
                 break
 

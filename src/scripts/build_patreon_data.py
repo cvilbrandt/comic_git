@@ -71,9 +71,8 @@ def call_patreon(cache_reponse=False):
 
 
 def build_patreon_data():
-    print(socket.gethostbyaddr(socket.gethostname())[0])
-    print(socket.getfqdn())
-    cache_response = False
+    # If we're not running in GitHub, use cache
+    cache_response = "cloudapp" not in socket.gethostname()
     nicknames = load_nicknames_sheet(cache_reponse=cache_response)
     patrons = call_patreon(cache_reponse=cache_response)
 
@@ -90,7 +89,7 @@ def build_patreon_data():
         full_name = attr["full_name"]
         cents = attr["lifetime_support_cents"]
         start = attr["pledge_relationship_start"]
-        # print("{:<25} | {:<6} | {}".format(full_name, cents, start))
+        print("{:<25} | {:<6} | {}".format(full_name, cents, start))
 
         name = nicknames[email] if email in nicknames else full_name.strip()
 
@@ -107,7 +106,7 @@ def build_patreon_data():
         for years in (6, 5, 4, 3, 2, 1):
             past_dt = datetime(year=current_year - years, month=current_month, day=current_day, tzinfo=dt.tzinfo)
             if dt < past_dt:
-                # print(f"Has pledged for {years} years")
+                print(f"Has pledged for {years} years")
                 years_dict[years].append(name)
                 break
 

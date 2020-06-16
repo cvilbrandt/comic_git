@@ -71,6 +71,7 @@
 
 <div id="footer">
     <p>Tamberlane is powered by <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
+    <p>Notice a typo or error in the comic? Something on the site not working? <a href="https://forum.tamberlanecomic.com/c/site-feedback/typos-and-errors/14">Submit a report here.</a></p>
 </div>
 
 {% endblock %}

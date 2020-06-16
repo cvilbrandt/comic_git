@@ -35,6 +35,7 @@
         <div id="secondaryHenry" class="portrait"><span>Henry</span></div>
         <div id="secondaryMarie" class="portrait"><span>Marie</span></div>
         <div id="secondaryNora" class="portrait"><span>Nora</span></div>
+        <div id="secondaryParker" class="portrait"><span>Parker</span></div>
         <div id="secondaryParsley" class="portrait"><span>Parsley</span></div>
         <div id="secondaryPenny" class="portrait"><span>Penny</span></div>
         <div id="secondaryPiper" class="portrait"><span>Piper</span></div>

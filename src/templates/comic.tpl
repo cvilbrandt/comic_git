@@ -97,7 +97,7 @@
             <div id="comic-post">
                 <div id="metadata">
                     <h1>{{ page_title }}</h1>
-                    <div><p id="postdate">Posted on {{ post_date }}</p></div>
+                    <div><p id="postdate">Posted on<br>{{ post_date }}</p></div>
                     {%- if storyline %}
                         <p id="storyline">
                             Chapter: <a href='/{{ base_dir }}/archive.html#archive-{{ storyline | replace(" ", "-") }}'>{{ storyline }}</a>
@@ -167,6 +167,7 @@
     </div>
     <div id="footer">
         <p>Tamberlane is designed with <a href="https://github.com/ryanvilbrandt/comic_git/">comic_git</a>. &copy; Caytlin Vilbrandt, 2016 - Present.</p>
+        <p>Notice a typo or error in the comic? Something on the site not working? <a href="https://forum.tamberlanecomic.com/c/site-feedback/typos-and-errors/14">Submit a report here.</a></p>
     </div>
     <script src="/{{ base_dir }}/src/js/comic.js"></script>
     </body>

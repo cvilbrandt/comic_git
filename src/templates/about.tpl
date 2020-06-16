@@ -4,7 +4,8 @@
     <h1 id="page-title">&#9753; About the Author &#10087;</h1>
     <div id="about-top">
         <div id="about-photo"></div>
-        <div id="about-text"><p>Tamberlane is written, drawn, and maintained by Caytlin Vilbrandt.</p>
+        <div id="about-text">
+            <p>Tamberlane is written, drawn, and maintained by Caytlin Vilbrandt.</p>
 
             <p>Caytlin is a queer disabled woman from the Pacific Northwest who lives and breathes comics, art, and design.
                 She writes, draws, and maintains Tamberlane for her dayjob but also illustrates and does graphic design on
@@ -57,9 +58,9 @@
                 guys rock!</p>
 
             <h2>Contact Me</h2>
-            &#10087; <a href="mailto:artist@cvilbrandt.com"><i class="icon-envelope"></i> artist@cvilbrandt.com</a>
+            <a href="mailto:artist@cvilbrandt.com"><i class="icon-envelope"></i> artist@cvilbrandt.com</a>
             <br>
-            &#10087; <a href="http://www.twitter.com/justcaytlin"><i class="icon-twitter"></i> @JustCaytlin</a>
+            <a href="http://www.twitter.com/justcaytlin"><i class="icon-twitter"></i> @JustCaytlin</a>
+</div>
 </div>
 {% endblock %}
-</div>

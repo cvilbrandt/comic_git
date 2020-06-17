@@ -5,7 +5,7 @@
     {%- block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik|Underdog&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./src/css/icons.css">
 
@@ -52,15 +52,15 @@
             <li><span>&#10087;</span></li>
         </ul>
         <ul class="links-menu">
-            <li><h3><a href="comic/{{ first_id }}.html#comic-page">First Comic</a></h3></li>
-            <li><h3><a href="latest.html">Latest Comic</a></h3></li>
-            <li><h3><a href="archive.html">Archive</a></h3></li>
-            <li><h3><a href="about.html">About</a></h3></li>
-            <li><h3><a href="cast.html">Cast</a></h3></li>
-            <li><h3><a href="https://forum.tamberlanecomic.com">Forum</a></h3></li>
-            <li><h3><a href="https://shop.tamberlanecomic.com">Shop</a></h3></li>
-            <li><h3><a href="http://www.patreon.com/tamberlane">Patreon</a></h3></li>
-            <li class="liveStream"><a href="http://www.twitch.tv/tamberlanecomic"><i class="icon-twitch"></i><h3>&nbsp;Now Live</h3></a></li>
+            <li><a href="comic/{{ first_id }}.html#comic-page">First Comic</a></li>
+            <li><a href="latest.html">Latest Comic</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="cast.html">Cast</a></li>
+            <li><a href="https://forum.tamberlanecomic.com">Forum</a></li>
+            <li><a href="https://shop.tamberlanecomic.com">Shop</a></li>
+            <li><a href="http://www.patreon.com/tamberlane">Patreon</a></li>
+            <li class="liveStream"><a href="http://www.twitch.tv/tamberlanecomic"><i class="icon-twitch"></i>&nbsp;Now Live</a></li>
         </ul>
     </div>
     <div id="large-desktop-container"></div>

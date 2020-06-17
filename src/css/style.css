@@ -232,22 +232,13 @@ header ul.links-menu {
     grid-area: navigation;
     display: flex;
     justify-content: center;
-    align-self: flex-end;
     list-style-type: none;
-    width: 100%;
     background-color: #341a09;
-    z-index: 2;
     margin: 0;
-    padding-left: 0;
+    padding: 0;
 }
 
-header ul.links-menu li {
-    min-width: 40px;
-    padding: 0 10px;
-    text-align: center;
-    margin: 0 1px;
-}
-
+/* Gets rid of the First & Last Comic links for desktop, so that it can be added in later for mobile */
 header ul.links-menu li:first-child, header ul.links-menu li:nth-child(2) {
     display: none;
 }
@@ -256,9 +247,15 @@ header ul.links-menu li a {
     color: #f5debd;
     text-shadow: 0 0 3px #F35E36;
     text-decoration: none;
+    font-size: 1.25em;
+    font-weight: bold;
     font-family: 'Underdog', cursive;
     transition: ease 0.2s;
+    display: block;
     width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 header ul.links-menu li:hover a {

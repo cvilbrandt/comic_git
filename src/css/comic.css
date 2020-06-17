@@ -135,6 +135,7 @@ header ul.links-menu {
     background-color: #341a09;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* Gets rid of the First & Last Comic links for desktop, so that it can be added in later for mobile */

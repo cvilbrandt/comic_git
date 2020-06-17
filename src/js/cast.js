@@ -424,7 +424,7 @@ let directory = {
     "Danger":
         {
             "Title": "Danger, the Shy Menace",
-            "Photo":"Danger.PNG",
+            "Photo":"Danger.png",
             "Species":"Corgi",
             "Gender":"Male",
             "Birthday": "October 31",
@@ -472,7 +472,7 @@ let directory = {
     "Jackie":
         {
             "Title": "Jackie Tavern, the Barkeep",
-            "Photo":"Jackie.PNG",
+            "Photo":"Jackie.png",
             "Species":"Jackal/Cat",
             "Gender":"Male",
             "Birthday": "March 14",
@@ -504,7 +504,7 @@ let directory = {
     "Jentzen":
         {
             "Title": "Jentzen Prentice, the Teacher's Assistant",
-            "Photo":"Jentzen.PNG",
+            "Photo":"Jentzen.png",
             "Species":"Cheetah/Wolf",
             "Gender":"Male",
             "Birthday": "November 4",
@@ -575,7 +575,7 @@ let directory = {
     "Peek":
         {
             "Title": "Peek Livres, the Book Expert",
-            "Photo":"Peek.PNG",
+            "Photo":"Peek.png",
             "Species":"Water Deer",
             "Gender":"Male",
             "Birthday": "June 20",
@@ -657,7 +657,7 @@ let directory = {
     "Tagg":
         {
             "Title": "Tagg, the Punk Rock Corgi",
-            "Photo":"Tagg.PNG",
+            "Photo":"Tagg.png",
             "Species":"Corgi",
             "Gender":"Non-binary",
             "Birthday": "August 15",

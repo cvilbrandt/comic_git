@@ -12,29 +12,36 @@
 
 /* Containers for each type of cast categories */
 
-.cast-section{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: center;
+.cast-container {
+    width: 90%;
     margin: auto;
-    padding: 25px 0 0 0;
 }
 
 /* The headers for each section of the cast page */
-.cast-section h2 {
-    width: 100%;
+#PrimaryCastTitle, #SecondaryCastTitle, #PatreonCastTitle {
     font-size: xx-large;
     text-align: center;
-    align-self: start;
     color: white;
-    margin: 10px;
-    padding: 15px 0 15px 7px;
-    writing-mode: sideways-lr;
-    text-orientation: mixed;
+    margin: 1em 0 0 0;
+    padding: 0.25em;
     border-top-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
     background-color: #271b1a;
+    box-sizing: content-box;
+    width: 10em;
+    display: block;
+}
+
+.cast-section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 1em;
+    /*justify-content: center;*/
+    align-items: center;
+    margin: 1em auto;
+    padding: 0 0 0 0;
+    width: 100%;
+
 }
 
 /* The summary for each cast section */
@@ -53,28 +60,8 @@
 /*                        THE CAST SECTIONS                             */
 /* ==================================================================== */
 
-#primary-cast, #secondary-cast, #patreon-cast {
-    display: grid;
-    grid-template-columns: minmax(30px, 50px) 4fr 2fr;
-    column-gap: 25px;
-}
 
-#primary-cast {
-    grid-template-areas:
-            "PrimaryTitle PrimaryCast PrimarySummary";
-}
-
-#secondary-cast {
-    grid-template-areas:
-            "SecondaryTitle SecondaryCast SecondarySummary";
-}
-
-#patreon-cast {
-    grid-template-areas:
-            "PatreonTitle PatreonCast PatreonSummary";
-}
-
-div#patreon-cast.cast-section h2#PatreonCastTitle {
+#PatreonCastTitle {
     background-color: #F35E36;
 }
 
@@ -82,27 +69,6 @@ div#patreon-cast.cast-section h2#PatreonCastTitle {
     align-self: center;
 }
 
-.cast-section #primary-cast h2#PrimaryCastTitle {
-    grid-area: PrimaryTitle;
-}
-
-.cast-section #secondary-cast h2#SecondaryCastTitle {
-    grid-area: SecondaryTitle;
-}
-
-.cast-section #patreon-cast h2#PatreonCastTitle {
-    grid-area: PatreonTitle;
-}
-
-.cast-section #primary-cast .cast-section-summary {
-    grid-area: PrimarySummary;
-}
-.cast-section #secondary-cast .cast-section-summary {
-    grid-area: SecondarySummary;
-}
-.cast-section #patreon-cast .cast-section-summary {
-    grid-area: PatreonSummary;
-}
 
 /* ==================================================================== */
 /*                           CAST PORTRAITS                             */
@@ -116,7 +82,7 @@ div#patreon-cast.cast-section h2#PatreonCastTitle {
     background-color: rgba(233, 216, 174, 0.8);
     border-radius: 0.4em;
     padding: 15px;
-    margin-left: -10px;
+    height: 100%;
 }
 
 .portrait {
@@ -367,9 +333,17 @@ h2#cast-title {
     transition: 0.3s ease;
 }
 
+/* ==================================================================== */
+/*                          MEDIA QUERY TIME                            */
+/* ==================================================================== */
+
 @media only screen and (max-width: 850px) {
     #primary-cast, #secondary-cast, #patreon-cast {
         display: block;
+    }
+
+    .cast-container {
+        width: 100%;
     }
 
     .cast-section-portraits {
@@ -379,15 +353,15 @@ h2#cast-title {
 
     .cast-section {
         width: 100%;
+        margin-top: 0;
     }
 
-    .cast-section h2 {
-        writing-mode: horizontal-tb;
-        text-orientation: upright;
+    #PrimaryCastTitle, #SecondaryCastTitle, #PatreonCastTitle  {
         border-bottom-left-radius: 0;
         border-top-right-radius: 0.5em;
-        margin: 0;
+        margin: 1em 0 0 0;
         padding: 15px 0;
+        width: 100%;
     }
 
     .cast-section-summary {

@@ -16,7 +16,8 @@
 
         {% for character, full_name, patron in cast %}
             <div id="patron-{{character}}" class="patron-profile">
-                <div id="{{character}}-photo" class="patron-photo" style="background-image: url('your_content/images/cast/{{character}}.png');"></div>
+                <div id="{{character}}-photo" class="patron-photo" style="background-image: url('your_content/images/cast/{{character}}.png');">
+                     </div>
                 <div id="{{character}}-info" class="patron-info">
                     <h2>{{full_name}}</h2>
                     <p class="patron-donated-text"><em>donated by</em></p>

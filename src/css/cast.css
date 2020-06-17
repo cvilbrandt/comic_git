@@ -271,7 +271,7 @@ h2#cast-title {
     grid-area: Stats1;
     /*width: 90%;*/
     margin: 0 20px;
-    background-color: rgba(226, 215, 199, 0.89);
+    background-color: rgba(238, 225, 200, 0.89);
     padding: 1em;
 }
 

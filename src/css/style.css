@@ -477,6 +477,10 @@ ul.links-menu .liveStream a {
     transition: 0.2s ease;
 }
 
+#media-reviews {
+    padding: 0;
+}
+
 #index-patrons {
     text-align: center;
     padding: 0 4em;

@@ -262,8 +262,8 @@ h2#cast-title {
     border-radius: 1em;
     grid-area: Photo;
     border: 5px solid #008552;
-    margin: 0 10px;
-    align-self: center;
+    margin: 10px;
+    align-self: start;
     justify-self: center;
 }
 

@@ -673,6 +673,7 @@ h2#jump-to {
 #infinite-scroll img {
     display: block;
     margin: auto;
+    width: 100%;
 }
 
 .infinite-section, .archive-icon-section {

@@ -57,6 +57,11 @@
             <a href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page">
                 <img src="/{{ base_dir }}/{{ comic_path }}" title="{{ alt_text }}"/>
             </a>
+<!--            <img src="/{{ base_dir }}/{{ comic_path }}" title="{{ alt_text }}" usemap="page"/>-->
+<!--            <map name="page">-->
+<!--                <area id="previous_page" shape="rect" coords="0,0,100,1545" alt="Previous Page" href="/{{ base_dir }}/comic/{{ prev_id }}.html#comic-page">-->
+<!--                <area id="next_page" shape="rect" coords="0,0,1545,1000" alt="Next Page" href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page">-->
+<!--            </map>-->
         </div>
             <div id="comic-navigation">
             <!--Disable the navigation links if you're at the first or latest comic. -->
@@ -96,7 +101,18 @@
         <!--    Commence the metadata! -->
             <div id="comic-post">
                 <div id="metadata">
-                    <h1>{{ page_title }}</h1>
+                    <h1>
+                    {%- if page_title == "Latest" %}
+                        {%- if current_id|int %}
+                            Page {{ page_name }}
+                        {% else %}
+                            {{ page_name }}
+                        {% endif %}
+                    {%- else %}
+                        {{ page_title }}
+                    {% endif %}
+                    </h1>
+<!--                    <h1>{{ page_title }}</h1>-->
                     <div><p id="postdate">Posted on<br>{{ post_date }}</p></div>
                     {%- if storyline %}
                         <p id="storyline">

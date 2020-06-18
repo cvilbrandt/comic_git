@@ -5,9 +5,9 @@
     {%- block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/{{ base_dir }}/src/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik|Underdog&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./src/css/icons.css">
+    <link rel="stylesheet" type="text/css" href="/{{ base_dir }}/src/css/icons.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -33,7 +33,7 @@
                 <a href="comic/{{ first_id }}.html#comic-page">Page 1</a>
             </div>
             <div id="LatestComic" style="background-image:url(your_content/comics/{{ last_id }}/Page_{{last_id}}_small.png);">
-                <a href="latest.html#comic-page">Page {{ last_id }}</a>
+                <a href="/{{ base_dir }}/latest.html#comic-page">Page {{ last_id }}</a>
             </div>
             <div id="FirstComicFrame"><h2>Start Here</h2></div>
             <div id="Flourish"></div>
@@ -48,15 +48,15 @@
             <li><a href="http://www.twitch.tv/tamberlanecomic" title="Watch Comic Livestreams on Twitch"><i class="icon-twitch"><span style="color: #663403;" class="Label">&nbsp;Twitch</span></i></a></li>
             <li><a href="http://www.youtube.com/c/pixelprism" title="Watch Speeddraws on YouTube"><i class="icon-youtube-play"><span style="color: #663403;" class="Label">&nbsp;YouTube</span></i></a></li>
             <li><a href="/{{ base_dir }}/feed.xml"><i class="icon-rss" title="Subscribe on RSS"><span style="color: #663403;" class="Label">&nbsp;RSS</span></i></a></li>
-            <li><a href="subscribe.html" title="Subscribe via Email"><i class="icon-envelope"><span style="color: #663403;" class="Label">&nbsp;Subscribe</span></i></a></li>
+            <li><a href="/{{ base_dir }}/subscribe.html" title="Subscribe via Email"><i class="icon-envelope"><span style="color: #663403;" class="Label">&nbsp;Subscribe</span></i></a></li>
             <li><span>&#10087;</span></li>
         </ul>
         <ul class="links-menu">
             <li><a href="comic/{{ first_id }}.html#comic-page">First Comic</a></li>
-            <li><a href="latest.html">Latest Comic</a></li>
-            <li><a href="archive.html">Archive</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="cast.html">Cast</a></li>
+            <li><a href="/{{ base_dir }}/latest.html">Latest Comic</a></li>
+            <li><a href="/{{ base_dir }}/archive.html">Archive</a></li>
+            <li><a href="/{{ base_dir }}/about.html">About</a></li>
+            <li><a href="/{{ base_dir }}/cast.html">Cast</a></li>
             <li><a href="https://forum.tamberlanecomic.com">Forum</a></li>
             <li><a href="https://shop.tamberlanecomic.com">Shop</a></li>
             <li><a href="http://www.patreon.com/tamberlane">Patreon</a></li>

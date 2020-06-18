@@ -3,7 +3,6 @@
 /*"C:\Users\artis\AppData\Local\Programs\Python\Python38\python.exe" src\scripts\build_site.py*/
 html, body {
     width: 100%;
-    overflow-x: hidden;
 }
 
 html {
@@ -953,7 +952,7 @@ h2#jump-to {
     }
 
     #page {
-        width: 100%;
+        /*width: 100%;*/
     }
 
     p {

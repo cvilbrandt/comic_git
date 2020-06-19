@@ -24,7 +24,7 @@
 {% block body %}
 <header>
     <div id="logo">
-        <a href="index.html"></a>
+        <a href="/index.html"></a>
     </div>
     <div id="mobile-menu-button"><h3>Menu</h3></div>
     <div id="mobile-menu">
@@ -32,7 +32,7 @@
             <div id="FirstComic">
                 <a href="comic/{{ first_id }}.html#comic-page">Page 1</a>
             </div>
-            <div id="LatestComic" style="background-image:url(your_content/comics/{{ last_id }}/Page_{{last_id}}_small.png);">
+            <div id="LatestComic" style="background-image:url('/{{ base_dir }}/your_content/comics/{{ last_id }}/Page_{{last_id}}_small.png');">
                 <a href="/{{ base_dir }}/latest.html#comic-page">Page {{ last_id }}</a>
             </div>
             <div id="FirstComicFrame"><h2>Start Here</h2></div>

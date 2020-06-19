@@ -21,9 +21,14 @@
     {%- if use_thumbnails %}
         {%- for storyline in storylines %}
         {%- if storyline.pages %}
-        <a id="archive-{{ storyline.name | replace(' ', '-') }}" class="archive-section">
-            <h2>{{ storyline.name }}</h2>
-        </a>
+        <div class="archive-banner-container">
+            <div class="archive-banner-clear"></div>
+            <a id="archive-{{ storyline.name | replace(' ', '-') }}" class="archive-section">
+    <!--            <img src="your_content/images/Chapter Clear.png">-->
+                <h2>{{ storyline.name }}</h2>
+            </a>
+            <div class="archive-banner-clear"></div>
+        </div>
         <div class="archive-grid">
         {%- for page in storyline.pages %}
             <a href="/{{ base_dir }}/comic/{{ page.page_name }}.html">

@@ -596,15 +596,28 @@ a#archive-Chapter-4 {
     background-image: url("../../your_content/images/Chapter 4.png");
 }
 
+.archive-banner-container {
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*display: flex;*/
+}
+
+/*.archive-banner-clear {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    background-color: black;*/
+/*}*/
+
 .archive-section {
     display: block;
     text-align: center;
-    background-size: contain;
+    background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: center top;
-    min-height: 100%;
+    background-position: center;
     overflow: hidden;
-    max-width: 100%;
+    min-height: 150px;
+    width: 100%;
+    /*height: auto;*/
     margin-bottom: 10px;
     background-color: black;
 }
@@ -1090,6 +1103,10 @@ h2#jump-to {
     }
     #about-photo {
         margin: auto;
+    }
+
+    .archive-section {
+        height: 100px;
     }
 }
 

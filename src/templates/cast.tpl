@@ -1,7 +1,7 @@
 {% extends "base.tpl" %}
 {%- block head %}
     {{ super() }}
-        <link rel="stylesheet" type="text/css" href="./src/css/cast.css">
+        <link rel="stylesheet" type="text/css" href="../src/css/cast.css">
     {%- endblock %}
 {% block content %}
 <div class="content" id="cast-header">
@@ -82,7 +82,7 @@
         </div>
         <div class="cast-section-summary"><p>Patreon supporters at $50+ have the opportunity to be featured in the comic as
             a non-speaking minor character, while supporters of $100+ get speaking roles. This list contains patron character
-            cameos that have spoken so far. If you'd like to see the full patreon cast, check out the <a href="patreon-cast.html">Rogue's Gallery</a>!</p>
+            cameos that have spoken so far. If you'd like to see the full patreon cast, check out the <a href="../patreon-cast/">Rogue's Gallery</a>!</p>
             <p>Want to be included in the comic and become a canonical part of the Tamberlane universe?</p>
             <div class="patreon-button" id="patreon-button"><a href="http://www.patreon.com/tamberlane">Become a Patron</a></div></div>
     </div>
@@ -123,8 +123,8 @@
             </div>
             <div id="cast-links">
                 <h3>Links</h3>
-                <p id="cast-tagged" class="cast-stats-p">&#10087; <a href="./tagged.html?tag=Belfry">All pages featuring Belfry</a></p>
-                <p id="cast-refsheet" class="cast-stats-p">&#10087; <a href="./your_content/images/sheets/Belfry.png">Belfry's Reference Sheet</a> <span><br>(contains nudity)</span></p>
+                <p id="cast-tagged" class="cast-stats-p">&#10087; <a href="../tagged/Belfry">All pages featuring Belfry</a></p>
+                <p id="cast-refsheet" class="cast-stats-p">&#10087; <a href="../your_content/images/sheets/Belfry.png">Belfry's Reference Sheet</a> <span><br>(contains nudity)</span></p>
             </div>
         </div>
         <div id="cast-info">
@@ -147,5 +147,5 @@
     </div>
     <div id="to-top"><p><a href="#top">⯅ To Top</a></p></div>
 </div>
-<script src="./src/js/cast.js"></script>
+<script src="../src/js/cast.js"></script>
 {% endblock %}

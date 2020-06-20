@@ -5,9 +5,9 @@
     <div id="jump-to">
         <h2>Jump to Chapter...</h2>
         <div id="jump-to-sections">
-            {%- for storyline in storylines %}
-            <div id="infinite-{{ storyline.name | replace(' ', '-') }}" class="infinite-section">
-                <a class="chapter-links" href="infinite_scroll.html#{{ storyline.pages[0].page_name }}">{{ storyline.name }}</a>
+            {%- for name, pages in storylines.items() %}
+            <div id="infinite-{{ name | replace(' ', '-') }}" class="infinite-section">
+                <a class="chapter-links" href="#{{ pages[0].page_name }}">{{ name }}</a>
             </div>
             {%- endfor %}
         </div>
@@ -29,7 +29,7 @@
 {% endblock %}
 {% block script %}
 <script type="module">
-    import { load_page } from "./src/js/infinite_scroll.js";
+    import { load_page } from "../src/js/infinite_scroll.js";
     load_page();
 </script>
 {% endblock %}

@@ -2,3 +2,5 @@ Jinja2
 Pillow
 requests
 google-api-python-client
+markdown2
+pytz

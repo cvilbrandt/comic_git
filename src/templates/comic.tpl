@@ -21,7 +21,7 @@
     <body>
     <header>
         <div id="logo">
-            <a href="/{{ base_dir }}"></a>
+            <a href="/{{ base_dir }}/"></a>
         </div>
         <div id="mobile-menu-button"><h3>Menu</h3></div>
         <div id="mobile-menu">
@@ -34,15 +34,15 @@
                 <li><a href="http://www.twitch.tv/tamberlanecomic" title="Watch Comic Livestreams on Twitch"><i class="icon-twitch"><span style="color: #663403;" class="Label">&nbsp;Twitch</span></i></a></li>
                 <li><a href="http://www.youtube.com/c/pixelprism" title="Watch Speeddraws on YouTube"><i class="icon-youtube-play"><span style="color: #663403;" class="Label">&nbsp;YouTube</span></i></a></li>
                 <li><a type="application/rss+xml" href="/{{ base_dir }}/feed.xml"><i class="icon-rss" title="Subscribe on RSS"><span style="color: #663403;" class="Label">&nbsp;RSS</span></i></a></li>
-                <li><a href="/{{ base_dir }}/subscribe.html" title="Subscribe via Email"><i class="icon-envelope"><span style="color: #663403;" class="Label">&nbsp;Subscribe</span></i></a></li>
+                <li><a href="/{{ base_dir }}/subscribe/" title="Subscribe via Email"><i class="icon-envelope"><span style="color: #663403;" class="Label">&nbsp;Subscribe</span></i></a></li>
                 <li><span>&#10087;</span></li>
             </ul>
             <ul class="links-menu">
-                <li><a href="comic/{{ first_id }}.html#comic-page">First Comic</a></li>
-                <li><a href="/{{ base_dir }}/latest.html">Latest Comic</a></li>
-                <li><a href="/{{ base_dir }}/archive.html">Archive</a></li>
-                <li><a href="/{{ base_dir }}/about.html">About</a></li>
-                <li><a href="/{{ base_dir }}/cast.html">Cast</a></li>
+                <li><a href="comic/{{ first_id }}/#comic-page">First Comic</a></li>
+                <li><a href="/{{ base_dir }}/latest/">Latest Comic</a></li>
+                <li><a href="/{{ base_dir }}/archive/">Archive</a></li>
+                <li><a href="/{{ base_dir }}/about/">About</a></li>
+                <li><a href="/{{ base_dir }}/cast/">Cast</a></li>
                 <li><a href="https://forum.tamberlanecomic.com">Forum</a></li>
                 <li><a href="https://shop.tamberlanecomic.com">Shop</a></li>
                 <li><a href="http://www.patreon.com/tamberlane">Patreon</a></li>
@@ -54,13 +54,13 @@
     <div id="page">
         <div id="comic-page">
         <!--     Makes the comic image a Next link. -->
-            <a href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page">
+            <a href="/{{ base_dir }}/comic/{{ next_id }}/#comic-page">
                 <img src="/{{ base_dir }}/{{ comic_path }}" title="{{ alt_text }}"/>
             </a>
 <!--            <img src="/{{ base_dir }}/{{ comic_path }}" title="{{ alt_text }}" usemap="page"/>-->
 <!--            <map name="page">-->
-<!--                <area id="previous_page" shape="rect" coords="0,0,100,1545" alt="Previous Page" href="/{{ base_dir }}/comic/{{ prev_id }}.html#comic-page">-->
-<!--                <area id="next_page" shape="rect" coords="0,0,1545,1000" alt="Next Page" href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page">-->
+<!--                <area id="previous_page" shape="rect" coords="0,0,100,1545" alt="Previous Page" href="/{{ base_dir }}/comic/{{ prev_id }}/#comic-page">-->
+<!--                <area id="next_page" shape="rect" coords="0,0,1545,1000" alt="Next Page" href="/{{ base_dir }}/comic/{{ next_id }}/#comic-page">-->
 <!--            </map>-->
         </div>
             <div id="comic-navigation">
@@ -69,8 +69,8 @@
                         <a id="first-invalid">First</a>
                         <a id="previous-invalid">Previous</a>
                     {% else %}
-                        <a href="/{{ base_dir }}/comic/{{ first_id }}.html#comic-page" id="first-link">First</a>
-                        <a href="/{{ base_dir }}/comic/{{ previous_id }}.html#comic-page" id="previous-link">Previous</a>
+                        <a href="/{{ base_dir }}/comic/{{ first_id }}/#comic-page" id="first-link">First</a>
+                        <a href="/{{ base_dir }}/comic/{{ previous_id }}/#comic-page" id="previous-link">Previous</a>
                     {% endif %}
                     {% if page_name|int %}
                         <div id="page-number"><span>{{ page_name }}</span></div>
@@ -81,8 +81,8 @@
                         <a id="next-invalid">Next</a>
                         <a id="latest-invalid">Last</a>
                     {% else %}
-                        <a href="/{{ base_dir }}/comic/{{ next_id }}.html#comic-page" id="next-link">Next</a>
-                        <a href="/{{ base_dir }}/latest.html#comic-page" id="latest-link">Last</a>
+                        <a href="/{{ base_dir }}/comic/{{ next_id }}/#comic-page" id="next-link">Next</a>
+                        <a href="/{{ base_dir }}/latest/#comic-page" id="latest-link">Last</a>
                     {% endif %}
             </div>
         <div id="comic-support">
@@ -116,14 +116,14 @@
                     <div><p id="postdate">Posted on<br>{{ post_date }}</p></div>
                     {%- if storyline %}
                         <p id="storyline">
-                            Chapter: <a href='/{{ base_dir }}/archive.html#archive-{{ storyline | replace(" ", "-") }}'>{{ storyline }}</a>
+                            Chapter: <a href='/{{ base_dir }}/archive/#archive-{{ storyline | replace(" ", "-") }}'>{{ storyline }}</a>
                         </p>
                     {%- endif %}
                     {%- if characters %}
                         <p id="characters">
                         Characters:
                         {%- for character in characters %}
-                            <a href="/{{ base_dir }}/tagged.html?tag={{ character }}">{{ character }}</a>{% if not loop.last %}, {% endif %}
+                            <a class="character-link" href="/{{ base_dir }}/tagged/{{ character }}/">{{ character }}</a>{% if not loop.last %}, {% endif %}
                         {%- endfor %}
                         </p>
                     {%- endif %}
@@ -131,7 +131,7 @@
                         <p id="tags">
                         Tags:
                         {%- for tag in tags %}
-                            <a class="tag-link" href="/{{ base_dir }}/tagged.html?tag={{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                            <a class="tag-link" href="/{{ base_dir }}/tagged/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}
                         {%- endfor %}
                         </p>
                     {%- endif %}
@@ -170,7 +170,7 @@
 
                 <script type="text/javascript">
                     window.DiscourseEmbed = { discourseUrl: 'https://forum.tamberlanecomic.com/',
-                        discourseEmbedUrl: 'http://cvilbrandt.github.io/tamberlane/comic/{{ current_id }}.html' };
+                        discourseEmbedUrl: 'http://cvilbrandt.github.io/tamberlane/comic/{{ current_id }}/' };
 
                     (function() {
                         var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;

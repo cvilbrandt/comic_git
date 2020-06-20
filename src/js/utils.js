@@ -1,4 +1,4 @@
-export function ajax_call(url, func, params=null, headers=null) {
+export function ajax_call(url, func, params=null) {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         switch (this.readyState) {
@@ -17,7 +17,7 @@ export function ajax_call(url, func, params=null, headers=null) {
                 if (this.status === 200) {
                     func(this);
                 } else {
-                    console.log("Ajax error: " + this.status + " / " + this.error);
+                    console.log("Ajax error: " + this.status + " / " + this.error());
                 }
                 break;
             default:
@@ -25,11 +25,6 @@ export function ajax_call(url, func, params=null, headers=null) {
     };
     xhttp.open(params === null ? "GET" : "POST", url, true);
     xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-    if (headers !== null ) {
-        for (const header in headers) {
-            xhttp.setRequestHeader(header, headers[header]);
-        }
-    }
     if (params === null) {
         xhttp.send();
     } else {

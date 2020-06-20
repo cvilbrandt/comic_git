@@ -774,7 +774,7 @@ for (let member of portraits) {
         let photo = document.getElementById("cast-photo");
 
         document.getElementById("cast-title").innerHTML = castMember["Title"];
-        photo.style.cssText = `background-image: url("./your_content/images/cast/${castMember["Photo"]}");`;
+        photo.style.cssText = `background-image: url("../your_content/images/cast/${castMember["Photo"]}");`;
         document.getElementById("textSpecies").innerHTML = castMember["Species"];
         document.getElementById("textGender").innerHTML = castMember["Gender"];
         document.getElementById("textBirthday").innerHTML = castMember["Birthday"];
@@ -786,7 +786,7 @@ for (let member of portraits) {
         document.getElementById("textInfo").innerHTML = castMember["Info"];
         document.getElementById("headerStory").innerHTML = castInfo + "'s Story";
         document.getElementById("textStory").innerHTML = castMember["Story"];
-        document.getElementById("cast-tagged").innerHTML = `&#10087; <a href="tagged.html?tag=`+ castInfo +`">All pages featuring ` + castInfo + `</a>`;
+        document.getElementById("cast-tagged").innerHTML = `&#10087; <a href="../tagged/${castInfo}">All pages featuring ${castInfo}</a>`;
 
 
         // if (castMember["RefSheet"] === ""){
@@ -794,8 +794,8 @@ for (let member of portraits) {
         // } else {
         //         document.getElementById("cast-refsheet").innerHTML = `&#10087; <a href="your_content/images/sheets/` + castInfo +`.png">`+ castInfo + `'s Reference Sheet</a>`;
         // }
-            XHR = new XMLHttpRequest();
-            let URL = `your_content/images/sheets/` + castInfo +`.png`;
+            let XHR = new XMLHttpRequest();
+            let URL = `../your_content/images/sheets/` + castInfo +`.png`;
             XHR.open("GET", URL);
             XHR.send();
             console.log(XHR);
@@ -803,7 +803,7 @@ for (let member of portraits) {
                     if (XHR.response.includes("404 Not Found")) {
                             document.getElementById("cast-refsheet").innerHTML = ``;
                     } else {
-                            document.getElementById("cast-refsheet").innerHTML = `&#10087; <a href="your_content/images/sheets/` + castInfo +`.png">`+ castInfo + `'s Reference Sheet</a> <span><br>(contains nudity)</span>`;
+                            document.getElementById("cast-refsheet").innerHTML = `&#10087; <a href="../your_content/images/sheets/` + castInfo +`.png">`+ castInfo + `'s Reference Sheet</a> <span><br>(contains nudity)</span>`;
                     }
             };
 
